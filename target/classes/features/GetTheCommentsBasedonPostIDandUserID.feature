@@ -5,7 +5,7 @@ Feature: I want to read the comments based on postid and userid
     When I can access the posts
     Then I want to get the "comments" <postid>
     And  I want to verify comments 
-    And verify the details of comments made by userid <id> with values <postid> with "<name>" "<email>" "<body>"
+    And  verify the details of comments made by userid <id> with values <postid> with "<name>" "<email>" "<body>"
     
     
     Examples: 

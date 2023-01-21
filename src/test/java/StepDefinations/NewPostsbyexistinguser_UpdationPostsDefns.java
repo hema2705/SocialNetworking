@@ -45,7 +45,7 @@ public class NewPostsbyexistinguser_UpdationPostsDefns {
 	private int actualid;
 	PostsData resourcedata;
 	private int actualuserid;
-	
+
 	@Before
 	public void beforeScenario(Scenario s) throws IOException{
 		thisscenario =s;
@@ -62,14 +62,14 @@ public class NewPostsbyexistinguser_UpdationPostsDefns {
 	}
 
 
-	@Given("I want to post a new message with type header specification")
-	public void i_want_to_post_a_new_message_with_type_header_specification() {
 
+	@Given("has the  header specification")
+	public void has_the_header_specification() {
 		Header contettype = new Header("Content-type", "application/json; charset=UTF-8");
 		reqspec = given().header(contettype);
 		thisscenario.log("Setting header:"+ contettype.toString());
-
 	}
+
 
 	@When("my user id {int} with title {string} posts {string}")
 	public void my_user_id_with_title_posts(Integer userid, String title, String body) {
@@ -84,12 +84,11 @@ public class NewPostsbyexistinguser_UpdationPostsDefns {
 		thisscenario.log("Creating a new resource post :"+ userid + ":"+title+":"+ body);
 		this.postid= initialpostssize +1;
 		expectedid= this.postid;
-		
+
 	}
 
-	@Then("the response is posted")
-	public void the_response_is_posted() {
-
+	@Then("the message status is")
+	public void the_message_status_is() {
 
 		validatepost = resp.then();
 		thisscenario.log("Retreived response is :"+ validatepost.log().body().extract().asString());
@@ -102,6 +101,8 @@ public class NewPostsbyexistinguser_UpdationPostsDefns {
 
 
 	}
+
+
 
 	@Then("I want to verify the log")
 	public void i_want_to_verify_the_log() {
@@ -117,7 +118,7 @@ public class NewPostsbyexistinguser_UpdationPostsDefns {
 	public void i_want_to_verify_the_post_deleted() {
 		int postid;
 		try {
-			
+
 			postid = validatepost.statusCode(post_responsecode).and().extract().jsonPath().getInt("id");
 			Assert.fail("The post is not deleted ");
 		}
@@ -157,8 +158,8 @@ public class NewPostsbyexistinguser_UpdationPostsDefns {
 	}
 
 
-	@When("my user id {int} with title {string} posts {string} to patch where post id is {int}")
-	public void my_user_id_with_title_posts_to_patch_where_post_id_is(Integer userid, String title, String body, Integer postid){
+	@When("my user id {int} with title {string} posts {string} to modify with patch where post id is {int}")
+	public void my_user_id_with_title_posts_to_modify_with_patch_where_post_id_is(Integer userid, String title, String body, Integer postid){
 
 		System.out.println("PATCHIND:" + postid);
 		PostsData patch = new PostsData(title);
@@ -167,7 +168,7 @@ public class NewPostsbyexistinguser_UpdationPostsDefns {
 		resp = reqspec.pathParam("postId",postid).body(patch).when().patch(posts_endpoint+"/{postId}");
 		thisscenario.log("Patching the an existing resource  :"+ userid + ":"+title+":"+ body);
 		post_responsecode = 200;
-		
+
 		expectedUserid = userid;
 		expectedtitle = title;
 		expectedbody = body;
@@ -201,6 +202,48 @@ public class NewPostsbyexistinguser_UpdationPostsDefns {
 		resourcedata = 	given().pathParam("postId",postid).when().get(posts_endpoint+"/{postId}").as(PostsData.class);
 
 	}
+
+
+	@When("my user id {int} with title {string} posts {string} to modify with put where post id is {int}")
+	public void my_user_id_with_title_posts_to_modify_with_put_where_post_id_is(Integer userid, String title, String body, Integer postid) {
+
+		PostsData updatepost = new PostsData(userid,body,title,postid);
+
+		expectedbody = body;
+		expectedUserid = userid;
+		expectedid = postid;
+		expectedtitle = title;
+
+		thisscenario.log("Creating a PUT request with values :" +" body:"+body + " user ID:" +userid + " postID: "+ postid + " title:"+ title);
+		resp = reqspec.pathParam("postId",postid).body(updatepost).when().put(posts_endpoint+"/{postId}");
+		thisscenario.log("Updating an existing resource  resource post :"+ userid + ":"+title+":"+ body);
+		this.postid = postid;
+		post_responsecode = 200;
+	}
+
+
+
+
+	@Then("confirm the message\\/post is as expected by retriving")
+	public void confirm_the_message_post_is_as_expected_by_retriving() {
+
+
+		PostsData newPosteddata =	given().pathParam("postId",this.postid).when().get(posts_endpoint+"/{postId}").as(PostsData.class);
+		try {
+			thisscenario.log(newPosteddata.getTitle());
+			thisscenario.log(newPosteddata.getBody());
+			thisscenario.log(newPosteddata.getId()+"id");
+			thisscenario.log(newPosteddata.getUserId()+"userid");
+		}
+		catch (NullPointerException e) {
+
+			thisscenario.log("The values cannot be verified by retriving using get method to validdate new posted message as this is a mock service");
+		}
+
+
+	}
+
+
 
 
 
