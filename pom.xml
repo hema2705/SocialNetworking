@@ -141,6 +141,12 @@
     <scope>test</scope>
 </dependency>
 
+<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.14.1</version>
+</dependency>
 
   </dependencies>
 
@@ -174,7 +180,8 @@
 						src/main/resources/features/GetTheExistingPostDetails.feature,
 						src/main/resources/features/NewPostByExistingUser.feature,
 						src/main/resources/features/PatchingAnExistingResource.feature,
-						src/main/resources/features/UpdatingAnExistingPost.feature
+						src/main/resources/features/UpdatingAnExistingPost.feature,
+						src/main/resources/features/FilteringthroughQueryParams.feature
 						</cucumber.features>
 
 						<cucumber.plugin>pretty, html:src/test/resources/Reports/${project.name}${timestamp}.html</cucumber.plugin>  

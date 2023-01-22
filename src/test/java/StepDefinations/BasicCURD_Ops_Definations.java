@@ -15,16 +15,10 @@ import io.restassured.http.Header;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
-
-import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.Matchers.endsWith;
 import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.equalToIgnoringCase;
-import static org.hamcrest.Matchers.startsWith;
-import static org.hamcrest.Matchers.empty;;
 
 
-public class NewPostsbyexistinguser_UpdationPostsDefns {
+public class BasicCURD_Ops_Definations {
 
 	String posts_endpoint;
 	RequestSpecification reqspec;
@@ -45,6 +39,8 @@ public class NewPostsbyexistinguser_UpdationPostsDefns {
 	private int actualid;
 	PostsData resourcedata;
 	private int actualuserid;
+	private Integer expectedheight;
+	private int actualheight;
 
 	@Before
 	public void beforeScenario(Scenario s) throws IOException{
@@ -116,7 +112,6 @@ public class NewPostsbyexistinguser_UpdationPostsDefns {
 
 	@Then("I want to verify the post deleted")
 	public void i_want_to_verify_the_post_deleted() {
-		int postid;
 		try {
 
 			postid = validatepost.statusCode(post_responsecode).and().extract().jsonPath().getInt("id");
@@ -158,11 +153,12 @@ public class NewPostsbyexistinguser_UpdationPostsDefns {
 	}
 
 
-	@When("my user id {int} with title {string} posts {string} to modify with patch where post id is {int}")
-	public void my_user_id_with_title_posts_to_modify_with_patch_where_post_id_is(Integer userid, String title, String body, Integer postid){
+	@When("my user id {int} with title {string} posts {string} to modify with patch where post id is {int} with mt height {int}")
+	public void my_user_id_with_title_posts_to_modify_with_patch_where_post_id_is_with_mt_height(Integer userid, String title, String body, Integer postid, Integer height) {
 
 		System.out.println("PATCHIND:" + postid);
-		PostsData patch = new PostsData(title);
+		PostsData patch = new PostsData(userid,title,body,postid,height);
+		System.out.println(userid+ "****"+title+"****"+body+"****"+postid+"****"+height);
 		thisscenario.log("Creating a PATCH request with values :" +" body:"+body + " user ID:" +userid + " postID: "+ postid + " title:"+ title);
 
 		resp = reqspec.pathParam("postId",postid).body(patch).when().patch(posts_endpoint+"/{postId}");
@@ -173,6 +169,7 @@ public class NewPostsbyexistinguser_UpdationPostsDefns {
 		expectedtitle = title;
 		expectedbody = body;
 		expectedid = postid;
+		expectedheight = height;
 		this.postid = postid;
 
 	}
@@ -185,11 +182,13 @@ public class NewPostsbyexistinguser_UpdationPostsDefns {
 		actualbody = validatepost.statusCode(post_responsecode).and().extract().jsonPath().getString("body");
 		actualid = validatepost.statusCode(post_responsecode).and().extract().jsonPath().getInt("id");
 		actualuserid = validatepost.statusCode(post_responsecode).and().extract().jsonPath().getInt("userId");
+		actualheight = validatepost.statusCode(post_responsecode).and().extract().jsonPath().getInt("height");
 
 		Assertions.assertEquals(resourcedata.getUserId(), actualuserid);
 		Assertions.assertEquals(resourcedata.getId(), actualid);
 		Assertions.assertNotEquals(resourcedata.getTitle(), actualtitle);
 		Assertions.assertNotEquals(resourcedata.getBody(), actualbody);
+		Assertions.assertNotEquals(resourcedata.getheight(), actualheight);
 
 		thisscenario.log("Patching the an existing resource is sucessful at postid :"+actualid);
 

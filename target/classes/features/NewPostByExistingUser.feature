@@ -1,7 +1,7 @@
 @qa
 Feature: As a user of social network I want to post 
   I want to post an important message 
-
+// Adding a new resource and verifies the  new postid is created 
   Scenario Outline: Posting the message 
     Given I am an existing user of the social network 
     And has the  header specification

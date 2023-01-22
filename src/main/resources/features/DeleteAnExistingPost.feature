@@ -1,4 +1,6 @@
 Feature: As a user of social network I want to update a post 
+// deletes an existing resource with post id defined in Examples 
+//this scenario verifies the satus code and verifies if the body is empty after delete operation
 
   Scenario Outline: Deleting the post 
     Given I am an existing user of the social network 

@@ -1,11 +1,14 @@
 Feature: I want to read the comments based on postid and userid
-
+// this scenario reads the comments of the user based on postid and userid
+// the test data is validated as Serialization and Deserialization of json 
+// the test data expected is passed at method level
+// this scenario also validates for input error data testing 
+// one testcase fails -> which is expected 
   Scenario Outline: I want to read the comments based on postid 
     Given I am an user of the social network 
     When I can access the posts
     Then I want to get the "comments" <postid>
-    And  I want to verify comments 
-    And  verify the details of comments made by userid <id> with values <postid> with "<name>" "<email>" "<body>"
+    And  verify the details of comments made by userid <id> with values <postid> 
     
     
     Examples: 

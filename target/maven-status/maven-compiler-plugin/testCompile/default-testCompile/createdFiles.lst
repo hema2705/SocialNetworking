@@ -1,3 +1,4 @@
 NetworkRunner/RunnableTests.class
-StepDefinations/NewPostsbyexistinguser_UpdationPostsDefns.class
+StepDefinations/FilterOptionsDefinations.class
 StepDefinations/ReadingExistngPostDetailsDefns.class
+StepDefinations/BasicCURD_Ops_Definations.class

@@ -9,7 +9,6 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 import static io.restassured.RestAssured.*;
-import static org.hamcrest.Matchers.samePropertyValuesAs;
 import static org.hamcrest.Matchers.equalTo;
 
 import java.io.IOException;
@@ -34,7 +33,6 @@ public class ReadingExistngPostDetailsDefns {
 	@Before
 	public void beforeScenario(Scenario s) throws IOException{
 		thisscenario =s;
-
 	}	
 
 
@@ -49,13 +47,12 @@ public class ReadingExistngPostDetailsDefns {
 	@When("I can access the posts")
 	public void i_can_access_the_posts() {
 
-		reqspec = given().when();	
+		response = given().when().get(posts_endpoint);	
 
 	}
 
 	@Then("I want to read the posts")
 	public void i_want_to_read_the_posts() {
-		response = 	reqspec.get(posts_endpoint);
 
 	}
 
@@ -81,45 +78,17 @@ public class ReadingExistngPostDetailsDefns {
 
 
 	@Then("I want to get the {string} {int}")
-	public void i_want_to_get_the(String comments, Integer postid) {
-		response = 	reqspec.get(posts_endpoint+"/"+postid+"/"+comments);
+	public void i_want_to_get_the(String comments, Integer postid) {		
+		
+		response= given().pathParam("postId",postid).and().pathParam("comments", postid).when().get(posts_endpoint+"/{postId}/{comments}");
+
 		this.postid = postid;
 	}
 
-
-	@Then("I want to verify comments")
-	public void i_want_to_verify_comments() {
-
-		int actstatuscode = response.statusCode();
-		Assertions.assertEquals(actstatuscode, actstatuscode);
-		List<Integer> postid = response.jsonPath().getList("postId");
-		List<Integer> id = response.jsonPath().getList("id");
-		List<Integer> name = response.jsonPath().getList("name");
-		List<Integer> email = response.jsonPath().getList("email");
-		List<Integer> body = response.jsonPath().getList("body");
-
-		int num_postid = (int) postid.stream().count();
-
-		Assertions.assertEquals(num_postid, 5);
-		Integer n = this.postid;
-		boolean  ispostidequal = postid.stream().allMatch(n::equals);
-		
-		if(ispostidequal)
-		{
-			thisscenario.log("the fetched comments postid is :"+ n );
-			thisscenario.log("the fetched comments size is :"+ id.size() );
-			thisscenario.log("the status code is :"+ actstatuscode );
-
-		}
-
-	}
-
-
-
 	
 	
-	@Then("verify the details of comments made by userid {int} with values {int} with {string} {string} {string}")
-	public void verify_the_details_of_comments_made_by_userid_with_values_with(Integer id, Integer postid, String name, String email, String body) {
+	@Then("verify the details of comments made by userid {int} with values {int}")
+	public void verify_the_details_of_comments_made_by_userid_with_values(Integer id, Integer postid) {
 		
 		response= given().pathParam("postId",postid).and().pathParam("comments", "comments").and().queryParam("id", id).when().get(posts_endpoint+"/{postId}/{comments}");
 	    
@@ -131,20 +100,10 @@ public class ReadingExistngPostDetailsDefns {
 		body("[0].email", equalTo("Jayne_Kuhic@sydney.com")).
 		body("[0].body", equalTo("est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et"));
 		
-		
-		
 	}
 	
 	
 	
-	
-	@Then("I want to get the posts of user id {int}")
-	public void i_want_to_get_the_posts_of_user_id(Integer int1) {
-		// given().queryParam("userId", int1).when().get(posts_endpoint).jsonPath().getList("[0]").get(0);
-		 
-		// .stream().forEach(n->System.out.println(n));
-
-	}
 	
 
 
