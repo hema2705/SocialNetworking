@@ -1,70 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="NetworkRunner.RunnableTests" time="9.086" tests="34" errors="0" skipped="0" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="NetworkRunner.RunnableTests" time="8.555" tests="34" errors="0" skipped="0" failures="2">
   <properties>
     <property name="cucumber.features" value="src/main/resources/features/DeleteAnExistingPost.feature ,&#10;						src/main/resources/features/GetTheCommentsBasedonPostIDandUserID.feature,&#10;						src/main/resources/features/GetTheExistingPostDetails.feature,&#10;						src/main/resources/features/NewPostByExistingUser.feature,&#10;						src/main/resources/features/PatchingAnExistingResource.feature,&#10;						src/main/resources/features/UpdatingAnExistingPost.feature,&#10;						src/main/resources/features/FilteringthroughQueryParams.feature"/>
-    <property name="gopherProxySet" value="false"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
-    <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="java.specification.version" value="1.8"/>
-    <property name="sun.cpu.isalist" value=""/>
+    <property name="java.specification.version" value="12"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.class.path" value="/Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/test-classes:/Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/classes:/Users/hema/.m2/repository/io/cucumber/cucumber-java/7.11.0/cucumber-java-7.11.0.jar:/Users/hema/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-core/7.11.0/cucumber-core-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-gherkin/7.11.0/cucumber-gherkin-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.11.0/cucumber-gherkin-messages-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/gherkin/26.0.3/gherkin-26.0.3.jar:/Users/hema/.m2/repository/io/cucumber/messages/21.0.1/messages-21.0.1.jar:/Users/hema/.m2/repository/io/cucumber/tag-expressions/5.0.1/tag-expressions-5.0.1.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-expressions/16.1.1/cucumber-expressions-16.1.1.jar:/Users/hema/.m2/repository/io/cucumber/datatable/7.11.0/datatable-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-plugin/7.11.0/cucumber-plugin-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/docstring/7.11.0/docstring-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/html-formatter/20.2.1/html-formatter-20.2.1.jar:/Users/hema/.m2/repository/io/cucumber/junit-xml-formatter/0.1.0/junit-xml-formatter-0.1.0.jar:/Users/hema/.m2/repository/io/cucumber/ci-environment/9.1.0/ci-environment-9.1.0.jar:/Users/hema/.m2/repository/io/rest-assured/json-path/5.3.0/json-path-5.3.0.jar:/Users/hema/.m2/repository/org/apache/groovy/groovy-json/4.0.6/groovy-json-4.0.6.jar:/Users/hema/.m2/repository/org/apache/groovy/groovy/4.0.6/groovy-4.0.6.jar:/Users/hema/.m2/repository/io/rest-assured/rest-assured-common/5.3.0/rest-assured-common-5.3.0.jar:/Users/hema/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/Users/hema/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.2/junit-jupiter-api-5.9.2.jar:/Users/hema/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-commons/1.9.2/junit-platform-commons-1.9.2.jar:/Users/hema/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.14.1/jackson-databind-2.14.1.jar:/Users/hema/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.14.1/jackson-annotations-2.14.1.jar:/Users/hema/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.14.1/jackson-core-2.14.1.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.11.0/cucumber-junit-platform-engine-7.11.0.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.9.2/junit-platform-suite-engine-1.9.2.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-suite-api/1.9.2/junit-platform-suite-api-1.9.2.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.9.2/junit-platform-suite-commons-1.9.2.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-launcher/1.9.2/junit-platform-launcher-1.9.2.jar:/Users/hema/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.2/junit-jupiter-engine-5.9.2.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-java8/7.11.0/cucumber-java8-7.11.0.jar:/Users/hema/.m2/repository/net/jodah/typetools/0.6.3/typetools-0.6.3.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-suite/1.9.2/junit-platform-suite-1.9.2.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-engine/1.9.2/junit-platform-engine-1.9.2.jar:/Users/hema/.m2/repository/io/rest-assured/rest-assured/5.3.0/rest-assured-5.3.0.jar:/Users/hema/.m2/repository/org/apache/groovy/groovy-xml/4.0.6/groovy-xml-4.0.6.jar:/Users/hema/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/hema/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/hema/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/hema/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/hema/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/hema/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/Users/hema/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/hema/.m2/repository/io/rest-assured/xml-path/5.3.0/xml-path-5.3.0.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-junit/7.11.0/cucumber-junit-7.11.0.jar:/Users/hema/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/hema/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/hema/.m2/repository/org/junit/vintage/junit-vintage-engine/5.9.2/junit-vintage-engine-5.9.2.jar:"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="user.timezone" value="Europe/Warsaw"/>
-    <property name="user.country.format" value="IN"/>
-    <property name="java.vm.specification.version" value="1.8"/>
     <property name="os.name" value="Mac OS X"/>
-    <property name="user.country" value="GB"/>
+    <property name="java.vm.specification.version" value="12"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="sun.boot.library.path" value="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/surefire/surefirebooter-20230122014858470_3.jar /Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/surefire 2023-01-22T01-48-57_538-jvmRun1 surefire-20230122014858470_1tmp surefire_0-20230122014858470_2tmp"/>
+    <property name="user.country" value="GB"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/surefire/surefirebooter-20230122035137377_3.jar /Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/surefire 2023-01-22T03-51-36_467-jvmRun1 surefire-20230122035137377_1tmp surefire_0-20230122035137377_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/test-classes:/Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/classes:/Users/hema/.m2/repository/io/cucumber/cucumber-java/7.11.0/cucumber-java-7.11.0.jar:/Users/hema/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-core/7.11.0/cucumber-core-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-gherkin/7.11.0/cucumber-gherkin-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.11.0/cucumber-gherkin-messages-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/gherkin/26.0.3/gherkin-26.0.3.jar:/Users/hema/.m2/repository/io/cucumber/messages/21.0.1/messages-21.0.1.jar:/Users/hema/.m2/repository/io/cucumber/tag-expressions/5.0.1/tag-expressions-5.0.1.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-expressions/16.1.1/cucumber-expressions-16.1.1.jar:/Users/hema/.m2/repository/io/cucumber/datatable/7.11.0/datatable-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-plugin/7.11.0/cucumber-plugin-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/docstring/7.11.0/docstring-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/html-formatter/20.2.1/html-formatter-20.2.1.jar:/Users/hema/.m2/repository/io/cucumber/junit-xml-formatter/0.1.0/junit-xml-formatter-0.1.0.jar:/Users/hema/.m2/repository/io/cucumber/ci-environment/9.1.0/ci-environment-9.1.0.jar:/Users/hema/.m2/repository/io/rest-assured/json-path/5.3.0/json-path-5.3.0.jar:/Users/hema/.m2/repository/org/apache/groovy/groovy-json/4.0.6/groovy-json-4.0.6.jar:/Users/hema/.m2/repository/org/apache/groovy/groovy/4.0.6/groovy-4.0.6.jar:/Users/hema/.m2/repository/io/rest-assured/rest-assured-common/5.3.0/rest-assured-common-5.3.0.jar:/Users/hema/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/Users/hema/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.2/junit-jupiter-api-5.9.2.jar:/Users/hema/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-commons/1.9.2/junit-platform-commons-1.9.2.jar:/Users/hema/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.14.1/jackson-databind-2.14.1.jar:/Users/hema/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.14.1/jackson-annotations-2.14.1.jar:/Users/hema/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.14.1/jackson-core-2.14.1.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.11.0/cucumber-junit-platform-engine-7.11.0.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.9.2/junit-platform-suite-engine-1.9.2.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-suite-api/1.9.2/junit-platform-suite-api-1.9.2.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.9.2/junit-platform-suite-commons-1.9.2.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-launcher/1.9.2/junit-platform-launcher-1.9.2.jar:/Users/hema/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.2/junit-jupiter-engine-5.9.2.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-java8/7.11.0/cucumber-java8-7.11.0.jar:/Users/hema/.m2/repository/net/jodah/typetools/0.6.3/typetools-0.6.3.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-suite/1.9.2/junit-platform-suite-1.9.2.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-engine/1.9.2/junit-platform-engine-1.9.2.jar:/Users/hema/.m2/repository/io/rest-assured/rest-assured/5.3.0/rest-assured-5.3.0.jar:/Users/hema/.m2/repository/org/apache/groovy/groovy-xml/4.0.6/groovy-xml-4.0.6.jar:/Users/hema/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/hema/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/hema/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/hema/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/hema/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/hema/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/Users/hema/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/hema/.m2/repository/io/rest-assured/xml-path/5.3.0/xml-path-5.3.0.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-junit/7.11.0/cucumber-junit-7.11.0.jar:/Users/hema/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/hema/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/hema/.m2/repository/org/junit/vintage/junit-vintage-engine/5.9.2/junit-vintage-engine-5.9.2.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/hema"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.home" value="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"/>
-    <property name="basedir" value="/Users/hema/eclipse-workspace/SocialNetworkingCommunity"/>
+    <property name="java.version.date" value="2019-04-16"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home"/>
     <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/hema/eclipse-workspace/SocialNetworkingCommunity"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/surefire/surefirebooter-20230122014858470_3.jar"/>
-    <property name="sun.boot.class.path" value="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/resources.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/rt.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/sunrsasign.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/jsse.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/jce.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/charsets.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/jfr.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/classes"/>
+    <property name="surefire.real.class.path" value="/Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/surefire/surefirebooter-20230122035137377_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="cucumber.plugin" value="pretty, html:src/test/resources/Reports/Posts2023-01-22T00:48:54Z.html"/>
-    <property name="java.runtime.version" value="1.8.0_211-b12"/>
+    <property name="cucumber.plugin" value="pretty, html:src/test/resources/Reports/Posts2023-01-22T02:51:31Z.html"/>
+    <property name="java.runtime.version" value="12.0.1+12"/>
     <property name="user.name" value="hema"/>
     <property name="path.separator" value=":"/>
     <property name="os.version" value="10.16"/>
-    <property name="java.endorsed.dirs" value="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/endorsed"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="localRepository" value="/Users/hema/.m2/repository"/>
-    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="/var/folders/mf/j0n3s12n1tlf4g1yg6gg3_1h0000gn/T/"/>
-    <property name="java.version" value="1.8.0_211"/>
+    <property name="java.version" value="12.0.1"/>
     <property name="user.dir" value="/Users/hema/eclipse-workspace/SocialNetworkingCommunity"/>
     <property name="os.arch" value="x86_64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
-    <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.library.path" value="/Users/hema/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
-    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.version" value="25.211-b12"/>
-    <property name="java.ext.dirs" value="/Users/hema/Library/Java/Extensions:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="java.vm.version" value="12.0.1+12"/>
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
-    <property name="java.class.version" value="52.0"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="56.0"/>
   </properties>
-  <testcase name="Example #1.1" classname="Examples" time="4.142">
+  <testcase name="Example #1.1" classname="Examples" time="4.821">
     <system-out><![CDATA[
 Scenario Outline: Deleting the post                                                       &amp#27;[90m# src/main/resources/features/DeleteAnExistingPost.feature:16&amp#27;[0m
 
@@ -76,6 +70,20 @@ Scenario Outline: Deleting the post                                             
 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
 POSTID: get 1
+{
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+}
+
+    Updating the existing resource data:{
+      "userId": 1,
+      "id": 1,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    }
+
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
 
     Deleting the an existing resource  resource post :1
@@ -85,24 +93,18 @@ POSTID: get 1
     
 }
 
-    Retreived response is :{}
-
-{
-    
-}
-
     validated the response and is :{}
 
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
 HTTP/1.1 200 OK
-Date: Sun, 22 Jan 2023 00:49:04 GMT
+Date: Sun, 22 Jan 2023 02:51:44 GMT
 Content-Type: application/json; charset=utf-8
 Content-Length: 2
 Connection: keep-alive
 X-Powered-By: Express
 X-Ratelimit-Limit: 1000
 X-Ratelimit-Remaining: 999
-X-Ratelimit-Reset: 1674348583
+X-Ratelimit-Reset: 1674355963
 Vary: Origin, Accept-Encoding
 Access-Control-Allow-Credentials: true
 Cache-Control: no-cache
@@ -112,39 +114,40 @@ X-Content-Type-Options: nosniff
 Etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
 Via: 1.1 vegur
 CF-Cache-Status: DYNAMIC
-Server-Timing: cf-q-config;dur=5.9999947552569e-06
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=mnYY3dC1WLQkmeB8Q7Zk82w3Q62akrKLAdexjKWoF4zK2AY3YC2x%2F86sQDZalPK%2FN2FDswE3Z6caVTfwVV5St%2BqO2C11Aw2CzoX2GVTQ%2BLdlUPaIBkTBKeLyqkgmkGEdy0L1VZItiRghDC1Jy3Ar"}],"group":"cf-nel","max_age":604800}
+Server-Timing: cf-q-config;dur=5.0000016926788e-06
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Z22lQxBj5AFDvkPCdQ8icMVuMX4YC2VSfijhgclBnWNGr4a75OATV5nMDXSxgW8jnOYzzuQP5t1YjQ%2FDC9SWptkMPtzUFjxumuFpW0JtwR0Fnxs%2FQ6mQLDh3cQQLKXM0gHLf%2FvY9rV5QaZoHxYzZ"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 78d4499fdacbbf26-WAW
+CF-RAY: 78d4fd4eaa49bfdc-WAW
 alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
 
 {
     
 }
 
-    the post is deleted sucessfully with postid :1Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@5e5aafc6
+    the post is deleted sucessfully with postid :1Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@19bfbe28
 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the post deleted&amp#27;[0m                                                   &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_post_deleted()&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
-    <system-err><![CDATA[Jan 22, 2023 1:48:59 AM io.cucumber.junit.platform.engine.DiscoverySelectorResolver warnWhenCucumberFeaturesPropertyIsUsed
+    <system-err><![CDATA[Jan 22, 2023 3:51:38 AM io.cucumber.junit.platform.engine.DiscoverySelectorResolver warnWhenCucumberFeaturesPropertyIsUsed
 WARNING: Discovering tests using the cucumber.features property. Other discovery selectors are ignored!
 Please request/upvote/sponsor/ect better support for JUnit 5 discovery selectors.
 See: https://github.com/cucumber/cucumber-jvm/pull/2498
 ]]></system-err>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.648">
+  <testcase name="Example #1.1" classname="Examples" time="0.511">
     <failure message="1 expectation failed.&#10;JSON path [0].name doesn&apos;t match.&#10;Expected: quo vero reiciendis velit similique earum&#10;  Actual: id labore ex et quam laborum&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
 1 expectation failed.
 JSON path [0].name doesn't match.
 Expected: quo vero reiciendis velit similique earum
   Actual: id labore ex et quam laborum
 
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
 	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
 	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
@@ -155,9 +158,9 @@ Expected: quo vero reiciendis velit similique earum
 	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
 	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at sun.reflect.GeneratedMethodAccessor143.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
+	at jdk.internal.reflect.GeneratedMethodAccessor194.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
 	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
@@ -183,10 +186,11 @@ JSON path [0].name doesn't match.
 Expected: quo vero reiciendis velit similique earum
   Actual: id labore ex et quam laborum
 
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
 	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
 	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
@@ -197,9 +201,9 @@ Expected: quo vero reiciendis velit similique earum
 	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
 	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at sun.reflect.GeneratedMethodAccessor143.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
+	at jdk.internal.reflect.GeneratedMethodAccessor194.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
 	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
@@ -214,7 +218,7 @@ Expected: quo vero reiciendis velit similique earum
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="1.052">
+  <testcase name="Example #1.1" classname="Examples" time="0.662">
     <system-out><![CDATA[
 @qa
 Scenario Outline: Posting the message                                                       &amp#27;[90m# src/main/resources/features/NewPostByExistingUser.feature:16&amp#27;[0m
@@ -237,32 +241,14 @@ Scenario Outline: Posting the message                                           
     "userId": 1,
     "body": "I am very happy posting in community",
     "title": "my first post",
-    "id": 101,
-    "height": 0
-}
-
-    Retreived response is :{
-      "userId": 1,
-      "body": "I am very happy posting in community",
-      "title": "my first post",
-      "id": 101,
-      "height": 0
-    }
-
-{
-    "userId": 1,
-    "body": "I am very happy posting in community",
-    "title": "my first post",
-    "id": 101,
-    "height": 0
+    "id": 101
 }
 
     validated the response and is :{
       "userId": 1,
       "body": "I am very happy posting in community",
       "title": "my first post",
-      "id": 101,
-      "height": 0
+      "id": 101
     }
 
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
@@ -277,19 +263,33 @@ Scenario Outline: Posting the message                                           
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.69">
+  <testcase name="Example #1.1" classname="Examples" time="0.817">
     <system-out><![CDATA[
-Scenario Outline: Updating the message using patching                                                                             &amp#27;[90m# src/main/resources/features/PatchingAnExistingResource.feature:14&amp#27;[0m
+Scenario Outline: Updating the message using patching                                                                                    &amp#27;[90m# src/main/resources/features/PatchingAnExistingResource.feature:14&amp#27;[0m
 
     Request to the end point:https://jsonplaceholder.typicode.com/posts
 
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                                                               &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                                                                      &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
 
     Setting header:Content-type=application/json; charset=UTF-8
 
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                                               &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                                                      &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
 POSTID: get 1
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m                                         &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
+{
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+}
+
+    Updating the existing resource data:{
+      "userId": 1,
+      "id": 1,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    }
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
 PATCHIND:1
 1****Asia****Asia  has Mount Everest****1****8849
 
@@ -298,23 +298,7 @@ PATCHIND:1
 
     Patching the an existing resource  :1:Asia:Asia  has Mount Everest
 
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mmy user id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Asia"&amp#27;[0m&amp#27;[32m posts &amp#27;[0m&amp#27;[32m&amp#27;[1m"Asia  has Mount Everest"&amp#27;[0m&amp#27;[32m to modify with patch where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m with mt height &amp#27;[0m&amp#27;[32m&amp#27;[1m8849&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.my_user_id_with_title_posts_to_modify_with_patch_where_post_id_is_with_mt_height(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)&amp#27;[0m
-{
-    "userId": 1,
-    "id": 1,
-    "title": "Asia",
-    "body": "Asia  has Mount Everest",
-    "height": 8849
-}
-
-    Retreived response is :{
-      "userId": 1,
-      "id": 1,
-      "title": "Asia",
-      "body": "Asia  has Mount Everest",
-      "height": 8849
-    }
-
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mmy user id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Asia"&amp#27;[0m&amp#27;[32m posts &amp#27;[0m&amp#27;[32m&amp#27;[1m"Asia  has Mount Everest"&amp#27;[0m&amp#27;[32m to modify with patch where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m with mt height &amp#27;[0m&amp#27;[32m&amp#27;[1m8849&amp#27;[0m&amp#27;[32m values&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.my_user_id_with_title_posts_to_modify_with_patch_where_post_id_is_with_mt_height_values(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)&amp#27;[0m
 {
     "userId": 1,
     "id": 1,
@@ -331,15 +315,31 @@ PATCHIND:1
       "height": 8849
     }
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                      &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                             &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+{
+    "userId": 1,
+    "id": 1,
+    "title": "Asia",
+    "body": "Asia  has Mount Everest",
+    "height": 8849
+}
+
+    patched response  is :{
+      "userId": 1,
+      "id": 1,
+      "title": "Asia",
+      "body": "Asia  has Mount Everest",
+      "height": 8849
+    }
+
 
     Patching the an existing resource is sucessful at postid :1
 
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the if patch is successful&amp#27;[0m                                                                                 &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_if_patch_is_successful()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the if patch is successful&amp#27;[0m                                                                                        &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_if_patch_is_successful()&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.597">
+  <testcase name="Example #1.1" classname="Examples" time="0.713">
     <system-out><![CDATA[
 Scenario Outline: Updating the message using put                                                                  &amp#27;[90m# src/main/resources/features/UpdatingAnExistingPost.feature:15&amp#27;[0m
 
@@ -351,6 +351,20 @@ Scenario Outline: Updating the message using put                                
 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                               &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
 POSTID: get 1
+{
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+}
+
+    Updating the existing resource data:{
+      "userId": 1,
+      "id": 1,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    }
+
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m                         &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
 
     Creating a PUT request with values : body:Mango Wood is very hard user ID:1 postID: 1 title:Mango Wood
@@ -363,32 +377,14 @@ POSTID: get 1
     "userId": 1,
     "body": "Mango Wood is very hard",
     "title": "Mango Wood",
-    "id": 1,
-    "height": 0
-}
-
-    Retreived response is :{
-      "userId": 1,
-      "body": "Mango Wood is very hard",
-      "title": "Mango Wood",
-      "id": 1,
-      "height": 0
-    }
-
-{
-    "userId": 1,
-    "body": "Mango Wood is very hard",
-    "title": "Mango Wood",
-    "id": 1,
-    "height": 0
+    "id": 1
 }
 
     validated the response and is :{
       "userId": 1,
       "body": "Mango Wood is very hard",
       "title": "Mango Wood",
-      "id": 1,
-      "height": 0
+      "id": 1
     }
 
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                      &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
@@ -399,7 +395,7 @@ POSTID: get 1
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.633">
+  <testcase name="Example #1.1" classname="Examples" time="0.657">
     <system-out><![CDATA[
 Scenario Outline: Deleting the post                                                       &amp#27;[90m# src/main/resources/features/DeleteAnExistingPost.feature:16&amp#27;[0m
 
@@ -411,6 +407,20 @@ Scenario Outline: Deleting the post                                             
 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
 POSTID: get 1
+{
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+}
+
+    Updating the existing resource data:{
+      "userId": 1,
+      "id": 1,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    }
+
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
 
     Deleting the an existing resource  resource post :1
@@ -420,24 +430,18 @@ POSTID: get 1
     
 }
 
-    Retreived response is :{}
-
-{
-    
-}
-
     validated the response and is :{}
 
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
 HTTP/1.1 200 OK
-Date: Sun, 22 Jan 2023 00:49:15 GMT
+Date: Sun, 22 Jan 2023 02:51:54 GMT
 Content-Type: application/json; charset=utf-8
 Content-Length: 2
 Connection: keep-alive
 X-Powered-By: Express
 X-Ratelimit-Limit: 1000
-X-Ratelimit-Remaining: 987
-X-Ratelimit-Reset: 1674348583
+X-Ratelimit-Remaining: 988
+X-Ratelimit-Reset: 1674355963
 Vary: Origin, Accept-Encoding
 Access-Control-Allow-Credentials: true
 Cache-Control: no-cache
@@ -447,18 +451,18 @@ X-Content-Type-Options: nosniff
 Etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
 Via: 1.1 vegur
 CF-Cache-Status: DYNAMIC
-Server-Timing: cf-q-config;dur=7.0000023697503e-06
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=r0U3gDQsTz57QRtdlUdpeC%2B9wBpfs7G5%2BQnF2mzbhQFhRteXNsha9jM6Hr%2Fye49HgQFHnkZVMoo8Wpd8J73KrH69U%2F1Y84W%2Bj5EN7fDIpySMGl00jqs3O%2BCM8lzXANISHEP5mwqeKNpzCocCIFbW"}],"group":"cf-nel","max_age":604800}
+Server-Timing: cf-q-config;dur=4.9999944167212e-06
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Xmwp44VH7iPgXM7yU5f35yObkPv4Jx%2FzBsZhEkLFvimu176TGYUmlFYYuqlEUssT%2FXZ8IuaXy%2FQ%2BWs%2BUpq%2BUHRstRzov8FrEi1sS4%2B9tr3uuaKY%2FvjKGsHGoXfuBXlNA2G%2FzFK%2FHQkHE5SQszTcA"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 78d449e7fe5cbf7b-WAW
+CF-RAY: 78d4fd92eddfbf5b-WAW
 alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
 
 {
     
 }
 
-    the post is deleted sucessfully with postid :1Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@2353354a
+    the post is deleted sucessfully with postid :1Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@70f5f57d
 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the post deleted&amp#27;[0m                                                   &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_post_deleted()&amp#27;[0m
 This will run after the Scenario
@@ -481,17 +485,18 @@ This will run after the Scenario
 &amp#27;[32m&amp#27;[1m└───────────────────────────────────────────────────────────────────────────────────┘&amp#27;[0m
 ]]></system-err>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.564">
+  <testcase name="Example #1.1" classname="Examples" time="0.376">
     <failure message="1 expectation failed.&#10;JSON path [0].name doesn&apos;t match.&#10;Expected: quo vero reiciendis velit similique earum&#10;  Actual: id labore ex et quam laborum&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
 1 expectation failed.
 JSON path [0].name doesn't match.
 Expected: quo vero reiciendis velit similique earum
   Actual: id labore ex et quam laborum
 
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
 	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
 	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
@@ -500,9 +505,9 @@ Expected: quo vero reiciendis velit similique earum
 	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
 	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at sun.reflect.GeneratedMethodAccessor143.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
+	at jdk.internal.reflect.GeneratedMethodAccessor194.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
 	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
@@ -528,10 +533,11 @@ JSON path [0].name doesn't match.
 Expected: quo vero reiciendis velit similique earum
   Actual: id labore ex et quam laborum
 
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
 	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
 	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
@@ -540,9 +546,9 @@ Expected: quo vero reiciendis velit similique earum
 	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
 	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at sun.reflect.GeneratedMethodAccessor143.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
+	at jdk.internal.reflect.GeneratedMethodAccessor194.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
 	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
@@ -557,7 +563,7 @@ Expected: quo vero reiciendis velit similique earum
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.587">
+  <testcase name="Example #1.1" classname="Examples" time="0.53">
     <system-out><![CDATA[
 @qa
 Scenario Outline: Posting the message                                                       &amp#27;[90m# src/main/resources/features/NewPostByExistingUser.feature:16&amp#27;[0m
@@ -580,32 +586,14 @@ Scenario Outline: Posting the message                                           
     "userId": 1,
     "body": "I am very happy posting in community",
     "title": "my first post",
-    "id": 101,
-    "height": 0
-}
-
-    Retreived response is :{
-      "userId": 1,
-      "body": "I am very happy posting in community",
-      "title": "my first post",
-      "id": 101,
-      "height": 0
-    }
-
-{
-    "userId": 1,
-    "body": "I am very happy posting in community",
-    "title": "my first post",
-    "id": 101,
-    "height": 0
+    "id": 101
 }
 
     validated the response and is :{
       "userId": 1,
       "body": "I am very happy posting in community",
       "title": "my first post",
-      "id": 101,
-      "height": 0
+      "id": 101
     }
 
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
@@ -620,19 +608,33 @@ Scenario Outline: Posting the message                                           
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.703">
+  <testcase name="Example #1.1" classname="Examples" time="0.652">
     <system-out><![CDATA[
-Scenario Outline: Updating the message using patching                                                                             &amp#27;[90m# src/main/resources/features/PatchingAnExistingResource.feature:14&amp#27;[0m
+Scenario Outline: Updating the message using patching                                                                                    &amp#27;[90m# src/main/resources/features/PatchingAnExistingResource.feature:14&amp#27;[0m
 
     Request to the end point:https://jsonplaceholder.typicode.com/posts
 
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                                                               &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                                                                      &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
 
     Setting header:Content-type=application/json; charset=UTF-8
 
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                                               &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                                                      &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
 POSTID: get 1
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m                                         &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
+{
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+}
+
+    Updating the existing resource data:{
+      "userId": 1,
+      "id": 1,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    }
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
 PATCHIND:1
 1****Asia****Asia  has Mount Everest****1****8849
 
@@ -641,23 +643,7 @@ PATCHIND:1
 
     Patching the an existing resource  :1:Asia:Asia  has Mount Everest
 
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mmy user id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Asia"&amp#27;[0m&amp#27;[32m posts &amp#27;[0m&amp#27;[32m&amp#27;[1m"Asia  has Mount Everest"&amp#27;[0m&amp#27;[32m to modify with patch where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m with mt height &amp#27;[0m&amp#27;[32m&amp#27;[1m8849&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.my_user_id_with_title_posts_to_modify_with_patch_where_post_id_is_with_mt_height(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)&amp#27;[0m
-{
-    "userId": 1,
-    "id": 1,
-    "title": "Asia",
-    "body": "Asia  has Mount Everest",
-    "height": 8849
-}
-
-    Retreived response is :{
-      "userId": 1,
-      "id": 1,
-      "title": "Asia",
-      "body": "Asia  has Mount Everest",
-      "height": 8849
-    }
-
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mmy user id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Asia"&amp#27;[0m&amp#27;[32m posts &amp#27;[0m&amp#27;[32m&amp#27;[1m"Asia  has Mount Everest"&amp#27;[0m&amp#27;[32m to modify with patch where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m with mt height &amp#27;[0m&amp#27;[32m&amp#27;[1m8849&amp#27;[0m&amp#27;[32m values&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.my_user_id_with_title_posts_to_modify_with_patch_where_post_id_is_with_mt_height_values(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)&amp#27;[0m
 {
     "userId": 1,
     "id": 1,
@@ -674,15 +660,31 @@ PATCHIND:1
       "height": 8849
     }
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                      &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                             &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+{
+    "userId": 1,
+    "id": 1,
+    "title": "Asia",
+    "body": "Asia  has Mount Everest",
+    "height": 8849
+}
+
+    patched response  is :{
+      "userId": 1,
+      "id": 1,
+      "title": "Asia",
+      "body": "Asia  has Mount Everest",
+      "height": 8849
+    }
+
 
     Patching the an existing resource is sucessful at postid :1
 
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the if patch is successful&amp#27;[0m                                                                                 &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_if_patch_is_successful()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the if patch is successful&amp#27;[0m                                                                                        &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_if_patch_is_successful()&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.592">
+  <testcase name="Example #1.1" classname="Examples" time="0.557">
     <system-out><![CDATA[
 Scenario Outline: Updating the message using put                                                                  &amp#27;[90m# src/main/resources/features/UpdatingAnExistingPost.feature:15&amp#27;[0m
 
@@ -694,6 +696,20 @@ Scenario Outline: Updating the message using put                                
 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                               &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
 POSTID: get 1
+{
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+}
+
+    Updating the existing resource data:{
+      "userId": 1,
+      "id": 1,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    }
+
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m                         &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
 
     Creating a PUT request with values : body:Mango Wood is very hard user ID:1 postID: 1 title:Mango Wood
@@ -706,32 +722,14 @@ POSTID: get 1
     "userId": 1,
     "body": "Mango Wood is very hard",
     "title": "Mango Wood",
-    "id": 1,
-    "height": 0
-}
-
-    Retreived response is :{
-      "userId": 1,
-      "body": "Mango Wood is very hard",
-      "title": "Mango Wood",
-      "id": 1,
-      "height": 0
-    }
-
-{
-    "userId": 1,
-    "body": "Mango Wood is very hard",
-    "title": "Mango Wood",
-    "id": 1,
-    "height": 0
+    "id": 1
 }
 
     validated the response and is :{
       "userId": 1,
       "body": "Mango Wood is very hard",
       "title": "Mango Wood",
-      "id": 1,
-      "height": 0
+      "id": 1
     }
 
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                      &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
@@ -742,7 +740,7 @@ POSTID: get 1
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.831">
+  <testcase name="Example #1.2" classname="Examples" time="0.86">
     <system-out><![CDATA[
 Scenario Outline: Deleting the post                                                       &amp#27;[90m# src/main/resources/features/DeleteAnExistingPost.feature:17&amp#27;[0m
 
@@ -754,6 +752,20 @@ Scenario Outline: Deleting the post                                             
 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
 POSTID: get 4
+{
+    "userId": 1,
+    "id": 4,
+    "title": "eum et est occaecati",
+    "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+}
+
+    Updating the existing resource data:{
+      "userId": 1,
+      "id": 4,
+      "title": "eum et est occaecati",
+      "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+    }
+
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
 
     Deleting the an existing resource  resource post :4
@@ -763,24 +775,18 @@ POSTID: get 4
     
 }
 
-    Retreived response is :{}
-
-{
-    
-}
-
     validated the response and is :{}
 
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
 HTTP/1.1 200 OK
-Date: Sun, 22 Jan 2023 00:49:05 GMT
+Date: Sun, 22 Jan 2023 02:51:45 GMT
 Content-Type: application/json; charset=utf-8
 Content-Length: 2
 Connection: keep-alive
 X-Powered-By: Express
 X-Ratelimit-Limit: 1000
 X-Ratelimit-Remaining: 998
-X-Ratelimit-Reset: 1674348583
+X-Ratelimit-Reset: 1674355963
 Vary: Origin, Accept-Encoding
 Access-Control-Allow-Credentials: true
 Cache-Control: no-cache
@@ -790,24 +796,24 @@ X-Content-Type-Options: nosniff
 Etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
 Via: 1.1 vegur
 CF-Cache-Status: DYNAMIC
-Server-Timing: cf-q-config;dur=7.0000023697503e-06
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=cggCfPXfcJookQCS3SO4R5%2BoFMAWAYRfuclzg98dGktFDCTwvL1m9u18aBys8Oq%2FpS2xZMyzttyD7LULOfTUX3fEluwFge3Vu9QjysPL3FxLxWRLnhldS7ZGhBDHqaNQWmtItOO7Qn391g9B2xBa"}],"group":"cf-nel","max_age":604800}
+Server-Timing: cf-q-config;dur=5.0000089686364e-06
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=oRFtzwV45T%2BmpkcwNyFQ17SGyjm15Y476iZTN43yc1tU4gnsPxA4z0WBwGe1puXOfWZ8NxBkn0gGpbrDKXXZqBPtjLyI9B08oa8HwvAPVMv%2Bfgqf6Ss%2BDhpHhrpLTPmIFrxjJ8OkB9f2NXdwTl3t"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 78d449aa9affbf74-WAW
+CF-RAY: 78d4fd591ebdbf6c-WAW
 alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
 
 {
     
 }
 
-    the post is deleted sucessfully with postid :4Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@4d0e54e0
+    the post is deleted sucessfully with postid :4Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@45e7bb79
 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the post deleted&amp#27;[0m                                                   &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_post_deleted()&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.621">
+  <testcase name="Example #1.2" classname="Examples" time="0.429">
     <system-out><![CDATA[
 Scenario Outline: I want to read the comments based on postid       &amp#27;[90m# src/main/resources/features/GetTheCommentsBasedonPostIDandUserID.feature:17&amp#27;[0m
 
@@ -820,19 +826,33 @@ Scenario Outline: I want to read the comments based on postid       &amp#27;[90m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.702">
+  <testcase name="Example #1.2" classname="Examples" time="0.74">
     <system-out><![CDATA[
-Scenario Outline: Updating the message using patching                                                                                     &amp#27;[90m# src/main/resources/features/PatchingAnExistingResource.feature:15&amp#27;[0m
+Scenario Outline: Updating the message using patching                                                                                            &amp#27;[90m# src/main/resources/features/PatchingAnExistingResource.feature:15&amp#27;[0m
 
     Request to the end point:https://jsonplaceholder.typicode.com/posts
 
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
 
     Setting header:Content-type=application/json; charset=UTF-8
 
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
 POSTID: get 2
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m                                                 &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
+{
+    "userId": 1,
+    "id": 2,
+    "title": "qui est esse",
+    "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+}
+
+    Updating the existing resource data:{
+      "userId": 1,
+      "id": 2,
+      "title": "qui est esse",
+      "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    }
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m                                                        &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
 PATCHIND:2
 1****NorthAmerica****NorthAmerica has Denail****2****6190
 
@@ -841,23 +861,7 @@ PATCHIND:2
 
     Patching the an existing resource  :1:NorthAmerica:NorthAmerica has Denail
 
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mmy user id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"NorthAmerica"&amp#27;[0m&amp#27;[32m posts &amp#27;[0m&amp#27;[32m&amp#27;[1m"NorthAmerica has Denail"&amp#27;[0m&amp#27;[32m to modify with patch where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with mt height &amp#27;[0m&amp#27;[32m&amp#27;[1m6190&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.my_user_id_with_title_posts_to_modify_with_patch_where_post_id_is_with_mt_height(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)&amp#27;[0m
-{
-    "userId": 1,
-    "id": 2,
-    "title": "NorthAmerica",
-    "body": "NorthAmerica has Denail",
-    "height": 6190
-}
-
-    Retreived response is :{
-      "userId": 1,
-      "id": 2,
-      "title": "NorthAmerica",
-      "body": "NorthAmerica has Denail",
-      "height": 6190
-    }
-
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mmy user id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"NorthAmerica"&amp#27;[0m&amp#27;[32m posts &amp#27;[0m&amp#27;[32m&amp#27;[1m"NorthAmerica has Denail"&amp#27;[0m&amp#27;[32m to modify with patch where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with mt height &amp#27;[0m&amp#27;[32m&amp#27;[1m6190&amp#27;[0m&amp#27;[32m values&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.my_user_id_with_title_posts_to_modify_with_patch_where_post_id_is_with_mt_height_values(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)&amp#27;[0m
 {
     "userId": 1,
     "id": 2,
@@ -874,15 +878,31 @@ PATCHIND:2
       "height": 6190
     }
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                                     &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+{
+    "userId": 1,
+    "id": 2,
+    "title": "NorthAmerica",
+    "body": "NorthAmerica has Denail",
+    "height": 6190
+}
+
+    patched response  is :{
+      "userId": 1,
+      "id": 2,
+      "title": "NorthAmerica",
+      "body": "NorthAmerica has Denail",
+      "height": 6190
+    }
+
 
     Patching the an existing resource is sucessful at postid :2
 
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the if patch is successful&amp#27;[0m                                                                                         &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_if_patch_is_successful()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the if patch is successful&amp#27;[0m                                                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_if_patch_is_successful()&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.596">
+  <testcase name="Example #1.2" classname="Examples" time="0.674">
     <system-out><![CDATA[
 Scenario Outline: Updating the message using put                                                                   &amp#27;[90m# src/main/resources/features/UpdatingAnExistingPost.feature:16&amp#27;[0m
 
@@ -894,6 +914,20 @@ Scenario Outline: Updating the message using put                                
 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
 POSTID: get 1
+{
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+}
+
+    Updating the existing resource data:{
+      "userId": 1,
+      "id": 1,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    }
+
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m                          &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
 
     Creating a PUT request with values : body:Teak wood is most durable user ID:2 postID: 1 title:Teak wood
@@ -906,32 +940,14 @@ POSTID: get 1
     "userId": 2,
     "body": "Teak wood is most durable",
     "title": "Teak wood",
-    "id": 1,
-    "height": 0
-}
-
-    Retreived response is :{
-      "userId": 2,
-      "body": "Teak wood is most durable",
-      "title": "Teak wood",
-      "id": 1,
-      "height": 0
-    }
-
-{
-    "userId": 2,
-    "body": "Teak wood is most durable",
-    "title": "Teak wood",
-    "id": 1,
-    "height": 0
+    "id": 1
 }
 
     validated the response and is :{
       "userId": 2,
       "body": "Teak wood is most durable",
       "title": "Teak wood",
-      "id": 1,
-      "height": 0
+      "id": 1
     }
 
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
@@ -942,7 +958,7 @@ POSTID: get 1
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.597">
+  <testcase name="Example #1.2" classname="Examples" time="0.727">
     <system-out><![CDATA[
 Scenario Outline: Deleting the post                                                       &amp#27;[90m# src/main/resources/features/DeleteAnExistingPost.feature:17&amp#27;[0m
 
@@ -954,6 +970,20 @@ Scenario Outline: Deleting the post                                             
 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
 POSTID: get 4
+{
+    "userId": 1,
+    "id": 4,
+    "title": "eum et est occaecati",
+    "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+}
+
+    Updating the existing resource data:{
+      "userId": 1,
+      "id": 4,
+      "title": "eum et est occaecati",
+      "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+    }
+
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
 
     Deleting the an existing resource  resource post :4
@@ -963,224 +993,18 @@ POSTID: get 4
     
 }
 
-    Retreived response is :{}
-
-{
-    
-}
-
     validated the response and is :{}
 
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
 HTTP/1.1 200 OK
-Date: Sun, 22 Jan 2023 00:49:16 GMT
+Date: Sun, 22 Jan 2023 02:51:55 GMT
 Content-Type: application/json; charset=utf-8
 Content-Length: 2
 Connection: keep-alive
 X-Powered-By: Express
 X-Ratelimit-Limit: 1000
-X-Ratelimit-Remaining: 986
-X-Ratelimit-Reset: 1674348583
-Vary: Origin, Accept-Encoding
-Access-Control-Allow-Credentials: true
-Cache-Control: no-cache
-Pragma: no-cache
-Expires: -1
-X-Content-Type-Options: nosniff
-Etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
-Via: 1.1 vegur
-CF-Cache-Status: DYNAMIC
-Server-Timing: cf-q-config;dur=6.9999950937927e-06
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=cluwSq7xe0b%2F5Gas3pDVCM%2FlTqYv4Ixq%2BQqqdwkgApDAcWrQevpgv%2FEBVN6PbNt%2Bjz7ifvnQZnP6e2jXGY%2FFkLzFS1%2BwqJb1BbIsc3TIQJcdkP%2FE78Q66bpf27IwIZpd5Z8%2BZJhaOHXWp52YzaNo"}],"group":"cf-nel","max_age":604800}
-NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
-Server: cloudflare
-CF-RAY: 78d449ebb939ffd0-WAW
-alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
-
-{
-    
-}
-
-    the post is deleted sucessfully with postid :4Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@5e0f2c82
-
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the post deleted&amp#27;[0m                                                   &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_post_deleted()&amp#27;[0m
-This will run after the Scenario
-]]></system-out>
-  </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.548">
-    <system-out><![CDATA[
-Scenario Outline: I want to read the comments based on postid       &amp#27;[90m# src/main/resources/features/GetTheCommentsBasedonPostIDandUserID.feature:17&amp#27;[0m
-
-    End point url of the posts is :https://jsonplaceholder.typicode.com/posts
-
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an user of the social network&amp#27;[0m                          &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_am_an_user_of_the_social_network()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI can access the posts&amp#27;[0m                                       &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_can_access_the_posts()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI want to get the &amp#27;[0m&amp#27;[32m&amp#27;[1m"comments"&amp#27;[0m&amp#27;[32m &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m                               &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_want_to_get_the(java.lang.String,java.lang.Integer)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mverify the details of comments made by userid &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with values &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_made_by_userid_with_values(java.lang.Integer,java.lang.Integer)&amp#27;[0m
-This will run after the Scenario
-]]></system-out>
-  </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.681">
-    <system-out><![CDATA[
-Scenario Outline: Updating the message using patching                                                                                     &amp#27;[90m# src/main/resources/features/PatchingAnExistingResource.feature:15&amp#27;[0m
-
-    Request to the end point:https://jsonplaceholder.typicode.com/posts
-
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
-
-    Setting header:Content-type=application/json; charset=UTF-8
-
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
-POSTID: get 2
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m                                                 &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
-PATCHIND:2
-1****NorthAmerica****NorthAmerica has Denail****2****6190
-
-    Creating a PATCH request with values : body:NorthAmerica has Denail user ID:1 postID: 2 title:NorthAmerica
-
-
-    Patching the an existing resource  :1:NorthAmerica:NorthAmerica has Denail
-
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mmy user id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"NorthAmerica"&amp#27;[0m&amp#27;[32m posts &amp#27;[0m&amp#27;[32m&amp#27;[1m"NorthAmerica has Denail"&amp#27;[0m&amp#27;[32m to modify with patch where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with mt height &amp#27;[0m&amp#27;[32m&amp#27;[1m6190&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.my_user_id_with_title_posts_to_modify_with_patch_where_post_id_is_with_mt_height(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)&amp#27;[0m
-{
-    "userId": 1,
-    "id": 2,
-    "title": "NorthAmerica",
-    "body": "NorthAmerica has Denail",
-    "height": 6190
-}
-
-    Retreived response is :{
-      "userId": 1,
-      "id": 2,
-      "title": "NorthAmerica",
-      "body": "NorthAmerica has Denail",
-      "height": 6190
-    }
-
-{
-    "userId": 1,
-    "id": 2,
-    "title": "NorthAmerica",
-    "body": "NorthAmerica has Denail",
-    "height": 6190
-}
-
-    validated the response and is :{
-      "userId": 1,
-      "id": 2,
-      "title": "NorthAmerica",
-      "body": "NorthAmerica has Denail",
-      "height": 6190
-    }
-
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
-
-    Patching the an existing resource is sucessful at postid :2
-
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the if patch is successful&amp#27;[0m                                                                                         &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_if_patch_is_successful()&amp#27;[0m
-This will run after the Scenario
-]]></system-out>
-  </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.59">
-    <system-out><![CDATA[
-Scenario Outline: Updating the message using put                                                                   &amp#27;[90m# src/main/resources/features/UpdatingAnExistingPost.feature:16&amp#27;[0m
-
-    Request to the end point:https://jsonplaceholder.typicode.com/posts
-
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
-
-    Setting header:Content-type=application/json; charset=UTF-8
-
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
-POSTID: get 1
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m                          &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
-
-    Creating a PUT request with values : body:Teak wood is most durable user ID:2 postID: 1 title:Teak wood
-
-
-    Updating an existing resource  resource post :2:Teak wood:Teak wood is most durable
-
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mmy user id &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Teak wood"&amp#27;[0m&amp#27;[32m posts &amp#27;[0m&amp#27;[32m&amp#27;[1m"Teak wood is most durable"&amp#27;[0m&amp#27;[32m to modify with put where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.my_user_id_with_title_posts_to_modify_with_put_where_post_id_is(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer)&amp#27;[0m
-{
-    "userId": 2,
-    "body": "Teak wood is most durable",
-    "title": "Teak wood",
-    "id": 1,
-    "height": 0
-}
-
-    Retreived response is :{
-      "userId": 2,
-      "body": "Teak wood is most durable",
-      "title": "Teak wood",
-      "id": 1,
-      "height": 0
-    }
-
-{
-    "userId": 2,
-    "body": "Teak wood is most durable",
-    "title": "Teak wood",
-    "id": 1,
-    "height": 0
-}
-
-    validated the response and is :{
-      "userId": 2,
-      "body": "Teak wood is most durable",
-      "title": "Teak wood",
-      "id": 1,
-      "height": 0
-    }
-
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
-
-    New post successfully created and validated, with status code and the postid is :200,1
-
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the log&amp#27;[0m                                                                                     &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_log()&amp#27;[0m
-This will run after the Scenario
-]]></system-out>
-  </testcase>
-  <testcase name="Example #1.3" classname="Examples" time="0.701">
-    <system-out><![CDATA[
-Scenario Outline: Deleting the post                                                       &amp#27;[90m# src/main/resources/features/DeleteAnExistingPost.feature:18&amp#27;[0m
-
-    Request to the end point:https://jsonplaceholder.typicode.com/posts
-
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
-
-    Setting header:Content-type=application/json; charset=UTF-8
-
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
-POSTID: get 2
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
-
-    Deleting the an existing resource  resource post :2
-
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mdelete where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m                                                          &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.delete_where_post_id_is(java.lang.Integer)&amp#27;[0m
-{
-    
-}
-
-    Retreived response is :{}
-
-{
-    
-}
-
-    validated the response and is :{}
-
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
-HTTP/1.1 200 OK
-Date: Sun, 22 Jan 2023 00:49:06 GMT
-Content-Type: application/json; charset=utf-8
-Content-Length: 2
-Connection: keep-alive
-X-Powered-By: Express
-X-Ratelimit-Limit: 1000
-X-Ratelimit-Remaining: 997
-X-Ratelimit-Reset: 1674348583
+X-Ratelimit-Remaining: 987
+X-Ratelimit-Reset: 1674355963
 Vary: Origin, Accept-Encoding
 Access-Control-Allow-Credentials: true
 Cache-Control: no-cache
@@ -1191,145 +1015,168 @@ Etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
 Via: 1.1 vegur
 CF-Cache-Status: DYNAMIC
 Server-Timing: cf-q-config;dur=5.0000016926788e-06
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=MRdRPiDM2VAjTGDwQ6Ke4vYyHJoouf4uDKMedUbas3Cfxnq%2FWSKIpgurBdxVcmbR3va3hk0qHps2B3sHDM0HBPzz8HTIiYnpvI%2BVZputV6BF0szP98yIpWslWTWpnzlaDHqC52aj2AkpCverp%2FAJ"}],"group":"cf-nel","max_age":604800}
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=63FnbNiUt8EJlMHVx3iBR2iaTG%2FXCPa1jrUr31nT5vzZwzSS%2FHhyxT1NFNR4W%2FCtuQwUZPK6xAlPzuGg0QZKyf2Qe6Qhi9yiZIgjCmgbiH0PC2SSVfSxb2pi3W5nvDlZ7QCETuvklN4rCHYPyjHM"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 78d449aefdc10046-WAW
+CF-RAY: 78d4fd9708b2bfab-WAW
 alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
 
 {
     
 }
 
-    the post is deleted sucessfully with postid :2Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@2404b5a
+    the post is deleted sucessfully with postid :4Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@66589252
 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the post deleted&amp#27;[0m                                                   &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_post_deleted()&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.3" classname="Examples" time="0.728">
+  <testcase name="Example #1.2" classname="Examples" time="0.339">
     <system-out><![CDATA[
-Scenario Outline: Updating the message using patching                                                                              &amp#27;[90m# src/main/resources/features/PatchingAnExistingResource.feature:16&amp#27;[0m
+Scenario Outline: I want to read the comments based on postid       &amp#27;[90m# src/main/resources/features/GetTheCommentsBasedonPostIDandUserID.feature:17&amp#27;[0m
 
-    Request to the end point:https://jsonplaceholder.typicode.com/posts
+    End point url of the posts is :https://jsonplaceholder.typicode.com/posts
 
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
-
-    Setting header:Content-type=application/json; charset=UTF-8
-
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
-POSTID: get 3
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m3&amp#27;[0m                                          &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
-PATCHIND:3
-1****Africa****Africa has KiliManjaro****3****5895
-
-    Creating a PATCH request with values : body:Africa has KiliManjaro user ID:1 postID: 3 title:Africa
-
-
-    Patching the an existing resource  :1:Africa:Africa has KiliManjaro
-
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mmy user id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Africa"&amp#27;[0m&amp#27;[32m posts &amp#27;[0m&amp#27;[32m&amp#27;[1m"Africa has KiliManjaro"&amp#27;[0m&amp#27;[32m to modify with patch where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m3&amp#27;[0m&amp#27;[32m with mt height &amp#27;[0m&amp#27;[32m&amp#27;[1m5895&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.my_user_id_with_title_posts_to_modify_with_patch_where_post_id_is_with_mt_height(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)&amp#27;[0m
-{
-    "userId": 1,
-    "id": 3,
-    "title": "Africa",
-    "body": "Africa has KiliManjaro",
-    "height": 5895
-}
-
-    Retreived response is :{
-      "userId": 1,
-      "id": 3,
-      "title": "Africa",
-      "body": "Africa has KiliManjaro",
-      "height": 5895
-    }
-
-{
-    "userId": 1,
-    "id": 3,
-    "title": "Africa",
-    "body": "Africa has KiliManjaro",
-    "height": 5895
-}
-
-    validated the response and is :{
-      "userId": 1,
-      "id": 3,
-      "title": "Africa",
-      "body": "Africa has KiliManjaro",
-      "height": 5895
-    }
-
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
-
-    Patching the an existing resource is sucessful at postid :3
-
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the if patch is successful&amp#27;[0m                                                                                  &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_if_patch_is_successful()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an user of the social network&amp#27;[0m                          &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_am_an_user_of_the_social_network()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI can access the posts&amp#27;[0m                                       &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_can_access_the_posts()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI want to get the &amp#27;[0m&amp#27;[32m&amp#27;[1m"comments"&amp#27;[0m&amp#27;[32m &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m                               &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_want_to_get_the(java.lang.String,java.lang.Integer)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mverify the details of comments made by userid &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with values &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_made_by_userid_with_values(java.lang.Integer,java.lang.Integer)&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.3" classname="Examples" time="0.617">
+  <testcase name="Example #1.2" classname="Examples" time="0.661">
     <system-out><![CDATA[
-Scenario Outline: Updating the message using put                                                                               &amp#27;[90m# src/main/resources/features/UpdatingAnExistingPost.feature:17&amp#27;[0m
+Scenario Outline: Updating the message using patching                                                                                            &amp#27;[90m# src/main/resources/features/PatchingAnExistingResource.feature:15&amp#27;[0m
 
     Request to the end point:https://jsonplaceholder.typicode.com/posts
 
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                                                            &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
 
     Setting header:Content-type=application/json; charset=UTF-8
 
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                                            &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
-POSTID: get 1
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m                                      &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
-
-    Creating a PUT request with values : body:Acacia is an extremely durable wood user ID:2 postID: 1 title:Acacia Wood
-
-
-    Updating an existing resource  resource post :2:Acacia Wood:Acacia is an extremely durable wood
-
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mmy user id &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Acacia Wood"&amp#27;[0m&amp#27;[32m posts &amp#27;[0m&amp#27;[32m&amp#27;[1m"Acacia is an extremely durable wood"&amp#27;[0m&amp#27;[32m to modify with put where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.my_user_id_with_title_posts_to_modify_with_put_where_post_id_is(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
+POSTID: get 2
 {
-    "userId": 2,
-    "body": "Acacia is an extremely durable wood",
-    "title": "Acacia Wood",
-    "id": 1,
-    "height": 0
+    "userId": 1,
+    "id": 2,
+    "title": "qui est esse",
+    "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
 }
 
-    Retreived response is :{
-      "userId": 2,
-      "body": "Acacia is an extremely durable wood",
-      "title": "Acacia Wood",
-      "id": 1,
-      "height": 0
+    Updating the existing resource data:{
+      "userId": 1,
+      "id": 2,
+      "title": "qui est esse",
+      "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
     }
 
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m                                                        &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
+PATCHIND:2
+1****NorthAmerica****NorthAmerica has Denail****2****6190
+
+    Creating a PATCH request with values : body:NorthAmerica has Denail user ID:1 postID: 2 title:NorthAmerica
+
+
+    Patching the an existing resource  :1:NorthAmerica:NorthAmerica has Denail
+
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mmy user id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"NorthAmerica"&amp#27;[0m&amp#27;[32m posts &amp#27;[0m&amp#27;[32m&amp#27;[1m"NorthAmerica has Denail"&amp#27;[0m&amp#27;[32m to modify with patch where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with mt height &amp#27;[0m&amp#27;[32m&amp#27;[1m6190&amp#27;[0m&amp#27;[32m values&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.my_user_id_with_title_posts_to_modify_with_patch_where_post_id_is_with_mt_height_values(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)&amp#27;[0m
+{
+    "userId": 1,
+    "id": 2,
+    "title": "NorthAmerica",
+    "body": "NorthAmerica has Denail",
+    "height": 6190
+}
+
+    validated the response and is :{
+      "userId": 1,
+      "id": 2,
+      "title": "NorthAmerica",
+      "body": "NorthAmerica has Denail",
+      "height": 6190
+    }
+
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                                     &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+{
+    "userId": 1,
+    "id": 2,
+    "title": "NorthAmerica",
+    "body": "NorthAmerica has Denail",
+    "height": 6190
+}
+
+    patched response  is :{
+      "userId": 1,
+      "id": 2,
+      "title": "NorthAmerica",
+      "body": "NorthAmerica has Denail",
+      "height": 6190
+    }
+
+
+    Patching the an existing resource is sucessful at postid :2
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the if patch is successful&amp#27;[0m                                                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_if_patch_is_successful()&amp#27;[0m
+This will run after the Scenario
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="0.605">
+    <system-out><![CDATA[
+Scenario Outline: Updating the message using put                                                                   &amp#27;[90m# src/main/resources/features/UpdatingAnExistingPost.feature:16&amp#27;[0m
+
+    Request to the end point:https://jsonplaceholder.typicode.com/posts
+
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
+
+    Setting header:Content-type=application/json; charset=UTF-8
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
+POSTID: get 1
+{
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+}
+
+    Updating the existing resource data:{
+      "userId": 1,
+      "id": 1,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    }
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m                          &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
+
+    Creating a PUT request with values : body:Teak wood is most durable user ID:2 postID: 1 title:Teak wood
+
+
+    Updating an existing resource  resource post :2:Teak wood:Teak wood is most durable
+
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mmy user id &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Teak wood"&amp#27;[0m&amp#27;[32m posts &amp#27;[0m&amp#27;[32m&amp#27;[1m"Teak wood is most durable"&amp#27;[0m&amp#27;[32m to modify with put where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.my_user_id_with_title_posts_to_modify_with_put_where_post_id_is(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer)&amp#27;[0m
 {
     "userId": 2,
-    "body": "Acacia is an extremely durable wood",
-    "title": "Acacia Wood",
-    "id": 1,
-    "height": 0
+    "body": "Teak wood is most durable",
+    "title": "Teak wood",
+    "id": 1
 }
 
     validated the response and is :{
       "userId": 2,
-      "body": "Acacia is an extremely durable wood",
-      "title": "Acacia Wood",
-      "id": 1,
-      "height": 0
+      "body": "Teak wood is most durable",
+      "title": "Teak wood",
+      "id": 1
     }
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                   &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
 
     New post successfully created and validated, with status code and the postid is :200,1
 
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the log&amp#27;[0m                                                                                                 &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_log()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the log&amp#27;[0m                                                                                     &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_log()&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.3" classname="Examples" time="0.606">
+  <testcase name="Example #1.3" classname="Examples" time="0.676">
     <system-out><![CDATA[
 Scenario Outline: Deleting the post                                                       &amp#27;[90m# src/main/resources/features/DeleteAnExistingPost.feature:18&amp#27;[0m
 
@@ -1341,6 +1188,20 @@ Scenario Outline: Deleting the post                                             
 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
 POSTID: get 2
+{
+    "userId": 1,
+    "id": 2,
+    "title": "qui est esse",
+    "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+}
+
+    Updating the existing resource data:{
+      "userId": 1,
+      "id": 2,
+      "title": "qui est esse",
+      "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    }
+
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
 
     Deleting the an existing resource  resource post :2
@@ -1350,24 +1211,18 @@ POSTID: get 2
     
 }
 
-    Retreived response is :{}
-
-{
-    
-}
-
     validated the response and is :{}
 
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
 HTTP/1.1 200 OK
-Date: Sun, 22 Jan 2023 00:49:16 GMT
+Date: Sun, 22 Jan 2023 02:51:46 GMT
 Content-Type: application/json; charset=utf-8
 Content-Length: 2
 Connection: keep-alive
 X-Powered-By: Express
 X-Ratelimit-Limit: 1000
-X-Ratelimit-Remaining: 985
-X-Ratelimit-Reset: 1674348583
+X-Ratelimit-Remaining: 997
+X-Ratelimit-Reset: 1674355963
 Vary: Origin, Accept-Encoding
 Access-Control-Allow-Credentials: true
 Cache-Control: no-cache
@@ -1378,35 +1233,49 @@ Etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
 Via: 1.1 vegur
 CF-Cache-Status: DYNAMIC
 Server-Timing: cf-q-config;dur=6.0000020312145e-06
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=nr5w4hxd8wkau4FyAQABrJFXD%2BcOU8gjYN9AwKeXBIrNWxnfbj9TnQ%2BFnC%2BUxiRKCVHVcqy0zMYQDlOKAgExXF0jF58N3ZrXWYTLOyxhKz9J4jLbiWdTBI%2FyydCWxpb4ZPw3P5z0xWAD6Yjal%2Fw%2B"}],"group":"cf-nel","max_age":604800}
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=wrcfraTCo0SBNmC2CDMWN%2F%2B0uO%2BE2NngIwlMASfsdnQilvOZUgR69WdINRgUDC7QAgfSBWRAYQKYUssZ2ONzQwojZk7QfQX5bf3NhPIzd44hyGzl%2BJpIVTGNZvVj%2BzHyFja%2B3GO6D6JgLecPKC4k"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 78d449ef8c48bfb4-WAW
+CF-RAY: 78d4fd5e4811fbe6-WAW
 alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
 
 {
     
 }
 
-    the post is deleted sucessfully with postid :2Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@30dd00b6
+    the post is deleted sucessfully with postid :2Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@3ad847f8
 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the post deleted&amp#27;[0m                                                   &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_post_deleted()&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.3" classname="Examples" time="0.607">
+  <testcase name="Example #1.3" classname="Examples" time="0.697">
     <system-out><![CDATA[
-Scenario Outline: Updating the message using patching                                                                              &amp#27;[90m# src/main/resources/features/PatchingAnExistingResource.feature:16&amp#27;[0m
+Scenario Outline: Updating the message using patching                                                                                     &amp#27;[90m# src/main/resources/features/PatchingAnExistingResource.feature:16&amp#27;[0m
 
     Request to the end point:https://jsonplaceholder.typicode.com/posts
 
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
 
     Setting header:Content-type=application/json; charset=UTF-8
 
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
 POSTID: get 3
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m3&amp#27;[0m                                          &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
+{
+    "userId": 1,
+    "id": 3,
+    "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+    "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+}
+
+    Updating the existing resource data:{
+      "userId": 1,
+      "id": 3,
+      "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+      "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+    }
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m3&amp#27;[0m                                                 &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
 PATCHIND:3
 1****Africa****Africa has KiliManjaro****3****5895
 
@@ -1415,23 +1284,7 @@ PATCHIND:3
 
     Patching the an existing resource  :1:Africa:Africa has KiliManjaro
 
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mmy user id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Africa"&amp#27;[0m&amp#27;[32m posts &amp#27;[0m&amp#27;[32m&amp#27;[1m"Africa has KiliManjaro"&amp#27;[0m&amp#27;[32m to modify with patch where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m3&amp#27;[0m&amp#27;[32m with mt height &amp#27;[0m&amp#27;[32m&amp#27;[1m5895&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.my_user_id_with_title_posts_to_modify_with_patch_where_post_id_is_with_mt_height(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)&amp#27;[0m
-{
-    "userId": 1,
-    "id": 3,
-    "title": "Africa",
-    "body": "Africa has KiliManjaro",
-    "height": 5895
-}
-
-    Retreived response is :{
-      "userId": 1,
-      "id": 3,
-      "title": "Africa",
-      "body": "Africa has KiliManjaro",
-      "height": 5895
-    }
-
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mmy user id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Africa"&amp#27;[0m&amp#27;[32m posts &amp#27;[0m&amp#27;[32m&amp#27;[1m"Africa has KiliManjaro"&amp#27;[0m&amp#27;[32m to modify with patch where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m3&amp#27;[0m&amp#27;[32m with mt height &amp#27;[0m&amp#27;[32m&amp#27;[1m5895&amp#27;[0m&amp#27;[32m values&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.my_user_id_with_title_posts_to_modify_with_patch_where_post_id_is_with_mt_height_values(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)&amp#27;[0m
 {
     "userId": 1,
     "id": 3,
@@ -1448,15 +1301,31 @@ PATCHIND:3
       "height": 5895
     }
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+{
+    "userId": 1,
+    "id": 3,
+    "title": "Africa",
+    "body": "Africa has KiliManjaro",
+    "height": 5895
+}
+
+    patched response  is :{
+      "userId": 1,
+      "id": 3,
+      "title": "Africa",
+      "body": "Africa has KiliManjaro",
+      "height": 5895
+    }
+
 
     Patching the an existing resource is sucessful at postid :3
 
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the if patch is successful&amp#27;[0m                                                                                  &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_if_patch_is_successful()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the if patch is successful&amp#27;[0m                                                                                         &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_if_patch_is_successful()&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.3" classname="Examples" time="0.59">
+  <testcase name="Example #1.3" classname="Examples" time="0.652">
     <system-out><![CDATA[
 Scenario Outline: Updating the message using put                                                                               &amp#27;[90m# src/main/resources/features/UpdatingAnExistingPost.feature:17&amp#27;[0m
 
@@ -1468,6 +1337,20 @@ Scenario Outline: Updating the message using put                                
 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                                            &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
 POSTID: get 1
+{
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+}
+
+    Updating the existing resource data:{
+      "userId": 1,
+      "id": 1,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    }
+
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m                                      &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
 
     Creating a PUT request with values : body:Acacia is an extremely durable wood user ID:2 postID: 1 title:Acacia Wood
@@ -1480,32 +1363,14 @@ POSTID: get 1
     "userId": 2,
     "body": "Acacia is an extremely durable wood",
     "title": "Acacia Wood",
-    "id": 1,
-    "height": 0
-}
-
-    Retreived response is :{
-      "userId": 2,
-      "body": "Acacia is an extremely durable wood",
-      "title": "Acacia Wood",
-      "id": 1,
-      "height": 0
-    }
-
-{
-    "userId": 2,
-    "body": "Acacia is an extremely durable wood",
-    "title": "Acacia Wood",
-    "id": 1,
-    "height": 0
+    "id": 1
 }
 
     validated the response and is :{
       "userId": 2,
       "body": "Acacia is an extremely durable wood",
       "title": "Acacia Wood",
-      "id": 1,
-      "height": 0
+      "id": 1
     }
 
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                   &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
@@ -1516,19 +1381,238 @@ POSTID: get 1
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.4" classname="Examples" time="0.645">
+  <testcase name="Example #1.3" classname="Examples" time="0.619">
     <system-out><![CDATA[
-Scenario Outline: Updating the message using patching                                                                              &amp#27;[90m# src/main/resources/features/PatchingAnExistingResource.feature:17&amp#27;[0m
+Scenario Outline: Deleting the post                                                       &amp#27;[90m# src/main/resources/features/DeleteAnExistingPost.feature:18&amp#27;[0m
 
     Request to the end point:https://jsonplaceholder.typicode.com/posts
 
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
 
     Setting header:Content-type=application/json; charset=UTF-8
 
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
+POSTID: get 2
+{
+    "userId": 1,
+    "id": 2,
+    "title": "qui est esse",
+    "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+}
+
+    Updating the existing resource data:{
+      "userId": 1,
+      "id": 2,
+      "title": "qui est esse",
+      "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    }
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
+
+    Deleting the an existing resource  resource post :2
+
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mdelete where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m                                                          &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.delete_where_post_id_is(java.lang.Integer)&amp#27;[0m
+{
+    
+}
+
+    validated the response and is :{}
+
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+HTTP/1.1 200 OK
+Date: Sun, 22 Jan 2023 02:51:56 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 2
+Connection: keep-alive
+X-Powered-By: Express
+X-Ratelimit-Limit: 1000
+X-Ratelimit-Remaining: 986
+X-Ratelimit-Reset: 1674355963
+Vary: Origin, Accept-Encoding
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: -1
+X-Content-Type-Options: nosniff
+Etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
+Via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+Server-Timing: cf-q-config;dur=5.0000016926788e-06
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=KWnBWfmfK8gx%2FxN2WAe0WzT2cQvKSVb5tUhK1OuD%2FFRI9lwHu2td2z9FhAtlINgh6BSqGK8OfCHp1NfQZsFucP2aH5RIICvbA8HxK8%2FNzABW9gA0NKAVQWwYLfbw3kiRTh40G2Mem7IYimf0JUmP"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 78d4fd9bcea3bfe6-WAW
+alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+
+{
+    
+}
+
+    the post is deleted sucessfully with postid :2Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@4d66cb
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the post deleted&amp#27;[0m                                                   &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_post_deleted()&amp#27;[0m
+This will run after the Scenario
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.3" classname="Examples" time="0.706">
+    <system-out><![CDATA[
+Scenario Outline: Updating the message using patching                                                                                     &amp#27;[90m# src/main/resources/features/PatchingAnExistingResource.feature:16&amp#27;[0m
+
+    Request to the end point:https://jsonplaceholder.typicode.com/posts
+
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
+
+    Setting header:Content-type=application/json; charset=UTF-8
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
+POSTID: get 3
+{
+    "userId": 1,
+    "id": 3,
+    "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+    "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+}
+
+    Updating the existing resource data:{
+      "userId": 1,
+      "id": 3,
+      "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+      "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+    }
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m3&amp#27;[0m                                                 &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
+PATCHIND:3
+1****Africa****Africa has KiliManjaro****3****5895
+
+    Creating a PATCH request with values : body:Africa has KiliManjaro user ID:1 postID: 3 title:Africa
+
+
+    Patching the an existing resource  :1:Africa:Africa has KiliManjaro
+
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mmy user id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Africa"&amp#27;[0m&amp#27;[32m posts &amp#27;[0m&amp#27;[32m&amp#27;[1m"Africa has KiliManjaro"&amp#27;[0m&amp#27;[32m to modify with patch where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m3&amp#27;[0m&amp#27;[32m with mt height &amp#27;[0m&amp#27;[32m&amp#27;[1m5895&amp#27;[0m&amp#27;[32m values&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.my_user_id_with_title_posts_to_modify_with_patch_where_post_id_is_with_mt_height_values(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)&amp#27;[0m
+{
+    "userId": 1,
+    "id": 3,
+    "title": "Africa",
+    "body": "Africa has KiliManjaro",
+    "height": 5895
+}
+
+    validated the response and is :{
+      "userId": 1,
+      "id": 3,
+      "title": "Africa",
+      "body": "Africa has KiliManjaro",
+      "height": 5895
+    }
+
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+{
+    "userId": 1,
+    "id": 3,
+    "title": "Africa",
+    "body": "Africa has KiliManjaro",
+    "height": 5895
+}
+
+    patched response  is :{
+      "userId": 1,
+      "id": 3,
+      "title": "Africa",
+      "body": "Africa has KiliManjaro",
+      "height": 5895
+    }
+
+
+    Patching the an existing resource is sucessful at postid :3
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the if patch is successful&amp#27;[0m                                                                                         &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_if_patch_is_successful()&amp#27;[0m
+This will run after the Scenario
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.3" classname="Examples" time="0.553">
+    <system-out><![CDATA[
+Scenario Outline: Updating the message using put                                                                               &amp#27;[90m# src/main/resources/features/UpdatingAnExistingPost.feature:17&amp#27;[0m
+
+    Request to the end point:https://jsonplaceholder.typicode.com/posts
+
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                                                            &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
+
+    Setting header:Content-type=application/json; charset=UTF-8
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                                            &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
+POSTID: get 1
+{
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+}
+
+    Updating the existing resource data:{
+      "userId": 1,
+      "id": 1,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    }
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m                                      &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
+
+    Creating a PUT request with values : body:Acacia is an extremely durable wood user ID:2 postID: 1 title:Acacia Wood
+
+
+    Updating an existing resource  resource post :2:Acacia Wood:Acacia is an extremely durable wood
+
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mmy user id &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Acacia Wood"&amp#27;[0m&amp#27;[32m posts &amp#27;[0m&amp#27;[32m&amp#27;[1m"Acacia is an extremely durable wood"&amp#27;[0m&amp#27;[32m to modify with put where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.my_user_id_with_title_posts_to_modify_with_put_where_post_id_is(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer)&amp#27;[0m
+{
+    "userId": 2,
+    "body": "Acacia is an extremely durable wood",
+    "title": "Acacia Wood",
+    "id": 1
+}
+
+    validated the response and is :{
+      "userId": 2,
+      "body": "Acacia is an extremely durable wood",
+      "title": "Acacia Wood",
+      "id": 1
+    }
+
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                   &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+
+    New post successfully created and validated, with status code and the postid is :200,1
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the log&amp#27;[0m                                                                                                 &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_log()&amp#27;[0m
+This will run after the Scenario
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.4" classname="Examples" time="0.724">
+    <system-out><![CDATA[
+Scenario Outline: Updating the message using patching                                                                                     &amp#27;[90m# src/main/resources/features/PatchingAnExistingResource.feature:17&amp#27;[0m
+
+    Request to the end point:https://jsonplaceholder.typicode.com/posts
+
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
+
+    Setting header:Content-type=application/json; charset=UTF-8
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
 POSTID: get 11
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m11&amp#27;[0m                                         &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
+{
+    "userId": 2,
+    "id": 11,
+    "title": "et ea vero quia laudantium autem",
+    "body": "delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\naccusamus in eum beatae sit\nvel qui neque voluptates ut commodi qui incidunt\nut animi commodi"
+}
+
+    Updating the existing resource data:{
+      "userId": 2,
+      "id": 11,
+      "title": "et ea vero quia laudantium autem",
+      "body": "delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\naccusamus in eum beatae sit\nvel qui neque voluptates ut commodi qui incidunt\nut animi commodi"
+    }
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m11&amp#27;[0m                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
 PATCHIND:11
 2****Europe****Europe has Mont Blanc****11****4809
 
@@ -1537,23 +1621,7 @@ PATCHIND:11
 
     Patching the an existing resource  :2:Europe:Europe has Mont Blanc
 
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mmy user id &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Europe"&amp#27;[0m&amp#27;[32m posts &amp#27;[0m&amp#27;[32m&amp#27;[1m"Europe has Mont Blanc"&amp#27;[0m&amp#27;[32m to modify with patch where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m11&amp#27;[0m&amp#27;[32m with mt height &amp#27;[0m&amp#27;[32m&amp#27;[1m4809&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.my_user_id_with_title_posts_to_modify_with_patch_where_post_id_is_with_mt_height(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)&amp#27;[0m
-{
-    "userId": 2,
-    "id": 11,
-    "title": "Europe",
-    "body": "Europe has Mont Blanc",
-    "height": 4809
-}
-
-    Retreived response is :{
-      "userId": 2,
-      "id": 11,
-      "title": "Europe",
-      "body": "Europe has Mont Blanc",
-      "height": 4809
-    }
-
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mmy user id &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Europe"&amp#27;[0m&amp#27;[32m posts &amp#27;[0m&amp#27;[32m&amp#27;[1m"Europe has Mont Blanc"&amp#27;[0m&amp#27;[32m to modify with patch where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m11&amp#27;[0m&amp#27;[32m with mt height &amp#27;[0m&amp#27;[32m&amp#27;[1m4809&amp#27;[0m&amp#27;[32m values&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.my_user_id_with_title_posts_to_modify_with_patch_where_post_id_is_with_mt_height_values(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)&amp#27;[0m
 {
     "userId": 2,
     "id": 11,
@@ -1570,36 +1638,7 @@ PATCHIND:11
       "height": 4809
     }
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
-
-    Patching the an existing resource is sucessful at postid :11
-
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the if patch is successful&amp#27;[0m                                                                                  &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_if_patch_is_successful()&amp#27;[0m
-This will run after the Scenario
-]]></system-out>
-  </testcase>
-  <testcase name="Example #1.4" classname="Examples" time="0.607">
-    <system-out><![CDATA[
-Scenario Outline: Updating the message using patching                                                                              &amp#27;[90m# src/main/resources/features/PatchingAnExistingResource.feature:17&amp#27;[0m
-
-    Request to the end point:https://jsonplaceholder.typicode.com/posts
-
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
-
-    Setting header:Content-type=application/json; charset=UTF-8
-
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
-POSTID: get 11
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m11&amp#27;[0m                                         &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
-PATCHIND:11
-2****Europe****Europe has Mont Blanc****11****4809
-
-    Creating a PATCH request with values : body:Europe has Mont Blanc user ID:2 postID: 11 title:Europe
-
-
-    Patching the an existing resource  :2:Europe:Europe has Mont Blanc
-
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mmy user id &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Europe"&amp#27;[0m&amp#27;[32m posts &amp#27;[0m&amp#27;[32m&amp#27;[1m"Europe has Mont Blanc"&amp#27;[0m&amp#27;[32m to modify with patch where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m11&amp#27;[0m&amp#27;[32m with mt height &amp#27;[0m&amp#27;[32m&amp#27;[1m4809&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.my_user_id_with_title_posts_to_modify_with_patch_where_post_id_is_with_mt_height(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
 {
     "userId": 2,
     "id": 11,
@@ -1608,7 +1647,7 @@ PATCHIND:11
     "height": 4809
 }
 
-    Retreived response is :{
+    patched response  is :{
       "userId": 2,
       "id": 11,
       "title": "Europe",
@@ -1616,6 +1655,49 @@ PATCHIND:11
       "height": 4809
     }
 
+
+    Patching the an existing resource is sucessful at postid :11
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the if patch is successful&amp#27;[0m                                                                                         &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_if_patch_is_successful()&amp#27;[0m
+This will run after the Scenario
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.4" classname="Examples" time="0.684">
+    <system-out><![CDATA[
+Scenario Outline: Updating the message using patching                                                                                     &amp#27;[90m# src/main/resources/features/PatchingAnExistingResource.feature:17&amp#27;[0m
+
+    Request to the end point:https://jsonplaceholder.typicode.com/posts
+
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
+
+    Setting header:Content-type=application/json; charset=UTF-8
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
+POSTID: get 11
+{
+    "userId": 2,
+    "id": 11,
+    "title": "et ea vero quia laudantium autem",
+    "body": "delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\naccusamus in eum beatae sit\nvel qui neque voluptates ut commodi qui incidunt\nut animi commodi"
+}
+
+    Updating the existing resource data:{
+      "userId": 2,
+      "id": 11,
+      "title": "et ea vero quia laudantium autem",
+      "body": "delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\naccusamus in eum beatae sit\nvel qui neque voluptates ut commodi qui incidunt\nut animi commodi"
+    }
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mwhen I get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m11&amp#27;[0m                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
+PATCHIND:11
+2****Europe****Europe has Mont Blanc****11****4809
+
+    Creating a PATCH request with values : body:Europe has Mont Blanc user ID:2 postID: 11 title:Europe
+
+
+    Patching the an existing resource  :2:Europe:Europe has Mont Blanc
+
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mmy user id &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Europe"&amp#27;[0m&amp#27;[32m posts &amp#27;[0m&amp#27;[32m&amp#27;[1m"Europe has Mont Blanc"&amp#27;[0m&amp#27;[32m to modify with patch where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m11&amp#27;[0m&amp#27;[32m with mt height &amp#27;[0m&amp#27;[32m&amp#27;[1m4809&amp#27;[0m&amp#27;[32m values&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.my_user_id_with_title_posts_to_modify_with_patch_where_post_id_is_with_mt_height_values(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)&amp#27;[0m
 {
     "userId": 2,
     "id": 11,
@@ -1632,15 +1714,31 @@ PATCHIND:11
       "height": 4809
     }
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+{
+    "userId": 2,
+    "id": 11,
+    "title": "Europe",
+    "body": "Europe has Mont Blanc",
+    "height": 4809
+}
+
+    patched response  is :{
+      "userId": 2,
+      "id": 11,
+      "title": "Europe",
+      "body": "Europe has Mont Blanc",
+      "height": 4809
+    }
+
 
     Patching the an existing resource is sucessful at postid :11
 
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the if patch is successful&amp#27;[0m                                                                                  &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_if_patch_is_successful()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the if patch is successful&amp#27;[0m                                                                                         &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_if_patch_is_successful()&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="verify the comments under single post" classname="I want to verify endpoint services using different query parameters" time="0.295">
+  <testcase name="verify the comments under single post" classname="I want to verify endpoint services using different query parameters" time="0.217">
     <system-out><![CDATA[
 Scenario: verify the comments under single post             &amp#27;[90m# src/main/resources/features/FilteringthroughQueryParams.feature:10&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am a user&amp#27;[0m                                         &amp#27;[90m# StepDefinations.FilterOptionsDefinations.i_am_a_user()&amp#27;[0m
@@ -1698,7 +1796,7 @@ Scenario: verify the comments under single post             &amp#27;[90m# src/ma
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="verify the comments under single post" classname="I want to verify endpoint services using different query parameters" time="0.186">
+  <testcase name="verify the comments under single post" classname="I want to verify endpoint services using different query parameters" time="0.137">
     <system-out><![CDATA[
 Scenario: verify the comments under single post             &amp#27;[90m# src/main/resources/features/FilteringthroughQueryParams.feature:10&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am a user&amp#27;[0m                                         &amp#27;[90m# StepDefinations.FilterOptionsDefinations.i_am_a_user()&amp#27;[0m
@@ -1756,7 +1854,7 @@ Scenario: verify the comments under single post             &amp#27;[90m# src/ma
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="verify the posts by a user" classname="I want to verify endpoint services using different query parameters" time="0.458">
+  <testcase name="verify the posts by a user" classname="I want to verify endpoint services using different query parameters" time="0.311">
     <system-out><![CDATA[
 Scenario: verify the posts by a user                         &amp#27;[90m# src/main/resources/features/FilteringthroughQueryParams.feature:19&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am a user&amp#27;[0m                                          &amp#27;[90m# StepDefinations.FilterOptionsDefinations.i_am_a_user()&amp#27;[0m
@@ -1782,7 +1880,7 @@ Scenario: verify the posts by a user                         &amp#27;[90m# src/m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="verify the posts by a user" classname="I want to verify endpoint services using different query parameters" time="0.351">
+  <testcase name="verify the posts by a user" classname="I want to verify endpoint services using different query parameters" time="0.251">
     <system-out><![CDATA[
 Scenario: verify the posts by a user                         &amp#27;[90m# src/main/resources/features/FilteringthroughQueryParams.feature:19&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am a user&amp#27;[0m                                          &amp#27;[90m# StepDefinations.FilterOptionsDefinations.i_am_a_user()&amp#27;[0m
@@ -1808,7 +1906,7 @@ Scenario: verify the posts by a user                         &amp#27;[90m# src/m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="verify the comments by a filtering postid" classname="I want to verify endpoint services using different query parameters" time="0.408">
+  <testcase name="verify the comments by a filtering postid" classname="I want to verify endpoint services using different query parameters" time="0.284">
     <system-out><![CDATA[
 Scenario: verify the comments by a filtering postid           &amp#27;[90m# src/main/resources/features/FilteringthroughQueryParams.feature:31&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am a user&amp#27;[0m                                           &amp#27;[90m# StepDefinations.FilterOptionsDefinations.i_am_a_user()&amp#27;[0m
@@ -1834,7 +1932,7 @@ Scenario: verify the comments by a filtering postid           &amp#27;[90m# src/
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="verify the comments by a filtering postid" classname="I want to verify endpoint services using different query parameters" time="0.364">
+  <testcase name="verify the comments by a filtering postid" classname="I want to verify endpoint services using different query parameters" time="0.257">
     <system-out><![CDATA[
 Scenario: verify the comments by a filtering postid           &amp#27;[90m# src/main/resources/features/FilteringthroughQueryParams.feature:31&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am a user&amp#27;[0m                                           &amp#27;[90m# StepDefinations.FilterOptionsDefinations.i_am_a_user()&amp#27;[0m
@@ -1860,7 +1958,7 @@ Scenario: verify the comments by a filtering postid           &amp#27;[90m# src/
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="I want to read the posts and the details" classname="I want to read the posts" time="0.185">
+  <testcase name="I want to read the posts and the details" classname="I want to read the posts" time="0.117">
     <system-out><![CDATA[
 @qa
 Scenario: I want to read the posts and the details &amp#27;[90m# src/main/resources/features/GetTheExistingPostDetails.feature:4&amp#27;[0m
@@ -1873,7 +1971,7 @@ Scenario: I want to read the posts and the details &amp#27;[90m# src/main/resour
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="I want to read the posts and the details" classname="I want to read the posts" time="0.172">
+  <testcase name="I want to read the posts and the details" classname="I want to read the posts" time="0.101">
     <system-out><![CDATA[
 @qa
 Scenario: I want to read the posts and the details &amp#27;[90m# src/main/resources/features/GetTheExistingPostDetails.feature:4&amp#27;[0m

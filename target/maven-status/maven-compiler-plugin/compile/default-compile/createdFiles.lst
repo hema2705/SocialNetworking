@@ -1,3 +1,4 @@
 TestDataUtility/Hooks.class
+TestDataUtility/PatchData.class
 TestDataUtility/CommentsData.class
 TestDataUtility/PostsData.class

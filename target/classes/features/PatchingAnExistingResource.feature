@@ -4,7 +4,7 @@ Feature: As a user of social network I want to update a post
     Given I am an existing user of the social network 
     And has the  header specification
     And when I get the existing resource values with user id  with title where post id is <post id>
-    When my user id <user id> with title "<title>" posts "<body>" to modify with patch where post id is <post id> with mt height <height>
+    When my user id <user id> with title "<title>" posts "<body>" to modify with patch where post id is <post id> with mt height <height> values
     Then the message status is 
     And I want to verify the if patch is successful 
 

@@ -5,7 +5,9 @@ import java.io.IOException;
 import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 
+import TestDataUtility.PatchData;
 import TestDataUtility.PostsData;
+import io.cucumber.datatable.internal.difflib.Patch;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
@@ -87,7 +89,6 @@ public class BasicCURD_Ops_Definations {
 	public void the_message_status_is() {
 
 		validatepost = resp.then();
-		thisscenario.log("Retreived response is :"+ validatepost.log().body().extract().asString());
 		validatepost.body("id",equalTo(expectedid));
 		validatepost.body("userId",equalTo(expectedUserid));
 		validatepost.body("title",equalTo(expectedtitle));
@@ -153,11 +154,11 @@ public class BasicCURD_Ops_Definations {
 	}
 
 
-	@When("my user id {int} with title {string} posts {string} to modify with patch where post id is {int} with mt height {int}")
-	public void my_user_id_with_title_posts_to_modify_with_patch_where_post_id_is_with_mt_height(Integer userid, String title, String body, Integer postid, Integer height) {
+	@When("my user id {int} with title {string} posts {string} to modify with patch where post id is {int} with mt height {int} values")
+	public void my_user_id_with_title_posts_to_modify_with_patch_where_post_id_is_with_mt_height_values(Integer userid, String title, String body, Integer postid, Integer height) {
 
 		System.out.println("PATCHIND:" + postid);
-		PostsData patch = new PostsData(userid,title,body,postid,height);
+		PatchData patch = new PatchData(userid,title,body,postid,height);
 		System.out.println(userid+ "****"+title+"****"+body+"****"+postid+"****"+height);
 		thisscenario.log("Creating a PATCH request with values :" +" body:"+body + " user ID:" +userid + " postID: "+ postid + " title:"+ title);
 
@@ -188,8 +189,9 @@ public class BasicCURD_Ops_Definations {
 		Assertions.assertEquals(resourcedata.getId(), actualid);
 		Assertions.assertNotEquals(resourcedata.getTitle(), actualtitle);
 		Assertions.assertNotEquals(resourcedata.getBody(), actualbody);
-		Assertions.assertNotEquals(resourcedata.getheight(), actualheight);
+		Assertions.assertEquals(expectedheight, actualheight);
 
+		thisscenario.log("patched response  is :"+ validatepost.log().body().extract().asString());
 		thisscenario.log("Patching the an existing resource is sucessful at postid :"+actualid);
 
 
@@ -198,7 +200,11 @@ public class BasicCURD_Ops_Definations {
 	@Given("when I get the existing resource values with user id  with title where post id is {int}")
 	public void when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(Integer postid) {
 		System.out.println("POSTID: get "+ postid);
+		
 		resourcedata = 	given().pathParam("postId",postid).when().get(posts_endpoint+"/{postId}").as(PostsData.class);
+		String existingresourcedata = 	given().pathParam("postId",postid).when().get(posts_endpoint+"/{postId}").then().log().body().extract().asString();
+
+		thisscenario.log("Updating the existing resource data:"+existingresourcedata);
 
 	}
 

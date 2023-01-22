@@ -7,7 +7,7 @@ public class PostsData {
 	private String title;
 	//	private int postid;
 	private int id;
-	private int height;
+	//private int height;
 	public PostsData()
 	{
 
@@ -49,7 +49,7 @@ public class PostsData {
 		setId(postid);
 		setTitle(title);
 		setBody(body);
-		setheight(height);
+		//setheight(height);
 
 	}
 
@@ -86,13 +86,7 @@ public class PostsData {
 		this.id = id;
 	}
 
-	public int getheight() {
-		return height;
-	}
 
-	public void setheight(int height) {
-		this.height = height;
-	}
 
 
 }
