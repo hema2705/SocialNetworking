@@ -85,9 +85,8 @@ public class BasicCURD_Ops_Definations {
 
 	}
 
-	@Then("the message status is")
-	public void the_message_status_is() {
-
+	@Then("verify the response body")
+	public void verify_the_response_body() {
 		validatepost = resp.then();
 		validatepost.body("id",equalTo(expectedid));
 		validatepost.body("userId",equalTo(expectedUserid));
@@ -96,17 +95,14 @@ public class BasicCURD_Ops_Definations {
 
 		thisscenario.log("validated the response and is :"+ validatepost.log().body().extract().asString());
 
-
 	}
 
 
-
-	@Then("I want to verify the log")
-	public void i_want_to_verify_the_log() {
-		int postid=	validatepost.statusCode(post_responsecode).and().extract().jsonPath().getInt("id");
+	@Then("I want to verify the response status code  {int}")
+	public void i_want_to_verify_the_response_status_code(Integer statuscode) {
+		int postid=	validatepost.statusCode(statuscode).and().extract().jsonPath().getInt("id");
 		Assertions.assertEquals(this.postid,postid);
 		thisscenario.log("New post successfully created and validated, with status code and the postid is :" +post_responsecode +","+ postid);
-
 
 	}
 
@@ -151,6 +147,10 @@ public class BasicCURD_Ops_Definations {
 		thisscenario.log("Deleting the an existing resource  resource post :"+postid );
 		this.postid = postid;
 		post_responsecode = 200;
+		expectedUserid = null;;
+		expectedtitle = null;
+		expectedbody = null;
+		expectedid = null;
 	}
 
 
@@ -200,7 +200,7 @@ public class BasicCURD_Ops_Definations {
 	@Given("when I get the existing resource values with user id  with title where post id is {int}")
 	public void when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(Integer postid) {
 		System.out.println("POSTID: get "+ postid);
-		
+
 		resourcedata = 	given().pathParam("postId",postid).when().get(posts_endpoint+"/{postId}").as(PostsData.class);
 		String existingresourcedata = 	given().pathParam("postId",postid).when().get(posts_endpoint+"/{postId}").then().log().body().extract().asString();
 

@@ -1,64 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="NetworkRunner.RunnableTests" time="8.555" tests="34" errors="0" skipped="0" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="NetworkRunner.RunnableTests" time="11.2" tests="34" errors="0" skipped="0" failures="2">
   <properties>
     <property name="cucumber.features" value="src/main/resources/features/DeleteAnExistingPost.feature ,&#10;						src/main/resources/features/GetTheCommentsBasedonPostIDandUserID.feature,&#10;						src/main/resources/features/GetTheExistingPostDetails.feature,&#10;						src/main/resources/features/NewPostByExistingUser.feature,&#10;						src/main/resources/features/PatchingAnExistingResource.feature,&#10;						src/main/resources/features/UpdatingAnExistingPost.feature,&#10;						src/main/resources/features/FilteringthroughQueryParams.feature"/>
+    <property name="gopherProxySet" value="false"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
-    <property name="java.specification.version" value="12"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value=""/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.class.path" value="/Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/test-classes:/Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/classes:/Users/hema/.m2/repository/io/cucumber/cucumber-java/7.11.0/cucumber-java-7.11.0.jar:/Users/hema/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-core/7.11.0/cucumber-core-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-gherkin/7.11.0/cucumber-gherkin-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.11.0/cucumber-gherkin-messages-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/gherkin/26.0.3/gherkin-26.0.3.jar:/Users/hema/.m2/repository/io/cucumber/messages/21.0.1/messages-21.0.1.jar:/Users/hema/.m2/repository/io/cucumber/tag-expressions/5.0.1/tag-expressions-5.0.1.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-expressions/16.1.1/cucumber-expressions-16.1.1.jar:/Users/hema/.m2/repository/io/cucumber/datatable/7.11.0/datatable-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-plugin/7.11.0/cucumber-plugin-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/docstring/7.11.0/docstring-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/html-formatter/20.2.1/html-formatter-20.2.1.jar:/Users/hema/.m2/repository/io/cucumber/junit-xml-formatter/0.1.0/junit-xml-formatter-0.1.0.jar:/Users/hema/.m2/repository/io/cucumber/ci-environment/9.1.0/ci-environment-9.1.0.jar:/Users/hema/.m2/repository/io/rest-assured/json-path/5.3.0/json-path-5.3.0.jar:/Users/hema/.m2/repository/org/apache/groovy/groovy-json/4.0.6/groovy-json-4.0.6.jar:/Users/hema/.m2/repository/org/apache/groovy/groovy/4.0.6/groovy-4.0.6.jar:/Users/hema/.m2/repository/io/rest-assured/rest-assured-common/5.3.0/rest-assured-common-5.3.0.jar:/Users/hema/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/Users/hema/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.2/junit-jupiter-api-5.9.2.jar:/Users/hema/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-commons/1.9.2/junit-platform-commons-1.9.2.jar:/Users/hema/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.14.1/jackson-databind-2.14.1.jar:/Users/hema/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.14.1/jackson-annotations-2.14.1.jar:/Users/hema/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.14.1/jackson-core-2.14.1.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.11.0/cucumber-junit-platform-engine-7.11.0.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.9.2/junit-platform-suite-engine-1.9.2.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-suite-api/1.9.2/junit-platform-suite-api-1.9.2.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.9.2/junit-platform-suite-commons-1.9.2.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-launcher/1.9.2/junit-platform-launcher-1.9.2.jar:/Users/hema/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.2/junit-jupiter-engine-5.9.2.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-java8/7.11.0/cucumber-java8-7.11.0.jar:/Users/hema/.m2/repository/net/jodah/typetools/0.6.3/typetools-0.6.3.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-suite/1.9.2/junit-platform-suite-1.9.2.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-engine/1.9.2/junit-platform-engine-1.9.2.jar:/Users/hema/.m2/repository/io/rest-assured/rest-assured/5.3.0/rest-assured-5.3.0.jar:/Users/hema/.m2/repository/org/apache/groovy/groovy-xml/4.0.6/groovy-xml-4.0.6.jar:/Users/hema/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/hema/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/hema/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/hema/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/hema/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/hema/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/Users/hema/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/hema/.m2/repository/io/rest-assured/xml-path/5.3.0/xml-path-5.3.0.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-junit/7.11.0/cucumber-junit-7.11.0.jar:/Users/hema/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/hema/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/hema/.m2/repository/org/junit/vintage/junit-vintage-engine/5.9.2/junit-vintage-engine-5.9.2.jar:"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="user.timezone" value="Europe/Warsaw"/>
+    <property name="user.country.format" value="IN"/>
+    <property name="java.vm.specification.version" value="1.8"/>
     <property name="os.name" value="Mac OS X"/>
-    <property name="java.vm.specification.version" value="12"/>
-    <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
-    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/surefire/surefirebooter-20230122035137377_3.jar /Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/surefire 2023-01-22T03-51-36_467-jvmRun1 surefire-20230122035137377_1tmp surefire_0-20230122035137377_2tmp"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/surefire/surefirebooter-20230122190952954_3.jar /Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/surefire 2023-01-22T19-09-52_272-jvmRun1 surefire-20230122190952954_1tmp surefire_0-20230122190952954_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/test-classes:/Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/classes:/Users/hema/.m2/repository/io/cucumber/cucumber-java/7.11.0/cucumber-java-7.11.0.jar:/Users/hema/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-core/7.11.0/cucumber-core-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-gherkin/7.11.0/cucumber-gherkin-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.11.0/cucumber-gherkin-messages-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/gherkin/26.0.3/gherkin-26.0.3.jar:/Users/hema/.m2/repository/io/cucumber/messages/21.0.1/messages-21.0.1.jar:/Users/hema/.m2/repository/io/cucumber/tag-expressions/5.0.1/tag-expressions-5.0.1.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-expressions/16.1.1/cucumber-expressions-16.1.1.jar:/Users/hema/.m2/repository/io/cucumber/datatable/7.11.0/datatable-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-plugin/7.11.0/cucumber-plugin-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/docstring/7.11.0/docstring-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/html-formatter/20.2.1/html-formatter-20.2.1.jar:/Users/hema/.m2/repository/io/cucumber/junit-xml-formatter/0.1.0/junit-xml-formatter-0.1.0.jar:/Users/hema/.m2/repository/io/cucumber/ci-environment/9.1.0/ci-environment-9.1.0.jar:/Users/hema/.m2/repository/io/rest-assured/json-path/5.3.0/json-path-5.3.0.jar:/Users/hema/.m2/repository/org/apache/groovy/groovy-json/4.0.6/groovy-json-4.0.6.jar:/Users/hema/.m2/repository/org/apache/groovy/groovy/4.0.6/groovy-4.0.6.jar:/Users/hema/.m2/repository/io/rest-assured/rest-assured-common/5.3.0/rest-assured-common-5.3.0.jar:/Users/hema/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/Users/hema/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.2/junit-jupiter-api-5.9.2.jar:/Users/hema/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-commons/1.9.2/junit-platform-commons-1.9.2.jar:/Users/hema/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.14.1/jackson-databind-2.14.1.jar:/Users/hema/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.14.1/jackson-annotations-2.14.1.jar:/Users/hema/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.14.1/jackson-core-2.14.1.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.11.0/cucumber-junit-platform-engine-7.11.0.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.9.2/junit-platform-suite-engine-1.9.2.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-suite-api/1.9.2/junit-platform-suite-api-1.9.2.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.9.2/junit-platform-suite-commons-1.9.2.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-launcher/1.9.2/junit-platform-launcher-1.9.2.jar:/Users/hema/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.2/junit-jupiter-engine-5.9.2.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-java8/7.11.0/cucumber-java8-7.11.0.jar:/Users/hema/.m2/repository/net/jodah/typetools/0.6.3/typetools-0.6.3.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-suite/1.9.2/junit-platform-suite-1.9.2.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-engine/1.9.2/junit-platform-engine-1.9.2.jar:/Users/hema/.m2/repository/io/rest-assured/rest-assured/5.3.0/rest-assured-5.3.0.jar:/Users/hema/.m2/repository/org/apache/groovy/groovy-xml/4.0.6/groovy-xml-4.0.6.jar:/Users/hema/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/hema/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/hema/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/hema/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/hema/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/hema/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/Users/hema/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/hema/.m2/repository/io/rest-assured/xml-path/5.3.0/xml-path-5.3.0.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-junit/7.11.0/cucumber-junit-7.11.0.jar:/Users/hema/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/hema/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/hema/.m2/repository/org/junit/vintage/junit-vintage-engine/5.9.2/junit-vintage-engine-5.9.2.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/hema"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2019-04-16"/>
-    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home"/>
-    <property name="file.separator" value="/"/>
+    <property name="java.home" value="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"/>
     <property name="basedir" value="/Users/hema/eclipse-workspace/SocialNetworkingCommunity"/>
-    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="file.separator" value="/"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/surefire/surefirebooter-20230122035137377_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/surefire/surefirebooter-20230122190952954_3.jar"/>
+    <property name="sun.boot.class.path" value="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/resources.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/rt.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/sunrsasign.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/jsse.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/jce.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/charsets.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/jfr.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/classes"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="cucumber.plugin" value="pretty, html:src/test/resources/Reports/Posts2023-01-22T02:51:31Z.html"/>
-    <property name="java.runtime.version" value="12.0.1+12"/>
+    <property name="cucumber.plugin" value="pretty, html:src/test/resources/Reports/Posts2023-01-22T18:09:50Z.html"/>
+    <property name="java.runtime.version" value="1.8.0_211-b12"/>
     <property name="user.name" value="hema"/>
     <property name="path.separator" value=":"/>
     <property name="os.version" value="10.16"/>
+    <property name="java.endorsed.dirs" value="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/endorsed"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="localRepository" value="/Users/hema/.m2/repository"/>
-    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="java.io.tmpdir" value="/var/folders/mf/j0n3s12n1tlf4g1yg6gg3_1h0000gn/T/"/>
-    <property name="java.version" value="12.0.1"/>
+    <property name="java.version" value="1.8.0_211"/>
     <property name="user.dir" value="/Users/hema/eclipse-workspace/SocialNetworkingCommunity"/>
     <property name="os.arch" value="x86_64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.library.path" value="/Users/hema/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
-    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vm.info" value="mixed mode"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.version" value="12.0.1+12"/>
+    <property name="java.vm.version" value="25.211-b12"/>
+    <property name="java.ext.dirs" value="/Users/hema/Library/Java/Extensions:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="java.class.version" value="52.0"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="java.class.version" value="56.0"/>
   </properties>
-  <testcase name="Example #1.1" classname="Examples" time="4.821">
+  <testcase name="Example #1.1" classname="Examples" time="4.502">
     <system-out><![CDATA[
 Scenario Outline: Deleting the post                                                       &amp#27;[90m# src/main/resources/features/DeleteAnExistingPost.feature:16&amp#27;[0m
 
@@ -95,16 +101,16 @@ POSTID: get 1
 
     validated the response and is :{}
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                           &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 HTTP/1.1 200 OK
-Date: Sun, 22 Jan 2023 02:51:44 GMT
+Date: Sun, 22 Jan 2023 18:09:58 GMT
 Content-Type: application/json; charset=utf-8
 Content-Length: 2
 Connection: keep-alive
 X-Powered-By: Express
 X-Ratelimit-Limit: 1000
 X-Ratelimit-Remaining: 999
-X-Ratelimit-Reset: 1674355963
+X-Ratelimit-Reset: 1674411049
 Vary: Origin, Accept-Encoding
 Access-Control-Allow-Credentials: true
 Cache-Control: no-cache
@@ -114,40 +120,39 @@ X-Content-Type-Options: nosniff
 Etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
 Via: 1.1 vegur
 CF-Cache-Status: DYNAMIC
-Server-Timing: cf-q-config;dur=5.0000016926788e-06
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Z22lQxBj5AFDvkPCdQ8icMVuMX4YC2VSfijhgclBnWNGr4a75OATV5nMDXSxgW8jnOYzzuQP5t1YjQ%2FDC9SWptkMPtzUFjxumuFpW0JtwR0Fnxs%2FQ6mQLDh3cQQLKXM0gHLf%2FvY9rV5QaZoHxYzZ"}],"group":"cf-nel","max_age":604800}
+Server-Timing: cf-q-config;dur=6.9999950937927e-06
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=bZFCxqA%2BJsFRo3lkUcMomXEgKtFOPHXnfqCOPQYb9I5vl8g%2F8%2BW0L4mZGYyKWs7oXlWxzUhnOrr2B%2FOdcXrlqiXuKRT%2Fvwg%2FotiDpEb1YsPH6zIok%2B%2Fp4rvWgxvL3RFWsWSKpPXXeG6wapovJqzJ"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 78d4fd4eaa49bfdc-WAW
+CF-RAY: 78da3e63ccb6bf7b-WAW
 alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
 
 {
     
 }
 
-    the post is deleted sucessfully with postid :1Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@19bfbe28
+    the post is deleted sucessfully with postid :1Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@6a9cd0f8
 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the post deleted&amp#27;[0m                                                   &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_post_deleted()&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
-    <system-err><![CDATA[Jan 22, 2023 3:51:38 AM io.cucumber.junit.platform.engine.DiscoverySelectorResolver warnWhenCucumberFeaturesPropertyIsUsed
+    <system-err><![CDATA[Jan 22, 2023 7:09:53 PM io.cucumber.junit.platform.engine.DiscoverySelectorResolver warnWhenCucumberFeaturesPropertyIsUsed
 WARNING: Discovering tests using the cucumber.features property. Other discovery selectors are ignored!
 Please request/upvote/sponsor/ect better support for JUnit 5 discovery selectors.
 See: https://github.com/cucumber/cucumber-jvm/pull/2498
 ]]></system-err>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.511">
+  <testcase name="Example #1.1" classname="Examples" time="0.739">
     <failure message="1 expectation failed.&#10;JSON path [0].name doesn&apos;t match.&#10;Expected: quo vero reiciendis velit similique earum&#10;  Actual: id labore ex et quam laborum&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
 1 expectation failed.
 JSON path [0].name doesn't match.
 Expected: quo vero reiciendis velit similique earum
   Actual: id labore ex et quam laborum
 
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
 	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
@@ -158,9 +163,9 @@ Expected: quo vero reiciendis velit similique earum
 	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
 	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor194.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at sun.reflect.GeneratedMethodAccessor194.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
@@ -186,11 +191,10 @@ JSON path [0].name doesn't match.
 Expected: quo vero reiciendis velit similique earum
   Actual: id labore ex et quam laborum
 
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
 	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
@@ -201,9 +205,9 @@ Expected: quo vero reiciendis velit similique earum
 	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
 	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor194.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at sun.reflect.GeneratedMethodAccessor194.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
@@ -218,7 +222,7 @@ Expected: quo vero reiciendis velit similique earum
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.662">
+  <testcase name="Example #1.1" classname="Examples" time="0.768">
     <system-out><![CDATA[
 @qa
 Scenario Outline: Posting the message                                                       &amp#27;[90m# src/main/resources/features/NewPostByExistingUser.feature:16&amp#27;[0m
@@ -251,11 +255,11 @@ Scenario Outline: Posting the message                                           
       "id": 101
     }
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                             &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 
     New post successfully created and validated, with status code and the postid is :201,101
 
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the log&amp#27;[0m                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_log()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the response status code  &amp#27;[0m&amp#27;[32m&amp#27;[1m201&amp#27;[0m                                        &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_response_status_code(java.lang.Integer)&amp#27;[0m
 
     The values cannot be verified by retriving using get method to validdate new posted message as this is a mock service
 
@@ -263,7 +267,7 @@ Scenario Outline: Posting the message                                           
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.817">
+  <testcase name="Example #1.1" classname="Examples" time="0.895">
     <system-out><![CDATA[
 Scenario Outline: Updating the message using patching                                                                                    &amp#27;[90m# src/main/resources/features/PatchingAnExistingResource.feature:14&amp#27;[0m
 
@@ -315,7 +319,7 @@ PATCHIND:1
       "height": 8849
     }
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                             &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                                                                          &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 {
     "userId": 1,
     "id": 1,
@@ -339,9 +343,9 @@ PATCHIND:1
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.713">
+  <testcase name="Example #1.1" classname="Examples" time="0.803">
     <system-out><![CDATA[
-Scenario Outline: Updating the message using put                                                                  &amp#27;[90m# src/main/resources/features/UpdatingAnExistingPost.feature:15&amp#27;[0m
+Scenario Outline: Updating the message using put                                                                  &amp#27;[90m# src/main/resources/features/UpdatingAnExistingPost.feature:13&amp#27;[0m
 
     Request to the end point:https://jsonplaceholder.typicode.com/posts
 
@@ -387,15 +391,15 @@ POSTID: get 1
       "id": 1
     }
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                      &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                                                   &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 
     New post successfully created and validated, with status code and the postid is :200,1
 
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the log&amp#27;[0m                                                                                    &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_log()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the response status code  &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_response_status_code(java.lang.Integer)&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.657">
+  <testcase name="Example #1.1" classname="Examples" time="0.833">
     <system-out><![CDATA[
 Scenario Outline: Deleting the post                                                       &amp#27;[90m# src/main/resources/features/DeleteAnExistingPost.feature:16&amp#27;[0m
 
@@ -432,16 +436,16 @@ POSTID: get 1
 
     validated the response and is :{}
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                           &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 HTTP/1.1 200 OK
-Date: Sun, 22 Jan 2023 02:51:54 GMT
+Date: Sun, 22 Jan 2023 18:10:12 GMT
 Content-Type: application/json; charset=utf-8
 Content-Length: 2
 Connection: keep-alive
 X-Powered-By: Express
 X-Ratelimit-Limit: 1000
 X-Ratelimit-Remaining: 988
-X-Ratelimit-Reset: 1674355963
+X-Ratelimit-Reset: 1674411049
 Vary: Origin, Accept-Encoding
 Access-Control-Allow-Credentials: true
 Cache-Control: no-cache
@@ -451,18 +455,18 @@ X-Content-Type-Options: nosniff
 Etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
 Via: 1.1 vegur
 CF-Cache-Status: DYNAMIC
-Server-Timing: cf-q-config;dur=4.9999944167212e-06
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Xmwp44VH7iPgXM7yU5f35yObkPv4Jx%2FzBsZhEkLFvimu176TGYUmlFYYuqlEUssT%2FXZ8IuaXy%2FQ%2BWs%2BUpq%2BUHRstRzov8FrEi1sS4%2B9tr3uuaKY%2FvjKGsHGoXfuBXlNA2G%2FzFK%2FHQkHE5SQszTcA"}],"group":"cf-nel","max_age":604800}
+Server-Timing: cf-q-config;dur=6.0000020312145e-06
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=gqX8hS3lI9KmoAF0UYe2jtL%2B%2BUh6qhHfw%2F8z0ZnzS49CIlrWfy17JDgBWmd2Ph3RQBPIULIm2MCj0fTR9w%2Bi7Qrw98kwcml0dmKN3jri6Mhlw9VEBK9Mn5MYq2hKDrrjTDmYbD0p1qugubphTOCw"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 78d4fd92eddfbf5b-WAW
+CF-RAY: 78da3eb8ea09c00f-WAW
 alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
 
 {
     
 }
 
-    the post is deleted sucessfully with postid :1Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@70f5f57d
+    the post is deleted sucessfully with postid :1Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@7254838
 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the post deleted&amp#27;[0m                                                   &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_post_deleted()&amp#27;[0m
 This will run after the Scenario
@@ -485,18 +489,17 @@ This will run after the Scenario
 &amp#27;[32m&amp#27;[1m└───────────────────────────────────────────────────────────────────────────────────┘&amp#27;[0m
 ]]></system-err>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.376">
+  <testcase name="Example #1.1" classname="Examples" time="0.567">
     <failure message="1 expectation failed.&#10;JSON path [0].name doesn&apos;t match.&#10;Expected: quo vero reiciendis velit similique earum&#10;  Actual: id labore ex et quam laborum&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
 1 expectation failed.
 JSON path [0].name doesn't match.
 Expected: quo vero reiciendis velit similique earum
   Actual: id labore ex et quam laborum
 
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
 	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
@@ -505,9 +508,9 @@ Expected: quo vero reiciendis velit similique earum
 	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
 	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor194.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at sun.reflect.GeneratedMethodAccessor194.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
@@ -533,11 +536,10 @@ JSON path [0].name doesn't match.
 Expected: quo vero reiciendis velit similique earum
   Actual: id labore ex et quam laborum
 
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
 	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
@@ -546,9 +548,9 @@ Expected: quo vero reiciendis velit similique earum
 	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
 	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor194.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at sun.reflect.GeneratedMethodAccessor194.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
@@ -563,7 +565,7 @@ Expected: quo vero reiciendis velit similique earum
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.53">
+  <testcase name="Example #1.1" classname="Examples" time="0.599">
     <system-out><![CDATA[
 @qa
 Scenario Outline: Posting the message                                                       &amp#27;[90m# src/main/resources/features/NewPostByExistingUser.feature:16&amp#27;[0m
@@ -596,11 +598,11 @@ Scenario Outline: Posting the message                                           
       "id": 101
     }
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                             &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 
     New post successfully created and validated, with status code and the postid is :201,101
 
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the log&amp#27;[0m                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_log()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the response status code  &amp#27;[0m&amp#27;[32m&amp#27;[1m201&amp#27;[0m                                        &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_response_status_code(java.lang.Integer)&amp#27;[0m
 
     The values cannot be verified by retriving using get method to validdate new posted message as this is a mock service
 
@@ -608,7 +610,7 @@ Scenario Outline: Posting the message                                           
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.652">
+  <testcase name="Example #1.1" classname="Examples" time="0.836">
     <system-out><![CDATA[
 Scenario Outline: Updating the message using patching                                                                                    &amp#27;[90m# src/main/resources/features/PatchingAnExistingResource.feature:14&amp#27;[0m
 
@@ -660,7 +662,7 @@ PATCHIND:1
       "height": 8849
     }
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                             &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                                                                          &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 {
     "userId": 1,
     "id": 1,
@@ -684,9 +686,9 @@ PATCHIND:1
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.557">
+  <testcase name="Example #1.1" classname="Examples" time="0.791">
     <system-out><![CDATA[
-Scenario Outline: Updating the message using put                                                                  &amp#27;[90m# src/main/resources/features/UpdatingAnExistingPost.feature:15&amp#27;[0m
+Scenario Outline: Updating the message using put                                                                  &amp#27;[90m# src/main/resources/features/UpdatingAnExistingPost.feature:13&amp#27;[0m
 
     Request to the end point:https://jsonplaceholder.typicode.com/posts
 
@@ -732,15 +734,15 @@ POSTID: get 1
       "id": 1
     }
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                      &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                                                   &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 
     New post successfully created and validated, with status code and the postid is :200,1
 
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the log&amp#27;[0m                                                                                    &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_log()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the response status code  &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_response_status_code(java.lang.Integer)&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.86">
+  <testcase name="Example #1.2" classname="Examples" time="0.943">
     <system-out><![CDATA[
 Scenario Outline: Deleting the post                                                       &amp#27;[90m# src/main/resources/features/DeleteAnExistingPost.feature:17&amp#27;[0m
 
@@ -777,16 +779,16 @@ POSTID: get 4
 
     validated the response and is :{}
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                           &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 HTTP/1.1 200 OK
-Date: Sun, 22 Jan 2023 02:51:45 GMT
+Date: Sun, 22 Jan 2023 18:10:00 GMT
 Content-Type: application/json; charset=utf-8
 Content-Length: 2
 Connection: keep-alive
 X-Powered-By: Express
 X-Ratelimit-Limit: 1000
 X-Ratelimit-Remaining: 998
-X-Ratelimit-Reset: 1674355963
+X-Ratelimit-Reset: 1674411049
 Vary: Origin, Accept-Encoding
 Access-Control-Allow-Credentials: true
 Cache-Control: no-cache
@@ -796,24 +798,24 @@ X-Content-Type-Options: nosniff
 Etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
 Via: 1.1 vegur
 CF-Cache-Status: DYNAMIC
-Server-Timing: cf-q-config;dur=5.0000089686364e-06
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=oRFtzwV45T%2BmpkcwNyFQ17SGyjm15Y476iZTN43yc1tU4gnsPxA4z0WBwGe1puXOfWZ8NxBkn0gGpbrDKXXZqBPtjLyI9B08oa8HwvAPVMv%2Bfgqf6Ss%2BDhpHhrpLTPmIFrxjJ8OkB9f2NXdwTl3t"}],"group":"cf-nel","max_age":604800}
+Server-Timing: cf-q-config;dur=6.9999950937927e-06
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=aOcjj57B99LxsQS3MKoBPabsndyTBMFHdP2In%2BaDbmq0uOwWsTjgl07Uf88lY3QDAhssftfIk3dd1oMdZL0vpfnt9pJppxx77AZji5bwyAN%2BmMH36burnCG7I1d8OmiBeQEbHTzqmLQCI%2FULfBwX"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 78d4fd591ebdbf6c-WAW
+CF-RAY: 78da3e6f1bfebf1f-WAW
 alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
 
 {
     
 }
 
-    the post is deleted sucessfully with postid :4Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@45e7bb79
+    the post is deleted sucessfully with postid :4Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@92d1782
 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the post deleted&amp#27;[0m                                                   &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_post_deleted()&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.429">
+  <testcase name="Example #1.2" classname="Examples" time="0.638">
     <system-out><![CDATA[
 Scenario Outline: I want to read the comments based on postid       &amp#27;[90m# src/main/resources/features/GetTheCommentsBasedonPostIDandUserID.feature:17&amp#27;[0m
 
@@ -826,7 +828,7 @@ Scenario Outline: I want to read the comments based on postid       &amp#27;[90m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.74">
+  <testcase name="Example #1.2" classname="Examples" time="0.895">
     <system-out><![CDATA[
 Scenario Outline: Updating the message using patching                                                                                            &amp#27;[90m# src/main/resources/features/PatchingAnExistingResource.feature:15&amp#27;[0m
 
@@ -878,7 +880,7 @@ PATCHIND:2
       "height": 6190
     }
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                                     &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                                                                                  &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 {
     "userId": 1,
     "id": 2,
@@ -902,9 +904,9 @@ PATCHIND:2
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.674">
+  <testcase name="Example #1.2" classname="Examples" time="0.802">
     <system-out><![CDATA[
-Scenario Outline: Updating the message using put                                                                   &amp#27;[90m# src/main/resources/features/UpdatingAnExistingPost.feature:16&amp#27;[0m
+Scenario Outline: Updating the message using put                                                                   &amp#27;[90m# src/main/resources/features/UpdatingAnExistingPost.feature:14&amp#27;[0m
 
     Request to the end point:https://jsonplaceholder.typicode.com/posts
 
@@ -950,15 +952,15 @@ POSTID: get 1
       "id": 1
     }
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                                                    &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 
     New post successfully created and validated, with status code and the postid is :200,1
 
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the log&amp#27;[0m                                                                                     &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_log()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the response status code  &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                                                               &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_response_status_code(java.lang.Integer)&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.727">
+  <testcase name="Example #1.2" classname="Examples" time="0.803">
     <system-out><![CDATA[
 Scenario Outline: Deleting the post                                                       &amp#27;[90m# src/main/resources/features/DeleteAnExistingPost.feature:17&amp#27;[0m
 
@@ -995,16 +997,16 @@ POSTID: get 4
 
     validated the response and is :{}
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                           &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 HTTP/1.1 200 OK
-Date: Sun, 22 Jan 2023 02:51:55 GMT
+Date: Sun, 22 Jan 2023 18:10:13 GMT
 Content-Type: application/json; charset=utf-8
 Content-Length: 2
 Connection: keep-alive
 X-Powered-By: Express
 X-Ratelimit-Limit: 1000
 X-Ratelimit-Remaining: 987
-X-Ratelimit-Reset: 1674355963
+X-Ratelimit-Reset: 1674411049
 Vary: Origin, Accept-Encoding
 Access-Control-Allow-Credentials: true
 Cache-Control: no-cache
@@ -1014,24 +1016,24 @@ X-Content-Type-Options: nosniff
 Etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
 Via: 1.1 vegur
 CF-Cache-Status: DYNAMIC
-Server-Timing: cf-q-config;dur=5.0000016926788e-06
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=63FnbNiUt8EJlMHVx3iBR2iaTG%2FXCPa1jrUr31nT5vzZwzSS%2FHhyxT1NFNR4W%2FCtuQwUZPK6xAlPzuGg0QZKyf2Qe6Qhi9yiZIgjCmgbiH0PC2SSVfSxb2pi3W5nvDlZ7QCETuvklN4rCHYPyjHM"}],"group":"cf-nel","max_age":604800}
+Server-Timing: cf-q-config;dur=7.0000023697503e-06
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=jE7FkHMN%2B69PPvKIbeLT0Kbgycqm1hS3dwdBmu1t5vuq%2B1OzBOa%2BQiJn0WbXdMjfQnA8hE0KzxQy9gwOm2xtSjY3tX7opLGBFVUZIUkJCRzimPd1Z6qoqhD0biTFHi2rT%2FYzkJTASRLUN9nvbYFr"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 78d4fd9708b2bfab-WAW
+CF-RAY: 78da3ebdcd91004c-WAW
 alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
 
 {
     
 }
 
-    the post is deleted sucessfully with postid :4Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@66589252
+    the post is deleted sucessfully with postid :4Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@498a4d62
 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the post deleted&amp#27;[0m                                                   &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_post_deleted()&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.339">
+  <testcase name="Example #1.2" classname="Examples" time="0.598">
     <system-out><![CDATA[
 Scenario Outline: I want to read the comments based on postid       &amp#27;[90m# src/main/resources/features/GetTheCommentsBasedonPostIDandUserID.feature:17&amp#27;[0m
 
@@ -1044,7 +1046,7 @@ Scenario Outline: I want to read the comments based on postid       &amp#27;[90m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.661">
+  <testcase name="Example #1.2" classname="Examples" time="0.832">
     <system-out><![CDATA[
 Scenario Outline: Updating the message using patching                                                                                            &amp#27;[90m# src/main/resources/features/PatchingAnExistingResource.feature:15&amp#27;[0m
 
@@ -1096,7 +1098,7 @@ PATCHIND:2
       "height": 6190
     }
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                                     &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                                                                                  &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 {
     "userId": 1,
     "id": 2,
@@ -1120,9 +1122,9 @@ PATCHIND:2
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.605">
+  <testcase name="Example #1.2" classname="Examples" time="0.764">
     <system-out><![CDATA[
-Scenario Outline: Updating the message using put                                                                   &amp#27;[90m# src/main/resources/features/UpdatingAnExistingPost.feature:16&amp#27;[0m
+Scenario Outline: Updating the message using put                                                                   &amp#27;[90m# src/main/resources/features/UpdatingAnExistingPost.feature:14&amp#27;[0m
 
     Request to the end point:https://jsonplaceholder.typicode.com/posts
 
@@ -1168,15 +1170,15 @@ POSTID: get 1
       "id": 1
     }
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                       &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                                                    &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 
     New post successfully created and validated, with status code and the postid is :200,1
 
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the log&amp#27;[0m                                                                                     &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_log()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the response status code  &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                                                               &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_response_status_code(java.lang.Integer)&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.3" classname="Examples" time="0.676">
+  <testcase name="Example #1.3" classname="Examples" time="1.027">
     <system-out><![CDATA[
 Scenario Outline: Deleting the post                                                       &amp#27;[90m# src/main/resources/features/DeleteAnExistingPost.feature:18&amp#27;[0m
 
@@ -1213,16 +1215,16 @@ POSTID: get 2
 
     validated the response and is :{}
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                           &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 HTTP/1.1 200 OK
-Date: Sun, 22 Jan 2023 02:51:46 GMT
+Date: Sun, 22 Jan 2023 18:10:01 GMT
 Content-Type: application/json; charset=utf-8
 Content-Length: 2
 Connection: keep-alive
 X-Powered-By: Express
 X-Ratelimit-Limit: 1000
 X-Ratelimit-Remaining: 997
-X-Ratelimit-Reset: 1674355963
+X-Ratelimit-Reset: 1674411049
 Vary: Origin, Accept-Encoding
 Access-Control-Allow-Credentials: true
 Cache-Control: no-cache
@@ -1232,24 +1234,24 @@ X-Content-Type-Options: nosniff
 Etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
 Via: 1.1 vegur
 CF-Cache-Status: DYNAMIC
-Server-Timing: cf-q-config;dur=6.0000020312145e-06
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=wrcfraTCo0SBNmC2CDMWN%2F%2B0uO%2BE2NngIwlMASfsdnQilvOZUgR69WdINRgUDC7QAgfSBWRAYQKYUssZ2ONzQwojZk7QfQX5bf3NhPIzd44hyGzl%2BJpIVTGNZvVj%2BzHyFja%2B3GO6D6JgLecPKC4k"}],"group":"cf-nel","max_age":604800}
+Server-Timing: cf-q-config;dur=7.9999990703072e-06
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=X5HoPLKdubX5JrptXlPF17WGAMmcWqt6sfd%2B4Zsq7yMptD8tIstw9rLhbWABO7hc5ak3FiWZWey1Uz3Z9KDZN6oxIaX8viho5a3DRvU82HQNc%2BpL3jxf0k8HekyNmZDiEM6c7UdT1c3kTljfgvS3"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 78d4fd5e4811fbe6-WAW
+CF-RAY: 78da3e759d90bf6f-WAW
 alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
 
 {
     
 }
 
-    the post is deleted sucessfully with postid :2Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@3ad847f8
+    the post is deleted sucessfully with postid :2Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@6ccac6f4
 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the post deleted&amp#27;[0m                                                   &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_post_deleted()&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.3" classname="Examples" time="0.697">
+  <testcase name="Example #1.3" classname="Examples" time="0.898">
     <system-out><![CDATA[
 Scenario Outline: Updating the message using patching                                                                                     &amp#27;[90m# src/main/resources/features/PatchingAnExistingResource.feature:16&amp#27;[0m
 
@@ -1301,7 +1303,7 @@ PATCHIND:3
       "height": 5895
     }
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                                                                           &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 {
     "userId": 1,
     "id": 3,
@@ -1325,9 +1327,9 @@ PATCHIND:3
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.3" classname="Examples" time="0.652">
+  <testcase name="Example #1.3" classname="Examples" time="0.829">
     <system-out><![CDATA[
-Scenario Outline: Updating the message using put                                                                               &amp#27;[90m# src/main/resources/features/UpdatingAnExistingPost.feature:17&amp#27;[0m
+Scenario Outline: Updating the message using put                                                                               &amp#27;[90m# src/main/resources/features/UpdatingAnExistingPost.feature:15&amp#27;[0m
 
     Request to the end point:https://jsonplaceholder.typicode.com/posts
 
@@ -1373,15 +1375,15 @@ POSTID: get 1
       "id": 1
     }
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                   &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 
     New post successfully created and validated, with status code and the postid is :200,1
 
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the log&amp#27;[0m                                                                                                 &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_log()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the response status code  &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                                                                           &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_response_status_code(java.lang.Integer)&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.3" classname="Examples" time="0.619">
+  <testcase name="Example #1.3" classname="Examples" time="0.864">
     <system-out><![CDATA[
 Scenario Outline: Deleting the post                                                       &amp#27;[90m# src/main/resources/features/DeleteAnExistingPost.feature:18&amp#27;[0m
 
@@ -1418,16 +1420,16 @@ POSTID: get 2
 
     validated the response and is :{}
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                           &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 HTTP/1.1 200 OK
-Date: Sun, 22 Jan 2023 02:51:56 GMT
+Date: Sun, 22 Jan 2023 18:10:13 GMT
 Content-Type: application/json; charset=utf-8
 Content-Length: 2
 Connection: keep-alive
 X-Powered-By: Express
 X-Ratelimit-Limit: 1000
 X-Ratelimit-Remaining: 986
-X-Ratelimit-Reset: 1674355963
+X-Ratelimit-Reset: 1674411049
 Vary: Origin, Accept-Encoding
 Access-Control-Allow-Credentials: true
 Cache-Control: no-cache
@@ -1437,24 +1439,24 @@ X-Content-Type-Options: nosniff
 Etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
 Via: 1.1 vegur
 CF-Cache-Status: DYNAMIC
-Server-Timing: cf-q-config;dur=5.0000016926788e-06
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=KWnBWfmfK8gx%2FxN2WAe0WzT2cQvKSVb5tUhK1OuD%2FFRI9lwHu2td2z9FhAtlINgh6BSqGK8OfCHp1NfQZsFucP2aH5RIICvbA8HxK8%2FNzABW9gA0NKAVQWwYLfbw3kiRTh40G2Mem7IYimf0JUmP"}],"group":"cf-nel","max_age":604800}
+Server-Timing: cf-q-config;dur=4.000001354143e-06
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=t1oiDKU5KS%2BFa9F8XfdnxuB2CExvAp3BTKTZtPdeeWPn7jOWUkNqpdYVvKDtuJEqCWaKtDIiCKXQM%2B8L9A3aP2SDCpUIbJc4Ycc0NjPrUnzDzLrTSbEKpZbKQNHIQ8LalxjZoLW01TEiADeN2rjD"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 78d4fd9bcea3bfe6-WAW
+CF-RAY: 78da3ec3590e0024-WAW
 alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
 
 {
     
 }
 
-    the post is deleted sucessfully with postid :2Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@4d66cb
+    the post is deleted sucessfully with postid :2Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@6f240187
 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the post deleted&amp#27;[0m                                                   &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_post_deleted()&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.3" classname="Examples" time="0.706">
+  <testcase name="Example #1.3" classname="Examples" time="0.794">
     <system-out><![CDATA[
 Scenario Outline: Updating the message using patching                                                                                     &amp#27;[90m# src/main/resources/features/PatchingAnExistingResource.feature:16&amp#27;[0m
 
@@ -1506,7 +1508,7 @@ PATCHIND:3
       "height": 5895
     }
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                                                                           &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 {
     "userId": 1,
     "id": 3,
@@ -1530,9 +1532,9 @@ PATCHIND:3
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.3" classname="Examples" time="0.553">
+  <testcase name="Example #1.3" classname="Examples" time="0.772">
     <system-out><![CDATA[
-Scenario Outline: Updating the message using put                                                                               &amp#27;[90m# src/main/resources/features/UpdatingAnExistingPost.feature:17&amp#27;[0m
+Scenario Outline: Updating the message using put                                                                               &amp#27;[90m# src/main/resources/features/UpdatingAnExistingPost.feature:15&amp#27;[0m
 
     Request to the end point:https://jsonplaceholder.typicode.com/posts
 
@@ -1578,15 +1580,15 @@ POSTID: get 1
       "id": 1
     }
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                   &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 
     New post successfully created and validated, with status code and the postid is :200,1
 
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the log&amp#27;[0m                                                                                                 &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_log()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the response status code  &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                                                                           &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_response_status_code(java.lang.Integer)&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.4" classname="Examples" time="0.724">
+  <testcase name="Example #1.4" classname="Examples" time="0.964">
     <system-out><![CDATA[
 Scenario Outline: Updating the message using patching                                                                                     &amp#27;[90m# src/main/resources/features/PatchingAnExistingResource.feature:17&amp#27;[0m
 
@@ -1638,7 +1640,7 @@ PATCHIND:11
       "height": 4809
     }
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                                                                           &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 {
     "userId": 2,
     "id": 11,
@@ -1662,7 +1664,7 @@ PATCHIND:11
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.4" classname="Examples" time="0.684">
+  <testcase name="Example #1.4" classname="Examples" time="0.856">
     <system-out><![CDATA[
 Scenario Outline: Updating the message using patching                                                                                     &amp#27;[90m# src/main/resources/features/PatchingAnExistingResource.feature:17&amp#27;[0m
 
@@ -1714,7 +1716,7 @@ PATCHIND:11
       "height": 4809
     }
 
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe message status is&amp#27;[0m                                                                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.the_message_status_is()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                                                                           &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 {
     "userId": 2,
     "id": 11,
@@ -1738,7 +1740,7 @@ PATCHIND:11
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="verify the comments under single post" classname="I want to verify endpoint services using different query parameters" time="0.217">
+  <testcase name="verify the comments under single post" classname="I want to verify endpoint services using different query parameters" time="0.34">
     <system-out><![CDATA[
 Scenario: verify the comments under single post             &amp#27;[90m# src/main/resources/features/FilteringthroughQueryParams.feature:10&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am a user&amp#27;[0m                                         &amp#27;[90m# StepDefinations.FilterOptionsDefinations.i_am_a_user()&amp#27;[0m
@@ -1796,7 +1798,7 @@ Scenario: verify the comments under single post             &amp#27;[90m# src/ma
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="verify the comments under single post" classname="I want to verify endpoint services using different query parameters" time="0.137">
+  <testcase name="verify the comments under single post" classname="I want to verify endpoint services using different query parameters" time="0.192">
     <system-out><![CDATA[
 Scenario: verify the comments under single post             &amp#27;[90m# src/main/resources/features/FilteringthroughQueryParams.feature:10&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am a user&amp#27;[0m                                         &amp#27;[90m# StepDefinations.FilterOptionsDefinations.i_am_a_user()&amp#27;[0m
@@ -1854,7 +1856,7 @@ Scenario: verify the comments under single post             &amp#27;[90m# src/ma
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="verify the posts by a user" classname="I want to verify endpoint services using different query parameters" time="0.311">
+  <testcase name="verify the posts by a user" classname="I want to verify endpoint services using different query parameters" time="0.454">
     <system-out><![CDATA[
 Scenario: verify the posts by a user                         &amp#27;[90m# src/main/resources/features/FilteringthroughQueryParams.feature:19&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am a user&amp#27;[0m                                          &amp#27;[90m# StepDefinations.FilterOptionsDefinations.i_am_a_user()&amp#27;[0m
@@ -1880,7 +1882,7 @@ Scenario: verify the posts by a user                         &amp#27;[90m# src/m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="verify the posts by a user" classname="I want to verify endpoint services using different query parameters" time="0.251">
+  <testcase name="verify the posts by a user" classname="I want to verify endpoint services using different query parameters" time="0.374">
     <system-out><![CDATA[
 Scenario: verify the posts by a user                         &amp#27;[90m# src/main/resources/features/FilteringthroughQueryParams.feature:19&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am a user&amp#27;[0m                                          &amp#27;[90m# StepDefinations.FilterOptionsDefinations.i_am_a_user()&amp#27;[0m
@@ -1906,7 +1908,7 @@ Scenario: verify the posts by a user                         &amp#27;[90m# src/m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="verify the comments by a filtering postid" classname="I want to verify endpoint services using different query parameters" time="0.284">
+  <testcase name="verify the comments by a filtering postid" classname="I want to verify endpoint services using different query parameters" time="0.473">
     <system-out><![CDATA[
 Scenario: verify the comments by a filtering postid           &amp#27;[90m# src/main/resources/features/FilteringthroughQueryParams.feature:31&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am a user&amp#27;[0m                                           &amp#27;[90m# StepDefinations.FilterOptionsDefinations.i_am_a_user()&amp#27;[0m
@@ -1932,7 +1934,7 @@ Scenario: verify the comments by a filtering postid           &amp#27;[90m# src/
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="verify the comments by a filtering postid" classname="I want to verify endpoint services using different query parameters" time="0.257">
+  <testcase name="verify the comments by a filtering postid" classname="I want to verify endpoint services using different query parameters" time="0.433">
     <system-out><![CDATA[
 Scenario: verify the comments by a filtering postid           &amp#27;[90m# src/main/resources/features/FilteringthroughQueryParams.feature:31&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am a user&amp#27;[0m                                           &amp#27;[90m# StepDefinations.FilterOptionsDefinations.i_am_a_user()&amp#27;[0m
@@ -1958,7 +1960,7 @@ Scenario: verify the comments by a filtering postid           &amp#27;[90m# src/
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="I want to read the posts and the details" classname="I want to read the posts" time="0.117">
+  <testcase name="I want to read the posts and the details" classname="I want to read the posts" time="0.177">
     <system-out><![CDATA[
 @qa
 Scenario: I want to read the posts and the details &amp#27;[90m# src/main/resources/features/GetTheExistingPostDetails.feature:4&amp#27;[0m
@@ -1971,7 +1973,7 @@ Scenario: I want to read the posts and the details &amp#27;[90m# src/main/resour
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="I want to read the posts and the details" classname="I want to read the posts" time="0.101">
+  <testcase name="I want to read the posts and the details" classname="I want to read the posts" time="0.182">
     <system-out><![CDATA[
 @qa
 Scenario: I want to read the posts and the details &amp#27;[90m# src/main/resources/features/GetTheExistingPostDetails.feature:4&amp#27;[0m
