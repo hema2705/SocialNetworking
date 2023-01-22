@@ -12,5 +12,5 @@ Feature: As a user of social network I want to update a post
       | user id  |     title       |         body                       |   post id   | status code |
       | 1        |     Mango Wood  | Mango Wood is very hard            |    1        |  200        |
       | 2        |     Teak wood   | Teak wood is most durable          |    1        |  200        |
-      | 2        |     Acacia Wood | Acacia is an extremely durable wood|    1        |  200        |
+      | 2        |     Acacia Wood | Acacia is an extremely durable wood|    1        |  201        |
       

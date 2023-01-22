@@ -107,15 +107,15 @@ public class BasicCURD_Ops_Definations {
 	}
 
 
-	@Then("I want to verify the post deleted")
-	public void i_want_to_verify_the_post_deleted() {
+	@Then("I want to verify the post deleted and verify staus code {int}")
+	public void i_want_to_verify_the_post_deleted_and_verify_staus_code(Integer statuscode) {
 		try {
 
-			postid = validatepost.statusCode(post_responsecode).and().extract().jsonPath().getInt("id");
+			postid = validatepost.statusCode(statuscode).and().extract().jsonPath().getInt("id");
 			Assert.fail("The post is not deleted ");
 		}
 		catch (NullPointerException e) {
-			thisscenario.log("the post is deleted sucessfully with postid :" + this.postid + "Response of the body is empty"+ validatepost.log().all());
+			thisscenario.log("the post is deleted sucessfully with postid :" + this.postid + "Response of the body is empty"+ validatepost.log().all() + "status code is :"+ statuscode );
 
 		}
 	}

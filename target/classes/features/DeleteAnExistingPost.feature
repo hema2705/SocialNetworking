@@ -8,11 +8,11 @@ Feature: As a user of social network I want to update a post
     And when I get the existing resource values with user id  with title where post id is <post id>
     When delete where post id is <post id>
     Then verify the response body
-    And I want to verify the post deleted 
+    And I want to verify the post deleted and verify staus code <status code>
 
 
     Examples: 
-     | post id |
-     | 1 |
-     | 4 |
-     | 2 |
+     | post id | status code |
+     | 1       |  200        |
+     | 4       |  200        |
+     | 2       |  200        |
