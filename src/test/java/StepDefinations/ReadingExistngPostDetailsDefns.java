@@ -167,7 +167,6 @@ public class ReadingExistngPostDetailsDefns {
 		CommentsData updatepost = new CommentsData(postid,name,email,body);
 		requestSpeification = given().header(contettype).body(updatepost).pathParam("postId",postid).and().pathParam("comments", "comments").when();
 
-		//requestSpeification = given().header(contettype).body(updatepost).pathParam("postId",postid).and().pathParam("comments", "comments").and().queryParam("id", id).when();
 	}
 
 
