@@ -133,7 +133,9 @@ public class BasicCURD_Ops_Definations {
 		expectedtitle = title;
 
 		thisscenario.log("Creating a PUT request with values :" +" body:"+body + " user ID:" +userid + " postID: "+ postid + " title:"+ title);
-		resp = reqspec.pathParam("postId",postid).body(updatepost).when().put(posts_endpoint+"/{postId}");
+		//resp = reqspec.pathParam("postId",postid).body(updatepost).when().put(posts_endpoint+"/{postId}");
+		resp = reqspec.body(updatepost).when().put(posts_endpoint);
+
 		thisscenario.log("Updating an existing resource  resource post :"+ userid + ":"+title+":"+ body);
 		this.postid = postid;
 		post_responsecode = 200;

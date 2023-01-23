@@ -41,5 +41,17 @@ Feature: Read ,Delete and Post the comments based on postid and userid
       | 1      |    1    | Elephant | animals@zoo.biz  | Elephant is an intelligent animal |
       | 1      |    2    | Cheetah  | animal@zoo.user  | Fastest animal is Cheetah         |
       
+    Scenario Outline: Verify new comments put/edit based on post id
+   
+    Given I am an user of the social network 
+    When I want to post the comments  name "<name>" email "<email>" and body "<body>" made by userid <id> with values <postid> edited
+    Then verify the details of comments name "<name>" email "<email>" and body "<body>" made by userid <id> with values <postid> edited 
+   
     
+    
+    Examples: 
+      | postid | id      | name     | email            | body                             |
+      | 1      |    1    | Elephant | animals@zoo.biz  | Elephant is an intelligent animal |
+      | 1      |    2    | Cheetah  | animal@zoo.user  | Fastest animal is Cheetah         |
+      
    

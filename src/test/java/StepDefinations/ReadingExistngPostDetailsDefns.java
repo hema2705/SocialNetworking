@@ -155,7 +155,7 @@ public class ReadingExistngPostDetailsDefns {
 
 		}
 		catch (java.lang.AssertionError e) {
-			Assertions.fail("the response is not as expected");
+			Assertions.fail("the response is not as expected parameter values does not match");
 		}
 
 
@@ -165,11 +165,51 @@ public class ReadingExistngPostDetailsDefns {
 	public void i_want_to_post_the_comments_name_email_and_body_made_by_userid_with_values_posted(String name, String email, String body, Integer id, Integer postid) {
 
 		CommentsData updatepost = new CommentsData(postid,name,email,body);
+		requestSpeification = given().header(contettype).body(updatepost).pathParam("postId",postid).and().pathParam("comments", "comments").when();
+
+		//requestSpeification = given().header(contettype).body(updatepost).pathParam("postId",postid).and().pathParam("comments", "comments").and().queryParam("id", id).when();
+	}
+
+
+	@When("I want to post the comments  name {string} email {string} and body {string} made by userid {int} with values {int} edited")
+	public void i_want_to_post_the_comments_name_email_and_body_made_by_userid_with_values_edited(String name, String email, String body, Integer id, Integer postid) {
+		try {
+			response= requestSpeification.put(posts_endpoint+"/{postId}/{comments}");
+		}
+		catch(java.lang.NullPointerException e)
+		{
+			Assertions.fail("the response is null");
+
+		}
+
+
+		thisscenario.log("Creating a Post comment request with values :" +" body:"+body + " user ID:" +id + " postID: "+ postid + " body:"+ body +"email:"+ email);
+		ValidatableResponse responseofoperation = 	response.then();
+		thisscenario.log(" the response and is :"+ responseofoperation.log().body().extract().asString());
+
+		try {
+			responseofoperation.body("name",equalTo(name));
+			responseofoperation.body("email",equalTo(email));
+			responseofoperation.body("body",equalTo(body));
+			responseofoperation.body("id",equalTo(501));
+			responseofoperation.body("postId",equalTo(postid));
+
+
+		}
+		catch (java.lang.AssertionError e) {
+			Assertions.fail("the response is not as expected paramenter values does not match");
+		}
+
+
+	}
+
+	@Then("verify the details of comments name {string} email {string} and body {string} made by userid {int} with values {int} edited")
+	public void verify_the_details_of_comments_name_email_and_body_made_by_userid_with_values_edited(String name, String email, String body, Integer id, Integer postid)  {
+		CommentsData updatepost = new CommentsData(postid,name,email,body);
 
 		requestSpeification = given().header(contettype).body(updatepost).pathParam("postId",postid).and().pathParam("comments", "comments").and().queryParam("id", id).when();
-	}
-	
 
+	}
 
 
 }
