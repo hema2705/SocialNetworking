@@ -10,11 +10,11 @@ public class CommentsData {
 
 
 
-	public CommentsData(int postid , int id , String name,String email,String body) {
+	public CommentsData(int postid , String name,String email,String body) {
 
 		setBody(body);
 		setEmail(email);
-		setId(id);
+		//setId(id);
 		setName(name);
 		setPostId(postid);
 

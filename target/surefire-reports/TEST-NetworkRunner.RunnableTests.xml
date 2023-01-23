@@ -1,64 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="NetworkRunner.RunnableTests" time="10.454" tests="38" errors="0" skipped="0" failures="6">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="NetworkRunner.RunnableTests" time="13.836" tests="46" errors="0" skipped="0" failures="10">
   <properties>
-    <property name="cucumber.features" value="src/main/resources/features/F1_NewPostByExistingUser.feature,&#10;						src/main/resources/features/F2_UpdatingAnExistingPost.feature,&#10;						src/main/resources/features/F3_PatchingAnExistingResource.feature,&#10;						src/main/resources/features/F4_FilteringthroughQueryParams.feature,&#10;						src/main/resources/features/F5_DeleteAnExistingPost.feature,&#10;						src/main/resources/features/F6_GetTheCommentsBasedonPostIDandUserID.feature,&#10;						src/main/resources/features/F7_GetTheExistingPostDetails.feature"/>
+    <property name="cucumber.features" value="src/main/resources/features/F1_NewPostByExistingUser.feature,&#10;			src/main/resources/features/F2_UpdatingAnExistingPost.feature,&#10;			src/main/resources/features/F3_PatchingAnExistingResource.feature,&#10;			src/main/resources/features/F4_FilteringthroughQueryParams.feature,&#10;			src/main/resources/features/F5_DeleteAnExistingPost.feature,&#10;			src/main/resources/features/F6_Comments_operations.feature,&#10;			src/main/resources/features/F7_GetTheExistingPostDetails.feature"/>
+    <property name="gopherProxySet" value="false"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
-    <property name="java.specification.version" value="12"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value=""/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.class.path" value="/Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/test-classes:/Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/classes:/Users/hema/.m2/repository/io/cucumber/cucumber-java/7.11.0/cucumber-java-7.11.0.jar:/Users/hema/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-core/7.11.0/cucumber-core-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-gherkin/7.11.0/cucumber-gherkin-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.11.0/cucumber-gherkin-messages-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/gherkin/26.0.3/gherkin-26.0.3.jar:/Users/hema/.m2/repository/io/cucumber/messages/21.0.1/messages-21.0.1.jar:/Users/hema/.m2/repository/io/cucumber/tag-expressions/5.0.1/tag-expressions-5.0.1.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-expressions/16.1.1/cucumber-expressions-16.1.1.jar:/Users/hema/.m2/repository/io/cucumber/datatable/7.11.0/datatable-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-plugin/7.11.0/cucumber-plugin-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/docstring/7.11.0/docstring-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/html-formatter/20.2.1/html-formatter-20.2.1.jar:/Users/hema/.m2/repository/io/cucumber/junit-xml-formatter/0.1.0/junit-xml-formatter-0.1.0.jar:/Users/hema/.m2/repository/io/cucumber/ci-environment/9.1.0/ci-environment-9.1.0.jar:/Users/hema/.m2/repository/io/rest-assured/json-path/5.3.0/json-path-5.3.0.jar:/Users/hema/.m2/repository/org/apache/groovy/groovy-json/4.0.6/groovy-json-4.0.6.jar:/Users/hema/.m2/repository/org/apache/groovy/groovy/4.0.6/groovy-4.0.6.jar:/Users/hema/.m2/repository/io/rest-assured/rest-assured-common/5.3.0/rest-assured-common-5.3.0.jar:/Users/hema/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/Users/hema/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.2/junit-jupiter-api-5.9.2.jar:/Users/hema/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-commons/1.9.2/junit-platform-commons-1.9.2.jar:/Users/hema/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.14.1/jackson-databind-2.14.1.jar:/Users/hema/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.14.1/jackson-annotations-2.14.1.jar:/Users/hema/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.14.1/jackson-core-2.14.1.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.11.0/cucumber-junit-platform-engine-7.11.0.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.9.2/junit-platform-suite-engine-1.9.2.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-suite-api/1.9.2/junit-platform-suite-api-1.9.2.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.9.2/junit-platform-suite-commons-1.9.2.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-launcher/1.9.2/junit-platform-launcher-1.9.2.jar:/Users/hema/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.2/junit-jupiter-engine-5.9.2.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-java8/7.11.0/cucumber-java8-7.11.0.jar:/Users/hema/.m2/repository/net/jodah/typetools/0.6.3/typetools-0.6.3.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-suite/1.9.2/junit-platform-suite-1.9.2.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-engine/1.9.2/junit-platform-engine-1.9.2.jar:/Users/hema/.m2/repository/io/rest-assured/rest-assured/5.3.0/rest-assured-5.3.0.jar:/Users/hema/.m2/repository/org/apache/groovy/groovy-xml/4.0.6/groovy-xml-4.0.6.jar:/Users/hema/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/hema/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/hema/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/hema/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/hema/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/hema/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/Users/hema/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/hema/.m2/repository/io/rest-assured/xml-path/5.3.0/xml-path-5.3.0.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-junit/7.11.0/cucumber-junit-7.11.0.jar:/Users/hema/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/hema/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/hema/.m2/repository/org/junit/vintage/junit-vintage-engine/5.9.2/junit-vintage-engine-5.9.2.jar:"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="user.timezone" value="Europe/Warsaw"/>
+    <property name="user.country.format" value="IN"/>
+    <property name="java.vm.specification.version" value="1.8"/>
     <property name="os.name" value="Mac OS X"/>
-    <property name="java.vm.specification.version" value="12"/>
-    <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
-    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/surefire/surefirebooter-20230123183108393_3.jar /Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/surefire 2023-01-23T18-31-07_519-jvmRun1 surefire-20230123183108393_1tmp surefire_0-20230123183108393_2tmp"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/surefire/surefirebooter-20230123210042631_3.jar /Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/surefire 2023-01-23T21-00-41_709-jvmRun1 surefire-20230123210042631_1tmp surefire_0-20230123210042631_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/test-classes:/Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/classes:/Users/hema/.m2/repository/io/cucumber/cucumber-java/7.11.0/cucumber-java-7.11.0.jar:/Users/hema/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-core/7.11.0/cucumber-core-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-gherkin/7.11.0/cucumber-gherkin-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.11.0/cucumber-gherkin-messages-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/gherkin/26.0.3/gherkin-26.0.3.jar:/Users/hema/.m2/repository/io/cucumber/messages/21.0.1/messages-21.0.1.jar:/Users/hema/.m2/repository/io/cucumber/tag-expressions/5.0.1/tag-expressions-5.0.1.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-expressions/16.1.1/cucumber-expressions-16.1.1.jar:/Users/hema/.m2/repository/io/cucumber/datatable/7.11.0/datatable-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-plugin/7.11.0/cucumber-plugin-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/docstring/7.11.0/docstring-7.11.0.jar:/Users/hema/.m2/repository/io/cucumber/html-formatter/20.2.1/html-formatter-20.2.1.jar:/Users/hema/.m2/repository/io/cucumber/junit-xml-formatter/0.1.0/junit-xml-formatter-0.1.0.jar:/Users/hema/.m2/repository/io/cucumber/ci-environment/9.1.0/ci-environment-9.1.0.jar:/Users/hema/.m2/repository/io/rest-assured/json-path/5.3.0/json-path-5.3.0.jar:/Users/hema/.m2/repository/org/apache/groovy/groovy-json/4.0.6/groovy-json-4.0.6.jar:/Users/hema/.m2/repository/org/apache/groovy/groovy/4.0.6/groovy-4.0.6.jar:/Users/hema/.m2/repository/io/rest-assured/rest-assured-common/5.3.0/rest-assured-common-5.3.0.jar:/Users/hema/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/Users/hema/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.2/junit-jupiter-api-5.9.2.jar:/Users/hema/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-commons/1.9.2/junit-platform-commons-1.9.2.jar:/Users/hema/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.14.1/jackson-databind-2.14.1.jar:/Users/hema/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.14.1/jackson-annotations-2.14.1.jar:/Users/hema/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.14.1/jackson-core-2.14.1.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.11.0/cucumber-junit-platform-engine-7.11.0.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.9.2/junit-platform-suite-engine-1.9.2.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-suite-api/1.9.2/junit-platform-suite-api-1.9.2.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.9.2/junit-platform-suite-commons-1.9.2.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-launcher/1.9.2/junit-platform-launcher-1.9.2.jar:/Users/hema/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.2/junit-jupiter-engine-5.9.2.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-java8/7.11.0/cucumber-java8-7.11.0.jar:/Users/hema/.m2/repository/net/jodah/typetools/0.6.3/typetools-0.6.3.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-suite/1.9.2/junit-platform-suite-1.9.2.jar:/Users/hema/.m2/repository/org/junit/platform/junit-platform-engine/1.9.2/junit-platform-engine-1.9.2.jar:/Users/hema/.m2/repository/io/rest-assured/rest-assured/5.3.0/rest-assured-5.3.0.jar:/Users/hema/.m2/repository/org/apache/groovy/groovy-xml/4.0.6/groovy-xml-4.0.6.jar:/Users/hema/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/hema/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/hema/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/hema/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/hema/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/hema/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/Users/hema/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/hema/.m2/repository/io/rest-assured/xml-path/5.3.0/xml-path-5.3.0.jar:/Users/hema/.m2/repository/io/cucumber/cucumber-junit/7.11.0/cucumber-junit-7.11.0.jar:/Users/hema/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/hema/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/hema/.m2/repository/org/junit/vintage/junit-vintage-engine/5.9.2/junit-vintage-engine-5.9.2.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/hema"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2019-04-16"/>
-    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home"/>
-    <property name="file.separator" value="/"/>
+    <property name="java.home" value="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"/>
     <property name="basedir" value="/Users/hema/eclipse-workspace/SocialNetworkingCommunity"/>
-    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="file.separator" value="/"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/surefire/surefirebooter-20230123183108393_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/hema/eclipse-workspace/SocialNetworkingCommunity/target/surefire/surefirebooter-20230123210042631_3.jar"/>
+    <property name="sun.boot.class.path" value="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/resources.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/rt.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/sunrsasign.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/jsse.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/jce.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/charsets.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/jfr.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/classes"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="cucumber.plugin" value="pretty, html:src/test/resources/Reports/Results_2023-01-23T17:30:58Z.html"/>
-    <property name="java.runtime.version" value="12.0.1+12"/>
+    <property name="cucumber.plugin" value="pretty, html:src/test/resources/Reports/Results_2023-01-23T20:00:39Z.html"/>
+    <property name="java.runtime.version" value="1.8.0_211-b12"/>
     <property name="user.name" value="hema"/>
     <property name="path.separator" value=":"/>
     <property name="os.version" value="10.16"/>
+    <property name="java.endorsed.dirs" value="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/endorsed"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="localRepository" value="/Users/hema/.m2/repository"/>
-    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="java.io.tmpdir" value="/var/folders/mf/j0n3s12n1tlf4g1yg6gg3_1h0000gn/T/"/>
-    <property name="java.version" value="12.0.1"/>
+    <property name="java.version" value="1.8.0_211"/>
     <property name="user.dir" value="/Users/hema/eclipse-workspace/SocialNetworkingCommunity"/>
     <property name="os.arch" value="x86_64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.library.path" value="/Users/hema/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
-    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vm.info" value="mixed mode"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.version" value="12.0.1+12"/>
+    <property name="java.vm.version" value="25.211-b12"/>
+    <property name="java.ext.dirs" value="/Users/hema/Library/Java/Extensions:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="java.class.version" value="52.0"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="java.class.version" value="56.0"/>
   </properties>
-  <testcase name="Example #1.1" classname="Examples" time="8.93">
+  <testcase name="Example #1.1" classname="Examples" time="4.597">
     <system-out><![CDATA[
 Scenario Outline: verify the post on social network                                      &amp#27;[90m# src/main/resources/features/F1_NewPostByExistingUser.feature:15&amp#27;[0m
 
@@ -101,13 +107,13 @@ Scenario Outline: verify the post on social network                             
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mconfirm the message/post is as expected by retriving&amp#27;[0m                               &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.confirm_the_message_post_is_as_expected_by_retriving()&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
-    <system-err><![CDATA[Jan 23, 2023 6:31:09 PM io.cucumber.junit.platform.engine.DiscoverySelectorResolver warnWhenCucumberFeaturesPropertyIsUsed
+    <system-err><![CDATA[Jan 23, 2023 9:00:43 PM io.cucumber.junit.platform.engine.DiscoverySelectorResolver warnWhenCucumberFeaturesPropertyIsUsed
 WARNING: Discovering tests using the cucumber.features property. Other discovery selectors are ignored!
 Please request/upvote/sponsor/ect better support for JUnit 5 discovery selectors.
 See: https://github.com/cucumber/cucumber-jvm/pull/2498
 ]]></system-err>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.966">
+  <testcase name="Example #1.1" classname="Examples" time="0.93">
     <system-out><![CDATA[
 Scenario Outline: Updating the message using put                                                                  &amp#27;[90m# src/main/resources/features/F2_UpdatingAnExistingPost.feature:13&amp#27;[0m
 
@@ -163,7 +169,7 @@ POSTID: get 1
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.993">
+  <testcase name="Example #1.1" classname="Examples" time="1.046">
     <system-out><![CDATA[
 Scenario Outline: Updating the message using patching                                                                                    &amp#27;[90m# src/main/resources/features/F3_PatchingAnExistingResource.feature:15&amp#27;[0m
 
@@ -243,7 +249,7 @@ PATCHIND:1
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.898">
+  <testcase name="Example #1.1" classname="Examples" time="0.803">
     <system-out><![CDATA[
 Scenario Outline: Deleting the post                                                  &amp#27;[90m# src/main/resources/features/F5_DeleteAnExistingPost.feature:17&amp#27;[0m
 
@@ -282,14 +288,14 @@ POSTID: get 1
 
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                      &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 HTTP/1.1 200 OK
-Date: Mon, 23 Jan 2023 17:31:32 GMT
+Date: Mon, 23 Jan 2023 20:00:59 GMT
 Content-Type: application/json; charset=utf-8
 Content-Length: 2
 Connection: keep-alive
 X-Powered-By: Express
 X-Ratelimit-Limit: 1000
-X-Ratelimit-Remaining: 999
-X-Ratelimit-Reset: 1674495152
+X-Ratelimit-Remaining: 989
+X-Ratelimit-Reset: 1674504092
 Vary: Origin, Accept-Encoding
 Access-Control-Allow-Credentials: true
 Cache-Control: no-cache
@@ -299,35 +305,34 @@ X-Content-Type-Options: nosniff
 Etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
 Via: 1.1 vegur
 CF-Cache-Status: DYNAMIC
-Server-Timing: cf-q-config;dur=1.1000003723893e-05
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=4yRKZHIR%2Br0AfFO9dk5n1ZjT976yY%2Fo75%2FxzRCVRis74phNWrep5wHEAxlrH2OcAl1OMmSqhBJcALWJIli%2Fxb5j%2FU4I3eCMMILnXrx4UF%2Ff%2B%2BhsLybT6TL%2FlBaO%2FxayE3mDzKPDqZNr6xb4p3fHw"}],"group":"cf-nel","max_age":604800}
+Server-Timing: cf-q-config;dur=7.0000023697503e-06
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=9NBVFmcYLEqgosZUCPrEqLXg7JLkdiHHItDxU4nMlfOPeGs3Lho7w8jruOX7Oe1MEFnCpUKI8kVanFLP4KzZO63Myl4Db%2Br6MVpNvA5TpJ9Jg659%2F2JkRTTh52gvoVJciezV80vO0x%2Bmv3sHzZTR"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 78e243771a51c00d-WAW
+CF-RAY: 78e31e611abffc83-WAW
 alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
 
 {
     
 }
 
-    the post is deleted sucessfully with postid :1Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@5f781173status code is :200
+    the post is deleted sucessfully with postid :1Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@45b7c97fstatus code is :200
 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the post deleted and verify staus code &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                    &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_post_deleted_and_verify_staus_code(java.lang.Integer)&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.632">
+  <testcase name="Example #1.1" classname="Examples" time="0.467">
     <failure message="1 expectation failed.&#10;JSON path [0].name doesn&apos;t match.&#10;Expected: quo vero reiciendis velit similique earum&#10;  Actual: id labore ex et quam laborum&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
 1 expectation failed.
 JSON path [0].name doesn't match.
 Expected: quo vero reiciendis velit similique earum
   Actual: id labore ex et quam laborum
 
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
 	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
@@ -336,9 +341,9 @@ Expected: quo vero reiciendis velit similique earum
 	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
 	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor124.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at sun.reflect.GeneratedMethodAccessor124.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
@@ -347,28 +352,26 @@ Expected: quo vero reiciendis velit similique earum
 	at io.restassured.specification.ResponseSpecification$body$0.callCurrent(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
 	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
-	at StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_made_by_userid_with_values(ReadingExistngPostDetailsDefns.java:99)
-	at ✽.verify the details of comments made by userid 1 with values 1(file:///Users/hema/eclipse-workspace/SocialNetworkingCommunity/src/main/resources/features/F6_GetTheCommentsBasedonPostIDandUserID.feature:11)
+	at StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_made_by_userid_with_values(ReadingExistngPostDetailsDefns.java:105)
+	at ✽.verify the details of comments made by userid 1 with values 1(file:///Users/hema/eclipse-workspace/SocialNetworkingCommunity/src/main/resources/features/F6_Comments_operations.feature:10)
 ]]></failure>
     <system-out><![CDATA[
-Scenario Outline: Verify the comments based on postid               &amp#27;[90m# src/main/resources/features/F6_GetTheCommentsBasedonPostIDandUserID.feature:16&amp#27;[0m
+Scenario Outline: Verify the comments based on postid                &amp#27;[90m# src/main/resources/features/F6_Comments_operations.feature:15&amp#27;[0m
 
     End point url of the posts is :https://jsonplaceholder.typicode.com/posts
 
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an user of the social network&amp#27;[0m                          &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_am_an_user_of_the_social_network()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI can access the posts&amp#27;[0m                                       &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_can_access_the_posts()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI want to get the &amp#27;[0m&amp#27;[32m&amp#27;[1m"comments"&amp#27;[0m&amp#27;[32m &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m                               &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_want_to_get_the(java.lang.String,java.lang.Integer)&amp#27;[0m
-  &amp#27;[31mAnd &amp#27;[0m&amp#27;[31mverify the details of comments made by userid &amp#27;[0m&amp#27;[31m&amp#27;[1m1&amp#27;[0m&amp#27;[31m with values &amp#27;[0m&amp#27;[31m&amp#27;[1m1&amp#27;[0m &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_made_by_userid_with_values(java.lang.Integer,java.lang.Integer)&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an user of the social network&amp#27;[0m                           &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_am_an_user_of_the_social_network()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI want to get the &amp#27;[0m&amp#27;[32m&amp#27;[1m"comments"&amp#27;[0m&amp#27;[32m &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m                                &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_want_to_get_the(java.lang.String,java.lang.Integer)&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mverify the details of comments made by userid &amp#27;[0m&amp#27;[31m&amp#27;[1m1&amp#27;[0m&amp#27;[31m with values &amp#27;[0m&amp#27;[31m&amp#27;[1m1&amp#27;[0m &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_made_by_userid_with_values(java.lang.Integer,java.lang.Integer)&amp#27;[0m
       &amp#27;[31mjava.lang.AssertionError: 1 expectation failed.
 JSON path [0].name doesn't match.
 Expected: quo vero reiciendis velit similique earum
   Actual: id labore ex et quam laborum
 
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
 	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
@@ -377,9 +380,9 @@ Expected: quo vero reiciendis velit similique earum
 	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
 	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor124.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at sun.reflect.GeneratedMethodAccessor124.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
@@ -388,13 +391,94 @@ Expected: quo vero reiciendis velit similique earum
 	at io.restassured.specification.ResponseSpecification$body$0.callCurrent(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
 	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
-	at StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_made_by_userid_with_values(ReadingExistngPostDetailsDefns.java:99)
-	at ✽.verify the details of comments made by userid 1 with values 1(file:///Users/hema/eclipse-workspace/SocialNetworkingCommunity/src/main/resources/features/F6_GetTheCommentsBasedonPostIDandUserID.feature:11)
+	at StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_made_by_userid_with_values(ReadingExistngPostDetailsDefns.java:105)
+	at ✽.verify the details of comments made by userid 1 with values 1(file:///Users/hema/eclipse-workspace/SocialNetworkingCommunity/src/main/resources/features/F6_Comments_operations.feature:10)
 &amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.582">
+  <testcase name="Example #1.1" classname="Examples" time="0.598">
+    <system-out><![CDATA[
+Scenario Outline: Verify comments deleted based on post id                                          &amp#27;[90m# src/main/resources/features/F6_Comments_operations.feature:28&amp#27;[0m
+
+    End point url of the posts is :https://jsonplaceholder.typicode.com/posts
+
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an user of the social network&amp#27;[0m                                                          &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_am_an_user_of_the_social_network()&amp#27;[0m
+[
+    {
+        "postId": 1,
+        "id": 1,
+        "name": "id labore ex et quam laborum",
+        "email": "Eliseo@gardner.biz",
+        "body": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium"
+    }
+]
+
+    [
+      {
+        "postId": 1,
+        "id": 1,
+        "name": "id labore ex et quam laborum",
+        "email": "Eliseo@gardner.biz",
+        "body": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium"
+      }
+    ]
+
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI want to delete the comments &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m and userid &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m                                                 &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_want_to_delete_the_comments_and_userid(java.lang.Integer,java.lang.Integer)&amp#27;[0m
+{
+    
+}
+
+    validated the response and is :{}
+
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the details of comments made by userid &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m with values &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m deleted with empy respnse body&amp#27;[0m &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_made_by_userid_with_values_deleted_with_empy_respnse_body(java.lang.Integer,java.lang.Integer)&amp#27;[0m
+This will run after the Scenario
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="0.48">
+    <failure message="the response is not as expected" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: the response is not as expected
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:135)
+	at StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_name_email_and_body_made_by_userid_with_values_posted(ReadingExistngPostDetailsDefns.java:158)
+	at ✽.verify the details of comments name "Elephant" email "animals@zoo.biz" and body "Elephant is an intelligent animal" made by userid 1 with values 1 posted(file:///Users/hema/eclipse-workspace/SocialNetworkingCommunity/src/main/resources/features/F6_Comments_operations.feature:35)
+]]></failure>
+    <system-out><![CDATA[
+Scenario Outline: Verify new comments posted based on post id                                                                                                    &amp#27;[90m# src/main/resources/features/F6_Comments_operations.feature:41&amp#27;[0m
+
+    End point url of the posts is :https://jsonplaceholder.typicode.com/posts
+
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an user of the social network&amp#27;[0m                                                                                                                       &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_am_an_user_of_the_social_network()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI want to post the comments  name &amp#27;[0m&amp#27;[32m&amp#27;[1m"Elephant"&amp#27;[0m&amp#27;[32m email &amp#27;[0m&amp#27;[32m&amp#27;[1m"animals@zoo.biz"&amp#27;[0m&amp#27;[32m and body &amp#27;[0m&amp#27;[32m&amp#27;[1m"Elephant is an intelligent animal"&amp#27;[0m&amp#27;[32m made by userid &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m with values &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m posted&amp#27;[0m   &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_want_to_post_the_comments_name_email_and_body_made_by_userid_with_values_posted(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)&amp#27;[0m
+
+    Creating a Post comment request with values : body:Elephant is an intelligent animal user ID:1 postID: 1 body:Elephant is an intelligent animalemail:animals@zoo.biz
+
+{
+    "postId": "1",
+    "id": 501,
+    "name": "Elephant",
+    "email": "animals@zoo.biz",
+    "body": "Elephant is an intelligent animal"
+}
+
+     the response and is :{
+      "postId": "1",
+      "id": 501,
+      "name": "Elephant",
+      "email": "animals@zoo.biz",
+      "body": "Elephant is an intelligent animal"
+    }
+
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mverify the details of comments name &amp#27;[0m&amp#27;[31m&amp#27;[1m"Elephant"&amp#27;[0m&amp#27;[31m email &amp#27;[0m&amp#27;[31m&amp#27;[1m"animals@zoo.biz"&amp#27;[0m&amp#27;[31m and body &amp#27;[0m&amp#27;[31m&amp#27;[1m"Elephant is an intelligent animal"&amp#27;[0m&amp#27;[31m made by userid &amp#27;[0m&amp#27;[31m&amp#27;[1m1&amp#27;[0m&amp#27;[31m with values &amp#27;[0m&amp#27;[31m&amp#27;[1m1&amp#27;[0m&amp#27;[31m posted&amp#27;[0m &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_name_email_and_body_made_by_userid_with_values_posted(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)&amp#27;[0m
+      &amp#27;[31morg.opentest4j.AssertionFailedError: the response is not as expected
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:135)
+	at StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_name_email_and_body_made_by_userid_with_values_posted(ReadingExistngPostDetailsDefns.java:158)
+	at ✽.verify the details of comments name "Elephant" email "animals@zoo.biz" and body "Elephant is an intelligent animal" made by userid 1 with values 1 posted(file:///Users/hema/eclipse-workspace/SocialNetworkingCommunity/src/main/resources/features/F6_Comments_operations.feature:35)
+&amp#27;[0m
+This will run after the Scenario
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="0.668">
     <system-out><![CDATA[
 Scenario Outline: verify the post on social network                                      &amp#27;[90m# src/main/resources/features/F1_NewPostByExistingUser.feature:15&amp#27;[0m
 
@@ -455,7 +539,7 @@ This will run after the Scenario
 &amp#27;[32m&amp#27;[1m└───────────────────────────────────────────────────────────────────────────────────┘&amp#27;[0m
 ]]></system-err>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.702">
+  <testcase name="Example #1.1" classname="Examples" time="0.791">
     <system-out><![CDATA[
 Scenario Outline: Updating the message using put                                                                  &amp#27;[90m# src/main/resources/features/F2_UpdatingAnExistingPost.feature:13&amp#27;[0m
 
@@ -511,7 +595,7 @@ POSTID: get 1
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.824">
+  <testcase name="Example #1.1" classname="Examples" time="0.903">
     <system-out><![CDATA[
 Scenario Outline: Updating the message using patching                                                                                    &amp#27;[90m# src/main/resources/features/F3_PatchingAnExistingResource.feature:15&amp#27;[0m
 
@@ -591,7 +675,7 @@ PATCHIND:1
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.684">
+  <testcase name="Example #1.1" classname="Examples" time="0.742">
     <system-out><![CDATA[
 Scenario Outline: Deleting the post                                                  &amp#27;[90m# src/main/resources/features/F5_DeleteAnExistingPost.feature:17&amp#27;[0m
 
@@ -630,14 +714,14 @@ POSTID: get 1
 
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                      &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 HTTP/1.1 200 OK
-Date: Mon, 23 Jan 2023 17:31:43 GMT
+Date: Mon, 23 Jan 2023 20:01:13 GMT
 Content-Type: application/json; charset=utf-8
 Content-Length: 2
 Connection: keep-alive
 X-Powered-By: Express
 X-Ratelimit-Limit: 1000
-X-Ratelimit-Remaining: 986
-X-Ratelimit-Reset: 1674495152
+X-Ratelimit-Remaining: 972
+X-Ratelimit-Reset: 1674504092
 Vary: Origin, Accept-Encoding
 Access-Control-Allow-Credentials: true
 Cache-Control: no-cache
@@ -647,35 +731,34 @@ X-Content-Type-Options: nosniff
 Etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
 Via: 1.1 vegur
 CF-Cache-Status: DYNAMIC
-Server-Timing: cf-q-config;dur=6.0000020312145e-06
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=vF3Nv4c2Tc93yc13Kybk9G59wZk3UqI9ks22Mr2aFGokRdqdRzuiBbi02nFYEkCgW0n%2B907oAeVIK8ixyUApbydgJ8Vo6fumureMKhIqmtNxGnaL1PPxWfMgipaxDJ8RG7zCCyWlIeKCiDC4SU7E"}],"group":"cf-nel","max_age":604800}
+Server-Timing: cf-q-config;dur=4.9999944167212e-06
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=IuPOI4%2B6czfByueHn75ZJtDK024NVEwdJ4tP%2F%2Fns9U2aEyXXJSv1q%2FxnWFzm%2BgvTxp7CiswHR0x%2FD3SldhS87jvlpOtAK4XFeR581cOSRhfHcFurIY0oAT89uGCy1Zt3PhYmT0WlaHAXHzK3jq%2By"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 78e243bd2f8d1642-WAW
+CF-RAY: 78e31eba7ed80037-WAW
 alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
 
 {
     
 }
 
-    the post is deleted sucessfully with postid :1Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@61627c9dstatus code is :200
+    the post is deleted sucessfully with postid :1Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@2e9dcdd3status code is :200
 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the post deleted and verify staus code &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                    &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_post_deleted_and_verify_staus_code(java.lang.Integer)&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.375">
+  <testcase name="Example #1.1" classname="Examples" time="0.352">
     <failure message="1 expectation failed.&#10;JSON path [0].name doesn&apos;t match.&#10;Expected: quo vero reiciendis velit similique earum&#10;  Actual: id labore ex et quam laborum&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
 1 expectation failed.
 JSON path [0].name doesn't match.
 Expected: quo vero reiciendis velit similique earum
   Actual: id labore ex et quam laborum
 
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
 	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
@@ -684,9 +767,9 @@ Expected: quo vero reiciendis velit similique earum
 	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
 	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor124.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at sun.reflect.GeneratedMethodAccessor124.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
@@ -695,28 +778,26 @@ Expected: quo vero reiciendis velit similique earum
 	at io.restassured.specification.ResponseSpecification$body$0.callCurrent(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
 	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
-	at StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_made_by_userid_with_values(ReadingExistngPostDetailsDefns.java:99)
-	at ✽.verify the details of comments made by userid 1 with values 1(file:///Users/hema/eclipse-workspace/SocialNetworkingCommunity/src/main/resources/features/F6_GetTheCommentsBasedonPostIDandUserID.feature:11)
+	at StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_made_by_userid_with_values(ReadingExistngPostDetailsDefns.java:105)
+	at ✽.verify the details of comments made by userid 1 with values 1(file:///Users/hema/eclipse-workspace/SocialNetworkingCommunity/src/main/resources/features/F6_Comments_operations.feature:10)
 ]]></failure>
     <system-out><![CDATA[
-Scenario Outline: Verify the comments based on postid               &amp#27;[90m# src/main/resources/features/F6_GetTheCommentsBasedonPostIDandUserID.feature:16&amp#27;[0m
+Scenario Outline: Verify the comments based on postid                &amp#27;[90m# src/main/resources/features/F6_Comments_operations.feature:15&amp#27;[0m
 
     End point url of the posts is :https://jsonplaceholder.typicode.com/posts
 
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an user of the social network&amp#27;[0m                          &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_am_an_user_of_the_social_network()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI can access the posts&amp#27;[0m                                       &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_can_access_the_posts()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI want to get the &amp#27;[0m&amp#27;[32m&amp#27;[1m"comments"&amp#27;[0m&amp#27;[32m &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m                               &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_want_to_get_the(java.lang.String,java.lang.Integer)&amp#27;[0m
-  &amp#27;[31mAnd &amp#27;[0m&amp#27;[31mverify the details of comments made by userid &amp#27;[0m&amp#27;[31m&amp#27;[1m1&amp#27;[0m&amp#27;[31m with values &amp#27;[0m&amp#27;[31m&amp#27;[1m1&amp#27;[0m &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_made_by_userid_with_values(java.lang.Integer,java.lang.Integer)&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an user of the social network&amp#27;[0m                           &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_am_an_user_of_the_social_network()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI want to get the &amp#27;[0m&amp#27;[32m&amp#27;[1m"comments"&amp#27;[0m&amp#27;[32m &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m                                &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_want_to_get_the(java.lang.String,java.lang.Integer)&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mverify the details of comments made by userid &amp#27;[0m&amp#27;[31m&amp#27;[1m1&amp#27;[0m&amp#27;[31m with values &amp#27;[0m&amp#27;[31m&amp#27;[1m1&amp#27;[0m &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_made_by_userid_with_values(java.lang.Integer,java.lang.Integer)&amp#27;[0m
       &amp#27;[31mjava.lang.AssertionError: 1 expectation failed.
 JSON path [0].name doesn't match.
 Expected: quo vero reiciendis velit similique earum
   Actual: id labore ex et quam laborum
 
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
 	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
@@ -725,9 +806,9 @@ Expected: quo vero reiciendis velit similique earum
 	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
 	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor124.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at sun.reflect.GeneratedMethodAccessor124.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
@@ -736,279 +817,94 @@ Expected: quo vero reiciendis velit similique earum
 	at io.restassured.specification.ResponseSpecification$body$0.callCurrent(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
 	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
-	at StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_made_by_userid_with_values(ReadingExistngPostDetailsDefns.java:99)
-	at ✽.verify the details of comments made by userid 1 with values 1(file:///Users/hema/eclipse-workspace/SocialNetworkingCommunity/src/main/resources/features/F6_GetTheCommentsBasedonPostIDandUserID.feature:11)
+	at StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_made_by_userid_with_values(ReadingExistngPostDetailsDefns.java:105)
+	at ✽.verify the details of comments made by userid 1 with values 1(file:///Users/hema/eclipse-workspace/SocialNetworkingCommunity/src/main/resources/features/F6_Comments_operations.feature:10)
 &amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.772">
+  <testcase name="Example #1.1" classname="Examples" time="0.601">
     <system-out><![CDATA[
-Scenario Outline: verify the post on social network             &amp#27;[90m# src/main/resources/features/F1_NewPostByExistingUser.feature:16&amp#27;[0m
-
-    Request to the end point:https://jsonplaceholder.typicode.com/posts
-
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m             &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
-
-    Setting header:Content-type=application/json; charset=UTF-8
-
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                             &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
-
-    Creating a POST request with values : body:post with empty title user ID:2 title:
-
-
-    Creating a new resource post :2::post with empty title
-
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mmy user id &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with title &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m posts &amp#27;[0m&amp#27;[32m&amp#27;[1m"post with empty title"&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.my_user_id_with_title_posts(java.lang.Integer,java.lang.String,java.lang.String)&amp#27;[0m
-{
-    "userId": 2,
-    "body": "post with empty title",
-    "title": "",
-    "id": 101
-}
-
-    validated the response and is :{
-      "userId": 2,
-      "body": "post with empty title",
-      "title": "",
-      "id": 101
-    }
-
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                 &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
-
-    New post successfully created and validated, with status code and the postid is :201,101
-
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the response status code  &amp#27;[0m&amp#27;[32m&amp#27;[1m201&amp#27;[0m            &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_response_status_code(java.lang.Integer)&amp#27;[0m
-
-    The values cannot be verified by retriving using get method to validdate new posted message as this is a mock service
-
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mconfirm the message/post is as expected by retriving&amp#27;[0m      &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.confirm_the_message_post_is_as_expected_by_retriving()&amp#27;[0m
-This will run after the Scenario
-]]></system-out>
-  </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.877">
-    <system-out><![CDATA[
-Scenario Outline: Updating the message using put                                                                   &amp#27;[90m# src/main/resources/features/F2_UpdatingAnExistingPost.feature:14&amp#27;[0m
-
-    Request to the end point:https://jsonplaceholder.typicode.com/posts
-
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
-
-    Setting header:Content-type=application/json; charset=UTF-8
-
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
-POSTID: get 1
-{
-    "userId": 1,
-    "id": 1,
-    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
-}
-
-    Updating the existing resource data:{
-      "userId": 1,
-      "id": 1,
-      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
-    }
-
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m                               &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
-
-    Creating a PUT request with values : body:Teak wood is most durable user ID:2 postID: 1 title:Teak wood
-
-
-    Updating an existing resource  resource post :2:Teak wood:Teak wood is most durable
-
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mmy user id &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Teak wood"&amp#27;[0m&amp#27;[32m posts &amp#27;[0m&amp#27;[32m&amp#27;[1m"Teak wood is most durable"&amp#27;[0m&amp#27;[32m to modify with put where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.my_user_id_with_title_posts_to_modify_with_put_where_post_id_is(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer)&amp#27;[0m
-{
-    "userId": 2,
-    "body": "Teak wood is most durable",
-    "title": "Teak wood",
-    "id": 1
-}
-
-    validated the response and is :{
-      "userId": 2,
-      "body": "Teak wood is most durable",
-      "title": "Teak wood",
-      "id": 1
-    }
-
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                                                    &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
-
-    New post successfully created and validated, with status code and the postid is :200,1
-
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the response status code  &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                                                               &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_response_status_code(java.lang.Integer)&amp#27;[0m
-This will run after the Scenario
-]]></system-out>
-  </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.871">
-    <system-out><![CDATA[
-Scenario Outline: Updating the message using patching                                                                                            &amp#27;[90m# src/main/resources/features/F3_PatchingAnExistingResource.feature:16&amp#27;[0m
-
-    Request to the end point:https://jsonplaceholder.typicode.com/posts
-
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
-
-    Setting header:Content-type=application/json; charset=UTF-8
-
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
-POSTID: get 2
-{
-    "userId": 1,
-    "id": 2,
-    "title": "qui est esse",
-    "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
-}
-
-    Updating the existing resource data:{
-      "userId": 1,
-      "id": 2,
-      "title": "qui est esse",
-      "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
-    }
-
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m                                                             &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
-PATCHIND:2
-1****NorthAmerica****NorthAmerica has Denail****2****6190
-
-    Creating a PATCH request with values : body:NorthAmerica has Denail user ID:1 postID: 2 title:NorthAmerica
-
-
-    Patching the an existing resource  :1:NorthAmerica:NorthAmerica has Denail
-
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mmy user id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"NorthAmerica"&amp#27;[0m&amp#27;[32m posts &amp#27;[0m&amp#27;[32m&amp#27;[1m"NorthAmerica has Denail"&amp#27;[0m&amp#27;[32m to modify with patch where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with mt height &amp#27;[0m&amp#27;[32m&amp#27;[1m6190&amp#27;[0m&amp#27;[32m values&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.my_user_id_with_title_posts_to_modify_with_patch_where_post_id_is_with_mt_height_values(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)&amp#27;[0m
-{
-    "userId": 1,
-    "id": 2,
-    "title": "NorthAmerica",
-    "body": "NorthAmerica has Denail",
-    "height": 6190
-}
-
-    validated the response and is :{
-      "userId": 1,
-      "id": 2,
-      "title": "NorthAmerica",
-      "body": "NorthAmerica has Denail",
-      "height": 6190
-    }
-
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                                                                                  &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
-
-    New post successfully created and validated, with status code and the postid is :200,2
-
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the response status code  &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                                                                                             &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_response_status_code(java.lang.Integer)&amp#27;[0m
-{
-    "userId": 1,
-    "id": 2,
-    "title": "NorthAmerica",
-    "body": "NorthAmerica has Denail",
-    "height": 6190
-}
-
-    patched response  is :{
-      "userId": 1,
-      "id": 2,
-      "title": "NorthAmerica",
-      "body": "NorthAmerica has Denail",
-      "height": 6190
-    }
-
-
-    Patching the an existing resource is sucessful at postid :2
-
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the if patch is successful&amp#27;[0m                                                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_if_patch_is_successful()&amp#27;[0m
-This will run after the Scenario
-]]></system-out>
-  </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.902">
-    <system-out><![CDATA[
-Scenario Outline: Deleting the post                                                  &amp#27;[90m# src/main/resources/features/F5_DeleteAnExistingPost.feature:18&amp#27;[0m
-
-    Request to the end point:https://jsonplaceholder.typicode.com/posts
-
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                  &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
-
-    Setting header:Content-type=application/json; charset=UTF-8
-
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                  &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
-POSTID: get 4
-{
-    "userId": 1,
-    "id": 4,
-    "title": "eum et est occaecati",
-    "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
-}
-
-    Updating the existing resource data:{
-      "userId": 1,
-      "id": 4,
-      "title": "eum et est occaecati",
-      "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
-    }
-
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
-
-    Deleting the an existing resource  resource post :4
-
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mdelete where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m                                                     &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.delete_where_post_id_is(java.lang.Integer)&amp#27;[0m
-{
-    
-}
-
-    validated the response and is :{}
-
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                      &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
-HTTP/1.1 200 OK
-Date: Mon, 23 Jan 2023 17:31:33 GMT
-Content-Type: application/json; charset=utf-8
-Content-Length: 2
-Connection: keep-alive
-X-Powered-By: Express
-X-Ratelimit-Limit: 1000
-X-Ratelimit-Remaining: 998
-X-Ratelimit-Reset: 1674495152
-Vary: Origin, Accept-Encoding
-Access-Control-Allow-Credentials: true
-Cache-Control: no-cache
-Pragma: no-cache
-Expires: -1
-X-Content-Type-Options: nosniff
-Etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
-Via: 1.1 vegur
-CF-Cache-Status: DYNAMIC
-Server-Timing: cf-q-config;dur=5.9999983932357e-06
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=dC3HJzey4DD7EA%2BmMk97f5Afz1PKH5%2Bv0HBrRVdbaxyZghcqHKTPrq0EcN2Vnl7jy0%2B%2FqV3dv27u6Xfo1IjLyR0U3Eph4XYsDi9TeZOon5f4Hv3110UJmZNS9Cj3VdZvBlZfqs1XkQi4bqjzCZ%2Fe"}],"group":"cf-nel","max_age":604800}
-NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
-Server: cloudflare
-CF-RAY: 78e2437d4f4e1630-WAW
-alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
-
-{
-    
-}
-
-    the post is deleted sucessfully with postid :4Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@1293f8d7status code is :200
-
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the post deleted and verify staus code &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                    &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_post_deleted_and_verify_staus_code(java.lang.Integer)&amp#27;[0m
-This will run after the Scenario
-]]></system-out>
-  </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.38">
-    <system-out><![CDATA[
-Scenario Outline: Verify the comments based on postid               &amp#27;[90m# src/main/resources/features/F6_GetTheCommentsBasedonPostIDandUserID.feature:17&amp#27;[0m
+Scenario Outline: Verify comments deleted based on post id                                          &amp#27;[90m# src/main/resources/features/F6_Comments_operations.feature:28&amp#27;[0m
 
     End point url of the posts is :https://jsonplaceholder.typicode.com/posts
 
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an user of the social network&amp#27;[0m                          &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_am_an_user_of_the_social_network()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI can access the posts&amp#27;[0m                                       &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_can_access_the_posts()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI want to get the &amp#27;[0m&amp#27;[32m&amp#27;[1m"comments"&amp#27;[0m&amp#27;[32m &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m                               &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_want_to_get_the(java.lang.String,java.lang.Integer)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mverify the details of comments made by userid &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with values &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_made_by_userid_with_values(java.lang.Integer,java.lang.Integer)&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an user of the social network&amp#27;[0m                                                          &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_am_an_user_of_the_social_network()&amp#27;[0m
+[
+    {
+        "postId": 1,
+        "id": 1,
+        "name": "id labore ex et quam laborum",
+        "email": "Eliseo@gardner.biz",
+        "body": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium"
+    }
+]
+
+    [
+      {
+        "postId": 1,
+        "id": 1,
+        "name": "id labore ex et quam laborum",
+        "email": "Eliseo@gardner.biz",
+        "body": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium"
+      }
+    ]
+
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI want to delete the comments &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m and userid &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m                                                 &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_want_to_delete_the_comments_and_userid(java.lang.Integer,java.lang.Integer)&amp#27;[0m
+{
+    
+}
+
+    validated the response and is :{}
+
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the details of comments made by userid &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m with values &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m deleted with empy respnse body&amp#27;[0m &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_made_by_userid_with_values_deleted_with_empy_respnse_body(java.lang.Integer,java.lang.Integer)&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.597">
+  <testcase name="Example #1.1" classname="Examples" time="0.425">
+    <failure message="the response is not as expected" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: the response is not as expected
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:135)
+	at StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_name_email_and_body_made_by_userid_with_values_posted(ReadingExistngPostDetailsDefns.java:158)
+	at ✽.verify the details of comments name "Elephant" email "animals@zoo.biz" and body "Elephant is an intelligent animal" made by userid 1 with values 1 posted(file:///Users/hema/eclipse-workspace/SocialNetworkingCommunity/src/main/resources/features/F6_Comments_operations.feature:35)
+]]></failure>
+    <system-out><![CDATA[
+Scenario Outline: Verify new comments posted based on post id                                                                                                    &amp#27;[90m# src/main/resources/features/F6_Comments_operations.feature:41&amp#27;[0m
+
+    End point url of the posts is :https://jsonplaceholder.typicode.com/posts
+
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an user of the social network&amp#27;[0m                                                                                                                       &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_am_an_user_of_the_social_network()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI want to post the comments  name &amp#27;[0m&amp#27;[32m&amp#27;[1m"Elephant"&amp#27;[0m&amp#27;[32m email &amp#27;[0m&amp#27;[32m&amp#27;[1m"animals@zoo.biz"&amp#27;[0m&amp#27;[32m and body &amp#27;[0m&amp#27;[32m&amp#27;[1m"Elephant is an intelligent animal"&amp#27;[0m&amp#27;[32m made by userid &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m with values &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m posted&amp#27;[0m   &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_want_to_post_the_comments_name_email_and_body_made_by_userid_with_values_posted(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)&amp#27;[0m
+
+    Creating a Post comment request with values : body:Elephant is an intelligent animal user ID:1 postID: 1 body:Elephant is an intelligent animalemail:animals@zoo.biz
+
+{
+    "postId": "1",
+    "id": 501,
+    "name": "Elephant",
+    "email": "animals@zoo.biz",
+    "body": "Elephant is an intelligent animal"
+}
+
+     the response and is :{
+      "postId": "1",
+      "id": 501,
+      "name": "Elephant",
+      "email": "animals@zoo.biz",
+      "body": "Elephant is an intelligent animal"
+    }
+
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mverify the details of comments name &amp#27;[0m&amp#27;[31m&amp#27;[1m"Elephant"&amp#27;[0m&amp#27;[31m email &amp#27;[0m&amp#27;[31m&amp#27;[1m"animals@zoo.biz"&amp#27;[0m&amp#27;[31m and body &amp#27;[0m&amp#27;[31m&amp#27;[1m"Elephant is an intelligent animal"&amp#27;[0m&amp#27;[31m made by userid &amp#27;[0m&amp#27;[31m&amp#27;[1m1&amp#27;[0m&amp#27;[31m with values &amp#27;[0m&amp#27;[31m&amp#27;[1m1&amp#27;[0m&amp#27;[31m posted&amp#27;[0m &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_name_email_and_body_made_by_userid_with_values_posted(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)&amp#27;[0m
+      &amp#27;[31morg.opentest4j.AssertionFailedError: the response is not as expected
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:135)
+	at StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_name_email_and_body_made_by_userid_with_values_posted(ReadingExistngPostDetailsDefns.java:158)
+	at ✽.verify the details of comments name "Elephant" email "animals@zoo.biz" and body "Elephant is an intelligent animal" made by userid 1 with values 1 posted(file:///Users/hema/eclipse-workspace/SocialNetworkingCommunity/src/main/resources/features/F6_Comments_operations.feature:35)
+&amp#27;[0m
+This will run after the Scenario
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="0.732">
     <system-out><![CDATA[
 Scenario Outline: verify the post on social network             &amp#27;[90m# src/main/resources/features/F1_NewPostByExistingUser.feature:16&amp#27;[0m
 
@@ -1052,7 +948,7 @@ Scenario Outline: verify the post on social network             &amp#27;[90m# sr
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.657">
+  <testcase name="Example #1.2" classname="Examples" time="0.822">
     <system-out><![CDATA[
 Scenario Outline: Updating the message using put                                                                   &amp#27;[90m# src/main/resources/features/F2_UpdatingAnExistingPost.feature:14&amp#27;[0m
 
@@ -1108,7 +1004,7 @@ POSTID: get 1
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.714">
+  <testcase name="Example #1.2" classname="Examples" time="0.873">
     <system-out><![CDATA[
 Scenario Outline: Updating the message using patching                                                                                            &amp#27;[90m# src/main/resources/features/F3_PatchingAnExistingResource.feature:16&amp#27;[0m
 
@@ -1188,7 +1084,7 @@ PATCHIND:2
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.594">
+  <testcase name="Example #1.2" classname="Examples" time="0.79">
     <system-out><![CDATA[
 Scenario Outline: Deleting the post                                                  &amp#27;[90m# src/main/resources/features/F5_DeleteAnExistingPost.feature:18&amp#27;[0m
 
@@ -1227,14 +1123,14 @@ POSTID: get 4
 
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                      &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 HTTP/1.1 200 OK
-Date: Mon, 23 Jan 2023 17:31:44 GMT
+Date: Mon, 23 Jan 2023 20:01:00 GMT
 Content-Type: application/json; charset=utf-8
 Content-Length: 2
 Connection: keep-alive
 X-Powered-By: Express
 X-Ratelimit-Limit: 1000
-X-Ratelimit-Remaining: 985
-X-Ratelimit-Reset: 1674495152
+X-Ratelimit-Remaining: 988
+X-Ratelimit-Reset: 1674504092
 Vary: Origin, Accept-Encoding
 Access-Control-Allow-Credentials: true
 Cache-Control: no-cache
@@ -1245,17 +1141,363 @@ Etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
 Via: 1.1 vegur
 CF-Cache-Status: DYNAMIC
 Server-Timing: cf-q-config;dur=6.9999950937927e-06
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=wvFiTqmu%2B6w7qDpCAjsh%2BfEBM3nFqQPVfpWD2YKXk4IihkAjikAQJ2p6NjAEHI3KIehlXvHlCIrhiQFpIUnPPkybIPcoa2PCDy%2Bpe11arY%2F6n9HU%2FELaUmM4sTQbzi52NMyYUNpPxqtbzwgHLu3j"}],"group":"cf-nel","max_age":604800}
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=RaQLYGDrQ3Nf93O%2FPKThwrYdJs4FSNBRGTXpwlllaBKeGV10deMpznxkxKXTM%2FSEBtD9dz1qM%2BQhGX6if8%2BjoB8dR6%2BohkQmE18zrixO0mhMZqI0oTAw2vx2R1YqaroilNA14ndUUgouF96UptlI"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 78e243c12be31648-WAW
+CF-RAY: 78e31e65ed90bf44-WAW
 alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
 
 {
     
 }
 
-    the post is deleted sucessfully with postid :4Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@6fc1a1d5status code is :200
+    the post is deleted sucessfully with postid :4Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@27bb4dc5status code is :200
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the post deleted and verify staus code &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                    &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_post_deleted_and_verify_staus_code(java.lang.Integer)&amp#27;[0m
+This will run after the Scenario
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="0.419">
+    <system-out><![CDATA[
+Scenario Outline: Verify the comments based on postid                &amp#27;[90m# src/main/resources/features/F6_Comments_operations.feature:16&amp#27;[0m
+
+    End point url of the posts is :https://jsonplaceholder.typicode.com/posts
+
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an user of the social network&amp#27;[0m                           &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_am_an_user_of_the_social_network()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI want to get the &amp#27;[0m&amp#27;[32m&amp#27;[1m"comments"&amp#27;[0m&amp#27;[32m &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m                                &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_want_to_get_the(java.lang.String,java.lang.Integer)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the details of comments made by userid &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with values &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_made_by_userid_with_values(java.lang.Integer,java.lang.Integer)&amp#27;[0m
+This will run after the Scenario
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="0.605">
+    <system-out><![CDATA[
+Scenario Outline: Verify comments deleted based on post id                                          &amp#27;[90m# src/main/resources/features/F6_Comments_operations.feature:29&amp#27;[0m
+
+    End point url of the posts is :https://jsonplaceholder.typicode.com/posts
+
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an user of the social network&amp#27;[0m                                                          &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_am_an_user_of_the_social_network()&amp#27;[0m
+[
+    {
+        "postId": 1,
+        "id": 2,
+        "name": "quo vero reiciendis velit similique earum",
+        "email": "Jayne_Kuhic@sydney.com",
+        "body": "est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et"
+    }
+]
+
+    [
+      {
+        "postId": 1,
+        "id": 2,
+        "name": "quo vero reiciendis velit similique earum",
+        "email": "Jayne_Kuhic@sydney.com",
+        "body": "est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et"
+      }
+    ]
+
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI want to delete the comments &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m and userid &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m                                                 &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_want_to_delete_the_comments_and_userid(java.lang.Integer,java.lang.Integer)&amp#27;[0m
+{
+    
+}
+
+    validated the response and is :{}
+
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the details of comments made by userid &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with values &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m deleted with empy respnse body&amp#27;[0m &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_made_by_userid_with_values_deleted_with_empy_respnse_body(java.lang.Integer,java.lang.Integer)&amp#27;[0m
+This will run after the Scenario
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="0.468">
+    <failure message="the response is not as expected" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: the response is not as expected
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:135)
+	at StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_name_email_and_body_made_by_userid_with_values_posted(ReadingExistngPostDetailsDefns.java:158)
+	at ✽.verify the details of comments name "Cheetah" email "animal@zoo.user" and body "Fastest animal is Cheetah" made by userid 2 with values 1 posted(file:///Users/hema/eclipse-workspace/SocialNetworkingCommunity/src/main/resources/features/F6_Comments_operations.feature:35)
+]]></failure>
+    <system-out><![CDATA[
+Scenario Outline: Verify new comments posted based on post id                                                                                           &amp#27;[90m# src/main/resources/features/F6_Comments_operations.feature:42&amp#27;[0m
+
+    End point url of the posts is :https://jsonplaceholder.typicode.com/posts
+
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an user of the social network&amp#27;[0m                                                                                                              &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_am_an_user_of_the_social_network()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI want to post the comments  name &amp#27;[0m&amp#27;[32m&amp#27;[1m"Cheetah"&amp#27;[0m&amp#27;[32m email &amp#27;[0m&amp#27;[32m&amp#27;[1m"animal@zoo.user"&amp#27;[0m&amp#27;[32m and body &amp#27;[0m&amp#27;[32m&amp#27;[1m"Fastest animal is Cheetah"&amp#27;[0m&amp#27;[32m made by userid &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with values &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m posted&amp#27;[0m   &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_want_to_post_the_comments_name_email_and_body_made_by_userid_with_values_posted(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)&amp#27;[0m
+
+    Creating a Post comment request with values : body:Fastest animal is Cheetah user ID:2 postID: 1 body:Fastest animal is Cheetahemail:animal@zoo.user
+
+{
+    "postId": "1",
+    "id": 501,
+    "name": "Cheetah",
+    "email": "animal@zoo.user",
+    "body": "Fastest animal is Cheetah"
+}
+
+     the response and is :{
+      "postId": "1",
+      "id": 501,
+      "name": "Cheetah",
+      "email": "animal@zoo.user",
+      "body": "Fastest animal is Cheetah"
+    }
+
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mverify the details of comments name &amp#27;[0m&amp#27;[31m&amp#27;[1m"Cheetah"&amp#27;[0m&amp#27;[31m email &amp#27;[0m&amp#27;[31m&amp#27;[1m"animal@zoo.user"&amp#27;[0m&amp#27;[31m and body &amp#27;[0m&amp#27;[31m&amp#27;[1m"Fastest animal is Cheetah"&amp#27;[0m&amp#27;[31m made by userid &amp#27;[0m&amp#27;[31m&amp#27;[1m2&amp#27;[0m&amp#27;[31m with values &amp#27;[0m&amp#27;[31m&amp#27;[1m1&amp#27;[0m&amp#27;[31m posted&amp#27;[0m &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_name_email_and_body_made_by_userid_with_values_posted(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)&amp#27;[0m
+      &amp#27;[31morg.opentest4j.AssertionFailedError: the response is not as expected
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:135)
+	at StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_name_email_and_body_made_by_userid_with_values_posted(ReadingExistngPostDetailsDefns.java:158)
+	at ✽.verify the details of comments name "Cheetah" email "animal@zoo.user" and body "Fastest animal is Cheetah" made by userid 2 with values 1 posted(file:///Users/hema/eclipse-workspace/SocialNetworkingCommunity/src/main/resources/features/F6_Comments_operations.feature:35)
+&amp#27;[0m
+This will run after the Scenario
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="0.643">
+    <system-out><![CDATA[
+Scenario Outline: verify the post on social network             &amp#27;[90m# src/main/resources/features/F1_NewPostByExistingUser.feature:16&amp#27;[0m
+
+    Request to the end point:https://jsonplaceholder.typicode.com/posts
+
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m             &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
+
+    Setting header:Content-type=application/json; charset=UTF-8
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                             &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
+
+    Creating a POST request with values : body:post with empty title user ID:2 title:
+
+
+    Creating a new resource post :2::post with empty title
+
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mmy user id &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with title &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m posts &amp#27;[0m&amp#27;[32m&amp#27;[1m"post with empty title"&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.my_user_id_with_title_posts(java.lang.Integer,java.lang.String,java.lang.String)&amp#27;[0m
+{
+    "userId": 2,
+    "body": "post with empty title",
+    "title": "",
+    "id": 101
+}
+
+    validated the response and is :{
+      "userId": 2,
+      "body": "post with empty title",
+      "title": "",
+      "id": 101
+    }
+
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                 &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
+
+    New post successfully created and validated, with status code and the postid is :201,101
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the response status code  &amp#27;[0m&amp#27;[32m&amp#27;[1m201&amp#27;[0m            &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_response_status_code(java.lang.Integer)&amp#27;[0m
+
+    The values cannot be verified by retriving using get method to validdate new posted message as this is a mock service
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mconfirm the message/post is as expected by retriving&amp#27;[0m      &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.confirm_the_message_post_is_as_expected_by_retriving()&amp#27;[0m
+This will run after the Scenario
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="0.793">
+    <system-out><![CDATA[
+Scenario Outline: Updating the message using put                                                                   &amp#27;[90m# src/main/resources/features/F2_UpdatingAnExistingPost.feature:14&amp#27;[0m
+
+    Request to the end point:https://jsonplaceholder.typicode.com/posts
+
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
+
+    Setting header:Content-type=application/json; charset=UTF-8
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
+POSTID: get 1
+{
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+}
+
+    Updating the existing resource data:{
+      "userId": 1,
+      "id": 1,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    }
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m                               &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
+
+    Creating a PUT request with values : body:Teak wood is most durable user ID:2 postID: 1 title:Teak wood
+
+
+    Updating an existing resource  resource post :2:Teak wood:Teak wood is most durable
+
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mmy user id &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Teak wood"&amp#27;[0m&amp#27;[32m posts &amp#27;[0m&amp#27;[32m&amp#27;[1m"Teak wood is most durable"&amp#27;[0m&amp#27;[32m to modify with put where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.my_user_id_with_title_posts_to_modify_with_put_where_post_id_is(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer)&amp#27;[0m
+{
+    "userId": 2,
+    "body": "Teak wood is most durable",
+    "title": "Teak wood",
+    "id": 1
+}
+
+    validated the response and is :{
+      "userId": 2,
+      "body": "Teak wood is most durable",
+      "title": "Teak wood",
+      "id": 1
+    }
+
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                                                    &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
+
+    New post successfully created and validated, with status code and the postid is :200,1
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the response status code  &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                                                               &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_response_status_code(java.lang.Integer)&amp#27;[0m
+This will run after the Scenario
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="0.827">
+    <system-out><![CDATA[
+Scenario Outline: Updating the message using patching                                                                                            &amp#27;[90m# src/main/resources/features/F3_PatchingAnExistingResource.feature:16&amp#27;[0m
+
+    Request to the end point:https://jsonplaceholder.typicode.com/posts
+
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
+
+    Setting header:Content-type=application/json; charset=UTF-8
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                                                                              &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
+POSTID: get 2
+{
+    "userId": 1,
+    "id": 2,
+    "title": "qui est esse",
+    "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+}
+
+    Updating the existing resource data:{
+      "userId": 1,
+      "id": 2,
+      "title": "qui est esse",
+      "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    }
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m                                                             &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
+PATCHIND:2
+1****NorthAmerica****NorthAmerica has Denail****2****6190
+
+    Creating a PATCH request with values : body:NorthAmerica has Denail user ID:1 postID: 2 title:NorthAmerica
+
+
+    Patching the an existing resource  :1:NorthAmerica:NorthAmerica has Denail
+
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mmy user id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"NorthAmerica"&amp#27;[0m&amp#27;[32m posts &amp#27;[0m&amp#27;[32m&amp#27;[1m"NorthAmerica has Denail"&amp#27;[0m&amp#27;[32m to modify with patch where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with mt height &amp#27;[0m&amp#27;[32m&amp#27;[1m6190&amp#27;[0m&amp#27;[32m values&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.my_user_id_with_title_posts_to_modify_with_patch_where_post_id_is_with_mt_height_values(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)&amp#27;[0m
+{
+    "userId": 1,
+    "id": 2,
+    "title": "NorthAmerica",
+    "body": "NorthAmerica has Denail",
+    "height": 6190
+}
+
+    validated the response and is :{
+      "userId": 1,
+      "id": 2,
+      "title": "NorthAmerica",
+      "body": "NorthAmerica has Denail",
+      "height": 6190
+    }
+
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                                                                                  &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
+
+    New post successfully created and validated, with status code and the postid is :200,2
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the response status code  &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                                                                                             &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_response_status_code(java.lang.Integer)&amp#27;[0m
+{
+    "userId": 1,
+    "id": 2,
+    "title": "NorthAmerica",
+    "body": "NorthAmerica has Denail",
+    "height": 6190
+}
+
+    patched response  is :{
+      "userId": 1,
+      "id": 2,
+      "title": "NorthAmerica",
+      "body": "NorthAmerica has Denail",
+      "height": 6190
+    }
+
+
+    Patching the an existing resource is sucessful at postid :2
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the if patch is successful&amp#27;[0m                                                                                                &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_if_patch_is_successful()&amp#27;[0m
+This will run after the Scenario
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="0.752">
+    <system-out><![CDATA[
+Scenario Outline: Deleting the post                                                  &amp#27;[90m# src/main/resources/features/F5_DeleteAnExistingPost.feature:18&amp#27;[0m
+
+    Request to the end point:https://jsonplaceholder.typicode.com/posts
+
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an existing user of the social network&amp#27;[0m                                  &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_am_an_existing_user_of_the_social_network()&amp#27;[0m
+
+    Setting header:Content-type=application/json; charset=UTF-8
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhas the  header specification&amp#27;[0m                                                  &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.has_the_header_specification()&amp#27;[0m
+POSTID: get 4
+{
+    "userId": 1,
+    "id": 4,
+    "title": "eum et est occaecati",
+    "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+}
+
+    Updating the existing resource data:{
+      "userId": 1,
+      "id": 4,
+      "title": "eum et est occaecati",
+      "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+    }
+
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI get the existing resource values with user id  with title where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(java.lang.Integer)&amp#27;[0m
+
+    Deleting the an existing resource  resource post :4
+
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mdelete where post id is &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m                                                     &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.delete_where_post_id_is(java.lang.Integer)&amp#27;[0m
+{
+    
+}
+
+    validated the response and is :{}
+
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                      &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
+HTTP/1.1 200 OK
+Date: Mon, 23 Jan 2023 20:01:14 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 2
+Connection: keep-alive
+X-Powered-By: Express
+X-Ratelimit-Limit: 1000
+X-Ratelimit-Remaining: 971
+X-Ratelimit-Reset: 1674504092
+Vary: Origin, Accept-Encoding
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: -1
+X-Content-Type-Options: nosniff
+Etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
+Via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+Server-Timing: cf-q-config;dur=6.0000165831298e-06
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=9dJIIedUsi%2FeDr%2BXd1%2Boccqd4dfTMQqN6m0QalR5Z65XlvC96D9c8MEAjgvECshgGetpY8bn%2F8MiIu%2BjZY4%2BLJ7F6zMqUqrxAFNm8X8bXVWC4yOAQNF%2F270IpPLwhWAmqkKJKpMRSPqQV9jyfunF"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 78e31ebf3a31bfbe-WAW
+alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+
+{
+    
+}
+
+    the post is deleted sucessfully with postid :4Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@7a71ebf1status code is :200
 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the post deleted and verify staus code &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                    &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_post_deleted_and_verify_staus_code(java.lang.Integer)&amp#27;[0m
 This will run after the Scenario
@@ -1263,18 +1505,98 @@ This will run after the Scenario
   </testcase>
   <testcase name="Example #1.2" classname="Examples" time="0.404">
     <system-out><![CDATA[
-Scenario Outline: Verify the comments based on postid               &amp#27;[90m# src/main/resources/features/F6_GetTheCommentsBasedonPostIDandUserID.feature:17&amp#27;[0m
+Scenario Outline: Verify the comments based on postid                &amp#27;[90m# src/main/resources/features/F6_Comments_operations.feature:16&amp#27;[0m
 
     End point url of the posts is :https://jsonplaceholder.typicode.com/posts
 
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an user of the social network&amp#27;[0m                          &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_am_an_user_of_the_social_network()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI can access the posts&amp#27;[0m                                       &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_can_access_the_posts()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI want to get the &amp#27;[0m&amp#27;[32m&amp#27;[1m"comments"&amp#27;[0m&amp#27;[32m &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m                               &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_want_to_get_the(java.lang.String,java.lang.Integer)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mverify the details of comments made by userid &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with values &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_made_by_userid_with_values(java.lang.Integer,java.lang.Integer)&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an user of the social network&amp#27;[0m                           &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_am_an_user_of_the_social_network()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI want to get the &amp#27;[0m&amp#27;[32m&amp#27;[1m"comments"&amp#27;[0m&amp#27;[32m &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m                                &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_want_to_get_the(java.lang.String,java.lang.Integer)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the details of comments made by userid &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with values &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_made_by_userid_with_values(java.lang.Integer,java.lang.Integer)&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.3" classname="Examples" time="0.759">
+  <testcase name="Example #1.2" classname="Examples" time="0.567">
+    <system-out><![CDATA[
+Scenario Outline: Verify comments deleted based on post id                                          &amp#27;[90m# src/main/resources/features/F6_Comments_operations.feature:29&amp#27;[0m
+
+    End point url of the posts is :https://jsonplaceholder.typicode.com/posts
+
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an user of the social network&amp#27;[0m                                                          &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_am_an_user_of_the_social_network()&amp#27;[0m
+[
+    {
+        "postId": 1,
+        "id": 2,
+        "name": "quo vero reiciendis velit similique earum",
+        "email": "Jayne_Kuhic@sydney.com",
+        "body": "est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et"
+    }
+]
+
+    [
+      {
+        "postId": 1,
+        "id": 2,
+        "name": "quo vero reiciendis velit similique earum",
+        "email": "Jayne_Kuhic@sydney.com",
+        "body": "est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et"
+      }
+    ]
+
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI want to delete the comments &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m and userid &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m                                                 &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_want_to_delete_the_comments_and_userid(java.lang.Integer,java.lang.Integer)&amp#27;[0m
+{
+    
+}
+
+    validated the response and is :{}
+
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the details of comments made by userid &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with values &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m deleted with empy respnse body&amp#27;[0m &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_made_by_userid_with_values_deleted_with_empy_respnse_body(java.lang.Integer,java.lang.Integer)&amp#27;[0m
+This will run after the Scenario
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="0.433">
+    <failure message="the response is not as expected" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: the response is not as expected
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:135)
+	at StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_name_email_and_body_made_by_userid_with_values_posted(ReadingExistngPostDetailsDefns.java:158)
+	at ✽.verify the details of comments name "Cheetah" email "animal@zoo.user" and body "Fastest animal is Cheetah" made by userid 2 with values 1 posted(file:///Users/hema/eclipse-workspace/SocialNetworkingCommunity/src/main/resources/features/F6_Comments_operations.feature:35)
+]]></failure>
+    <system-out><![CDATA[
+Scenario Outline: Verify new comments posted based on post id                                                                                           &amp#27;[90m# src/main/resources/features/F6_Comments_operations.feature:42&amp#27;[0m
+
+    End point url of the posts is :https://jsonplaceholder.typicode.com/posts
+
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am an user of the social network&amp#27;[0m                                                                                                              &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_am_an_user_of_the_social_network()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI want to post the comments  name &amp#27;[0m&amp#27;[32m&amp#27;[1m"Cheetah"&amp#27;[0m&amp#27;[32m email &amp#27;[0m&amp#27;[32m&amp#27;[1m"animal@zoo.user"&amp#27;[0m&amp#27;[32m and body &amp#27;[0m&amp#27;[32m&amp#27;[1m"Fastest animal is Cheetah"&amp#27;[0m&amp#27;[32m made by userid &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m with values &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m posted&amp#27;[0m   &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.i_want_to_post_the_comments_name_email_and_body_made_by_userid_with_values_posted(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)&amp#27;[0m
+
+    Creating a Post comment request with values : body:Fastest animal is Cheetah user ID:2 postID: 1 body:Fastest animal is Cheetahemail:animal@zoo.user
+
+{
+    "postId": "1",
+    "id": 501,
+    "name": "Cheetah",
+    "email": "animal@zoo.user",
+    "body": "Fastest animal is Cheetah"
+}
+
+     the response and is :{
+      "postId": "1",
+      "id": 501,
+      "name": "Cheetah",
+      "email": "animal@zoo.user",
+      "body": "Fastest animal is Cheetah"
+    }
+
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mverify the details of comments name &amp#27;[0m&amp#27;[31m&amp#27;[1m"Cheetah"&amp#27;[0m&amp#27;[31m email &amp#27;[0m&amp#27;[31m&amp#27;[1m"animal@zoo.user"&amp#27;[0m&amp#27;[31m and body &amp#27;[0m&amp#27;[31m&amp#27;[1m"Fastest animal is Cheetah"&amp#27;[0m&amp#27;[31m made by userid &amp#27;[0m&amp#27;[31m&amp#27;[1m2&amp#27;[0m&amp#27;[31m with values &amp#27;[0m&amp#27;[31m&amp#27;[1m1&amp#27;[0m&amp#27;[31m posted&amp#27;[0m &amp#27;[90m# StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_name_email_and_body_made_by_userid_with_values_posted(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)&amp#27;[0m
+      &amp#27;[31morg.opentest4j.AssertionFailedError: the response is not as expected
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:135)
+	at StepDefinations.ReadingExistngPostDetailsDefns.verify_the_details_of_comments_name_email_and_body_made_by_userid_with_values_posted(ReadingExistngPostDetailsDefns.java:158)
+	at ✽.verify the details of comments name "Cheetah" email "animal@zoo.user" and body "Fastest animal is Cheetah" made by userid 2 with values 1 posted(file:///Users/hema/eclipse-workspace/SocialNetworkingCommunity/src/main/resources/features/F6_Comments_operations.feature:35)
+&amp#27;[0m
+This will run after the Scenario
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.3" classname="Examples" time="0.714">
     <system-out><![CDATA[
 Scenario Outline: verify the post on social network            &amp#27;[90m# src/main/resources/features/F1_NewPostByExistingUser.feature:17&amp#27;[0m
 
@@ -1318,16 +1640,15 @@ Scenario Outline: verify the post on social network            &amp#27;[90m# src
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.3" classname="Examples" time="0.802">
+  <testcase name="Example #1.3" classname="Examples" time="0.85">
     <failure message="1 expectation failed.&#10;Expected status code &lt;201&gt; but was &lt;200&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <201> but was <200>.
 
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
 	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
@@ -1338,9 +1659,9 @@ Expected status code <201> but was <200>.
 	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
 	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor124.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at sun.reflect.GeneratedMethodAccessor124.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
@@ -1404,11 +1725,10 @@ POSTID: get 1
       &amp#27;[31mjava.lang.AssertionError: 1 expectation failed.
 Expected status code <201> but was <200>.
 
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
 	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
@@ -1419,9 +1739,9 @@ Expected status code <201> but was <200>.
 	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
 	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor124.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at sun.reflect.GeneratedMethodAccessor124.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
@@ -1436,7 +1756,7 @@ Expected status code <201> but was <200>.
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.3" classname="Examples" time="0.88">
+  <testcase name="Example #1.3" classname="Examples" time="0.89">
     <system-out><![CDATA[
 Scenario Outline: Updating the message using patching                                                                                     &amp#27;[90m# src/main/resources/features/F3_PatchingAnExistingResource.feature:17&amp#27;[0m
 
@@ -1516,7 +1836,7 @@ PATCHIND:3
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.3" classname="Examples" time="0.795">
+  <testcase name="Example #1.3" classname="Examples" time="0.789">
     <system-out><![CDATA[
 Scenario Outline: Deleting the post                                                  &amp#27;[90m# src/main/resources/features/F5_DeleteAnExistingPost.feature:19&amp#27;[0m
 
@@ -1555,14 +1875,14 @@ POSTID: get 2
 
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                      &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 HTTP/1.1 200 OK
-Date: Mon, 23 Jan 2023 17:31:34 GMT
+Date: Mon, 23 Jan 2023 20:01:00 GMT
 Content-Type: application/json; charset=utf-8
 Content-Length: 2
 Connection: keep-alive
 X-Powered-By: Express
 X-Ratelimit-Limit: 1000
-X-Ratelimit-Remaining: 997
-X-Ratelimit-Reset: 1674495152
+X-Ratelimit-Remaining: 987
+X-Ratelimit-Reset: 1674504092
 Vary: Origin, Accept-Encoding
 Access-Control-Allow-Credentials: true
 Cache-Control: no-cache
@@ -1572,24 +1892,24 @@ X-Content-Type-Options: nosniff
 Etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
 Via: 1.1 vegur
 CF-Cache-Status: DYNAMIC
-Server-Timing: cf-q-config;dur=7.0000096457079e-06
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=h%2FdzMBIL4p%2F7A2lPDc4EPfSyy6w751dul%2B4uH2M6u75IF%2FaIdIVYDwVZocbqGwUsPEqAmNX8tFZNJ0XF6YtT5%2BvWAbMvWoEqsPByPgHHmu%2BGfdhpmpVV0srUc4jcCogXviIoaHfj%2FBAIlajL2Kyf"}],"group":"cf-nel","max_age":604800}
+Server-Timing: cf-q-config;dur=8.000002708286e-06
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=IOPDgd5qXhokIoVlBbqvKdpjn8rHM%2FYvz6GDvhIPtIh84VRrYx2rZeG0LNDt6DeneWz9WBZw7bVEbj0AtlYfvekYLZC4JYyDRdyobcjw9%2Bs6r1qyQTex88cMwkNG4G9MOklyPxGMuPhUs68kfKpT"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 78e243825fbabf3d-WAW
+CF-RAY: 78e31e6aefd8bfda-WAW
 alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
 
 {
     
 }
 
-    the post is deleted sucessfully with postid :2Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@43de9fc9status code is :200
+    the post is deleted sucessfully with postid :2Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@1930a804status code is :200
 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the post deleted and verify staus code &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                    &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_post_deleted_and_verify_staus_code(java.lang.Integer)&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.3" classname="Examples" time="0.552">
+  <testcase name="Example #1.3" classname="Examples" time="0.66">
     <system-out><![CDATA[
 Scenario Outline: verify the post on social network            &amp#27;[90m# src/main/resources/features/F1_NewPostByExistingUser.feature:17&amp#27;[0m
 
@@ -1633,16 +1953,15 @@ Scenario Outline: verify the post on social network            &amp#27;[90m# src
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.3" classname="Examples" time="0.666">
+  <testcase name="Example #1.3" classname="Examples" time="0.762">
     <failure message="1 expectation failed.&#10;Expected status code &lt;201&gt; but was &lt;200&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <201> but was <200>.
 
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
 	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
@@ -1651,9 +1970,9 @@ Expected status code <201> but was <200>.
 	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
 	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor124.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at sun.reflect.GeneratedMethodAccessor124.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
@@ -1717,11 +2036,10 @@ POSTID: get 1
       &amp#27;[31mjava.lang.AssertionError: 1 expectation failed.
 Expected status code <201> but was <200>.
 
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
 	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
@@ -1730,9 +2048,9 @@ Expected status code <201> but was <200>.
 	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
 	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor124.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at sun.reflect.GeneratedMethodAccessor124.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
@@ -1747,7 +2065,7 @@ Expected status code <201> but was <200>.
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.3" classname="Examples" time="0.79">
+  <testcase name="Example #1.3" classname="Examples" time="0.826">
     <system-out><![CDATA[
 Scenario Outline: Updating the message using patching                                                                                     &amp#27;[90m# src/main/resources/features/F3_PatchingAnExistingResource.feature:17&amp#27;[0m
 
@@ -1827,7 +2145,7 @@ PATCHIND:3
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.3" classname="Examples" time="0.719">
+  <testcase name="Example #1.3" classname="Examples" time="0.772">
     <system-out><![CDATA[
 Scenario Outline: Deleting the post                                                  &amp#27;[90m# src/main/resources/features/F5_DeleteAnExistingPost.feature:19&amp#27;[0m
 
@@ -1866,14 +2184,14 @@ POSTID: get 2
 
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the response body&amp#27;[0m                                                      &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.verify_the_response_body()&amp#27;[0m
 HTTP/1.1 200 OK
-Date: Mon, 23 Jan 2023 17:31:44 GMT
+Date: Mon, 23 Jan 2023 20:01:15 GMT
 Content-Type: application/json; charset=utf-8
 Content-Length: 2
 Connection: keep-alive
 X-Powered-By: Express
 X-Ratelimit-Limit: 1000
-X-Ratelimit-Remaining: 984
-X-Ratelimit-Reset: 1674495152
+X-Ratelimit-Remaining: 970
+X-Ratelimit-Reset: 1674504092
 Vary: Origin, Accept-Encoding
 Access-Control-Allow-Credentials: true
 Cache-Control: no-cache
@@ -1883,33 +2201,32 @@ X-Content-Type-Options: nosniff
 Etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
 Via: 1.1 vegur
 CF-Cache-Status: DYNAMIC
-Server-Timing: cf-q-config;dur=5.9999947552569e-06
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=qwcZY48Cd9Km%2B4k%2FAAb6gd8ZZ0W9WjGbFLEHy3UwQxkl0bRVJ%2FnKUAJAikSuVuZqTQkv6E0KbwOWq%2FPxoIhBbWIKvsUEA0V1SeJCyWR6TC%2BCO%2FTz2wUFhYcGMXmEnjpAUSXs6MwjVuO%2FPLrsMk4a"}],"group":"cf-nel","max_age":604800}
+Server-Timing: cf-q-config;dur=6.9999950937927e-06
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=F7egH5SozgMtSqMWXEc5p8%2F3t6hkoadExk3BdqN2q8C9WwwjTcLJA9ycRCARZsM2W5aGqSB%2B5gn%2FX3Brwmc5NrO7QHX3me6578oHVuh3MYTkZm5clLKQ3KeKwBomVyl0MXKH4I6cyakuzfrB8Kfg"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 78e243c4afecbfa6-WAW
+CF-RAY: 78e31ec3cf62bf33-WAW
 alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
 
 {
     
 }
 
-    the post is deleted sucessfully with postid :2Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@261b27dbstatus code is :200
+    the post is deleted sucessfully with postid :2Response of the body is emptyio.restassured.internal.ValidatableResponseImpl@45295cfdstatus code is :200
 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI want to verify the post deleted and verify staus code &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                    &amp#27;[90m# StepDefinations.BasicCURD_Ops_Definations.i_want_to_verify_the_post_deleted_and_verify_staus_code(java.lang.Integer)&amp#27;[0m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.4" classname="Examples" time="0.755">
+  <testcase name="Example #1.4" classname="Examples" time="0.809">
     <failure message="1 expectation failed.&#10;Expected status code &lt;201&gt; but was &lt;200&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <201> but was <200>.
 
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
 	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
@@ -1918,9 +2235,9 @@ Expected status code <201> but was <200>.
 	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
 	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor124.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at sun.reflect.GeneratedMethodAccessor124.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
@@ -1988,11 +2305,10 @@ PATCHIND:11
       &amp#27;[31mjava.lang.AssertionError: 1 expectation failed.
 Expected status code <201> but was <200>.
 
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
 	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
@@ -2001,9 +2317,9 @@ Expected status code <201> but was <200>.
 	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
 	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor124.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at sun.reflect.GeneratedMethodAccessor124.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
@@ -2019,16 +2335,15 @@ Expected status code <201> but was <200>.
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.4" classname="Examples" time="0.611">
+  <testcase name="Example #1.4" classname="Examples" time="0.762">
     <failure message="1 expectation failed.&#10;Expected status code &lt;201&gt; but was &lt;200&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <201> but was <200>.
 
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
 	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
@@ -2037,9 +2352,9 @@ Expected status code <201> but was <200>.
 	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
 	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor124.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at sun.reflect.GeneratedMethodAccessor124.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
@@ -2107,11 +2422,10 @@ PATCHIND:11
       &amp#27;[31mjava.lang.AssertionError: 1 expectation failed.
 Expected status code <201> but was <200>.
 
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
 	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
@@ -2120,9 +2434,9 @@ Expected status code <201> but was <200>.
 	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
 	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor124.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at sun.reflect.GeneratedMethodAccessor124.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
@@ -2138,7 +2452,7 @@ Expected status code <201> but was <200>.
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="verify the comments under single post" classname="verify endpoint services using different query parameters" time="0.459">
+  <testcase name="verify the comments under single post" classname="verify endpoint services using different query parameters" time="0.295">
     <system-out><![CDATA[
 Scenario: verify the comments under single post             &amp#27;[90m# src/main/resources/features/F4_FilteringthroughQueryParams.feature:10&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am a user&amp#27;[0m                                         &amp#27;[90m# StepDefinations.FilterOptionsDefinations.i_am_a_user()&amp#27;[0m
@@ -2196,7 +2510,7 @@ Scenario: verify the comments under single post             &amp#27;[90m# src/ma
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="verify the comments under single post" classname="verify endpoint services using different query parameters" time="0.148">
+  <testcase name="verify the comments under single post" classname="verify endpoint services using different query parameters" time="0.181">
     <system-out><![CDATA[
 Scenario: verify the comments under single post             &amp#27;[90m# src/main/resources/features/F4_FilteringthroughQueryParams.feature:10&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am a user&amp#27;[0m                                         &amp#27;[90m# StepDefinations.FilterOptionsDefinations.i_am_a_user()&amp#27;[0m
@@ -2254,7 +2568,7 @@ Scenario: verify the comments under single post             &amp#27;[90m# src/ma
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="verify the posts by a user" classname="verify endpoint services using different query parameters" time="0.315">
+  <testcase name="verify the posts by a user" classname="verify endpoint services using different query parameters" time="0.395">
     <system-out><![CDATA[
 Scenario: verify the posts by a user                         &amp#27;[90m# src/main/resources/features/F4_FilteringthroughQueryParams.feature:19&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am a user&amp#27;[0m                                          &amp#27;[90m# StepDefinations.FilterOptionsDefinations.i_am_a_user()&amp#27;[0m
@@ -2280,7 +2594,7 @@ Scenario: verify the posts by a user                         &amp#27;[90m# src/m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="verify the posts by a user" classname="verify endpoint services using different query parameters" time="0.278">
+  <testcase name="verify the posts by a user" classname="verify endpoint services using different query parameters" time="0.35">
     <system-out><![CDATA[
 Scenario: verify the posts by a user                         &amp#27;[90m# src/main/resources/features/F4_FilteringthroughQueryParams.feature:19&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am a user&amp#27;[0m                                          &amp#27;[90m# StepDefinations.FilterOptionsDefinations.i_am_a_user()&amp#27;[0m
@@ -2306,7 +2620,7 @@ Scenario: verify the posts by a user                         &amp#27;[90m# src/m
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="verify the comments by a filtering postid" classname="verify endpoint services using different query parameters" time="0.507">
+  <testcase name="verify the comments by a filtering postid" classname="verify endpoint services using different query parameters" time="0.367">
     <system-out><![CDATA[
 Scenario: verify the comments by a filtering postid           &amp#27;[90m# src/main/resources/features/F4_FilteringthroughQueryParams.feature:31&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am a user&amp#27;[0m                                           &amp#27;[90m# StepDefinations.FilterOptionsDefinations.i_am_a_user()&amp#27;[0m
@@ -2332,7 +2646,7 @@ Scenario: verify the comments by a filtering postid           &amp#27;[90m# src/
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="verify the comments by a filtering postid" classname="verify endpoint services using different query parameters" time="0.278">
+  <testcase name="verify the comments by a filtering postid" classname="verify endpoint services using different query parameters" time="0.349">
     <system-out><![CDATA[
 Scenario: verify the comments by a filtering postid           &amp#27;[90m# src/main/resources/features/F4_FilteringthroughQueryParams.feature:31&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am a user&amp#27;[0m                                           &amp#27;[90m# StepDefinations.FilterOptionsDefinations.i_am_a_user()&amp#27;[0m
@@ -2358,7 +2672,7 @@ Scenario: verify the comments by a filtering postid           &amp#27;[90m# src/
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="verify the posts and the details" classname="User reads the posts" time="0.127">
+  <testcase name="verify the posts and the details" classname="User reads the posts" time="0.195">
     <system-out><![CDATA[
 Scenario: verify the posts and the details &amp#27;[90m# src/main/resources/features/F7_GetTheExistingPostDetails.feature:3&amp#27;[0m
 
@@ -2370,7 +2684,7 @@ Scenario: verify the posts and the details &amp#27;[90m# src/main/resources/feat
 This will run after the Scenario
 ]]></system-out>
   </testcase>
-  <testcase name="verify the posts and the details" classname="User reads the posts" time="0.103">
+  <testcase name="verify the posts and the details" classname="User reads the posts" time="0.166">
     <system-out><![CDATA[
 Scenario: verify the posts and the details &amp#27;[90m# src/main/resources/features/F7_GetTheExistingPostDetails.feature:3&amp#27;[0m
 

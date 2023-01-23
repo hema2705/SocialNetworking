@@ -176,13 +176,14 @@
           <systemPropertiesFile>src/test/resources/cucumberProperties.txt</systemPropertiesFile>
 
                     <systemPropertyVariables>
-                       <cucumber.features>src/main/resources/features/F1_NewPostByExistingUser.feature,
-						src/main/resources/features/F2_UpdatingAnExistingPost.feature,
-						src/main/resources/features/F3_PatchingAnExistingResource.feature,
-						src/main/resources/features/F4_FilteringthroughQueryParams.feature,
-						src/main/resources/features/F5_DeleteAnExistingPost.feature,
-						src/main/resources/features/F6_GetTheCommentsBasedonPostIDandUserID.feature,
-						src/main/resources/features/F7_GetTheExistingPostDetails.feature
+                       <cucumber.features>
+ 		    src/main/resources/features/F1_NewPostByExistingUser.feature,
+			src/main/resources/features/F2_UpdatingAnExistingPost.feature,
+			src/main/resources/features/F3_PatchingAnExistingResource.feature,
+			src/main/resources/features/F4_FilteringthroughQueryParams.feature,
+			src/main/resources/features/F5_DeleteAnExistingPost.feature,
+			src/main/resources/features/F6_Comments_operations.feature,
+			src/main/resources/features/F7_GetTheExistingPostDetails.feature
 						</cucumber.features>
 
 						<cucumber.plugin>pretty, html:src/test/resources/Reports/Results_${timestamp}.html</cucumber.plugin>  
