@@ -13,4 +13,4 @@ type command "mvn clean test"
     
 After execution Reports are generated which are default html with necessary logs added  
 Reports can be found at location " src/test/resources/Reports "   
-Report name format is => "Posts"+Timestampformat.html
+Report name format is => "Results_"+Timestampformat.html
