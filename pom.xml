@@ -19,6 +19,7 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
    <timestamp>${maven.build.timestamp}</timestamp>
+   <results>${Results_}</results>
 
 
   </properties>
@@ -175,16 +176,16 @@
           <systemPropertiesFile>src/test/resources/cucumberProperties.txt</systemPropertiesFile>
 
                     <systemPropertyVariables>
-                       <cucumber.features>src/main/resources/features/DeleteAnExistingPost.feature ,
-						src/main/resources/features/GetTheCommentsBasedonPostIDandUserID.feature,
-						src/main/resources/features/GetTheExistingPostDetails.feature,
-						src/main/resources/features/NewPostByExistingUser.feature,
-						src/main/resources/features/PatchingAnExistingResource.feature,
-						src/main/resources/features/UpdatingAnExistingPost.feature,
-						src/main/resources/features/FilteringthroughQueryParams.feature
+                       <cucumber.features>src/main/resources/features/F1_NewPostByExistingUser.feature,
+						src/main/resources/features/F2_UpdatingAnExistingPost.feature,
+						src/main/resources/features/F3_PatchingAnExistingResource.feature,
+						src/main/resources/features/F4_FilteringthroughQueryParams.feature,
+						src/main/resources/features/F5_DeleteAnExistingPost.feature,
+						src/main/resources/features/F6_GetTheCommentsBasedonPostIDandUserID.feature,
+						src/main/resources/features/F7_GetTheExistingPostDetails.feature
 						</cucumber.features>
 
-						<cucumber.plugin>pretty, html:src/test/resources/Reports/${project.name}${timestamp}.html</cucumber.plugin>  
+						<cucumber.plugin>pretty, html:src/test/resources/Reports/Results_${timestamp}.html</cucumber.plugin>  
 
                     </systemPropertyVariables>
                 </configuration>

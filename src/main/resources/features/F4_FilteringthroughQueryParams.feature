@@ -1,8 +1,8 @@
-Feature: I want to verify endpoint services using different query parameters
+Feature: verify endpoint services using different query parameters
 
-// the feature validates the response for specific users defined in datatable at steps 
-// if we want to verify the for diiferent users change the userid to valid user 
-// and also update the specific data in src/test/resources/TestData folder as .json files 
+ the feature validates the response for specific users defined in datatable at steps 
+ if we want to verify the for diiferent users change the userid to valid user 
+ and also update the specific data in src/test/resources/TestData folder as .json files 
 
   Background:
 		Given I am a user 

@@ -1,9 +1,9 @@
-Feature: As a user of social network I want to update a post 
+Feature: User updating a post on social network 
 
-  Scenario Outline: Updating the message using put
+ Scenario Outline: Updating the message using put
     Given I am an existing user of the social network 
     And has the  header specification
-    And when I get the existing resource values with user id  with title where post id is <post id>
+    And I get the existing resource values with user id  with title where post id is <post id>
     When my user id <user id> with title "<title>" posts "<body>" to modify with put where post id is <post id>
     Then verify the response body
     And I want to verify the response status code  <status code>

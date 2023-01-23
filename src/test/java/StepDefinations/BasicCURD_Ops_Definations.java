@@ -197,8 +197,8 @@ public class BasicCURD_Ops_Definations {
 
 	}
 
-	@Given("when I get the existing resource values with user id  with title where post id is {int}")
-	public void when_i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(Integer postid) {
+	@Given("I get the existing resource values with user id  with title where post id is {int}")
+	public void i_get_the_existing_resource_values_with_user_id_with_title_where_post_id_is(Integer postid) {
 		System.out.println("POSTID: get "+ postid);
 
 		resourcedata = 	given().pathParam("postId",postid).when().get(posts_endpoint+"/{postId}").as(PostsData.class);
