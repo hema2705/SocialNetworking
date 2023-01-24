@@ -1,7 +1,7 @@
 the steps to run the features  
   
 prerequists:  
-java 1.8 , maven installed on local machine  
+java, maven installed on local machine  
   
 set the path JAVA_HOME and Maven Path  
   
